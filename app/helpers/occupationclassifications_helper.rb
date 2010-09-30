@@ -1,0 +1,2 @@
+module OccupationclassificationsHelper
+end

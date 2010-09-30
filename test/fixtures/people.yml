@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  party_id: 1
+  incomeclassification_id: 1
+  occupationclassification_id: 1
+  current_last_name: MyString
+  current_first_name: MyString
+  birth_date: 2010-09-30
+
+two:
+  party_id: 1
+  incomeclassification_id: 1
+  occupationclassification_id: 1
+  current_last_name: MyString
+  current_first_name: MyString
+  birth_date: 2010-09-30

@@ -1,0 +1,20 @@
+<h1>Listing incomeclassifications</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+  </tr>
+
+<% @incomeclassifications.each do |incomeclassification| %>
+  <tr>
+    <td><%=h incomeclassification.description %></td>
+    <td><%= link_to 'Show', incomeclassification %></td>
+    <td><%= link_to 'Edit', edit_incomeclassification_path(incomeclassification) %></td>
+    <td><%= link_to 'Destroy', incomeclassification, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New incomeclassification', new_incomeclassification_path %>

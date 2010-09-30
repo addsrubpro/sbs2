@@ -1,0 +1,32 @@
+<p>
+  <b>Party ID:</b>
+  <%=h @person.party_id %>
+</p>
+<p>
+  <b>Current last name:</b>
+  <%=h @person.current_last_name %>
+</p>
+<p>
+  <b>Current first name:</b>
+  <%=h @person.current_first_name %>
+</p>
+<p>
+  <b>Income classification ID:</b>
+  <%=h @person.incomeclassification_id %>
+  <b>Description:</b>
+  <%=h @person.incomeclassification.description %>
+</p>
+<p>
+  <b>Occupation classification ID:</b>
+  <%=h @person.occupationclassification_id %>
+  <b>Description:</b>
+  <%=h @person.occupationclassification.description %>
+</p>
+<p>
+  <b>Birth date:</b>
+  <%=h @person.birth_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

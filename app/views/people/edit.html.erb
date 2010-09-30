@@ -1,0 +1,34 @@
+<h1>Editing person</h1>
+
+<% form_for(@person) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    Party ID<br />
+    <%=h @person.party_id %>
+  </p>
+  <p>
+    <%= f.label :current_last_name %><br />
+    <%= f.text_field :current_last_name %>
+  </p>
+  <p>
+    <%= f.label :current_first_name %><br />
+    <%= f.text_field :current_first_name %>
+  </p>
+  <p>Income classification <br />
+    <%= collection_select(:person, :incomeclassification_id, @incomeclass, :id, :description) %>
+  </p>
+  <p>Occupation classification <br />
+    <%= collection_select(:person, :occupationclassification_id, @occupationclass, :id, :description) %>
+  </p>
+  <p>
+    <%= f.label :birth_date %><br />
+    <%= date_select(:person, :birth_date, :start_year => 1940) %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @person %> |
+<%= link_to 'Back', people_path %>
