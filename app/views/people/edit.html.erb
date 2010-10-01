@@ -16,10 +16,10 @@
     <%= f.text_field :current_first_name %>
   </p>
   <p>Income classification <br />
-    <%= collection_select(:person, :incomeclassification_id, @incomeclass, :id, :description) %>
+    <%= collection_select(:person, :incomeclassification_id, @incomeclass, :id, :description, :prompt => "none selected") %>
   </p>
   <p>Occupation classification <br />
-    <%= collection_select(:person, :occupationclassification_id, @occupationclass, :id, :description) %>
+    <%= collection_select(:person, :occupationclassification_id, @occupationclass, :id, :description, :prompt => "none selected") %>
   </p>
   <p>
     <%= f.label :birth_date %><br />

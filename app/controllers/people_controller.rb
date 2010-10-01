@@ -3,7 +3,7 @@ class PeopleController < ApplicationController
   # GET /people.xml
   def index
     @people = Person.all(:order => "party_id ASC")
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @people }

@@ -19,9 +19,9 @@
     <td><%=h person.current_first_name %></td>
     <td><%=h person.birth_date %></td>
     <td><%=h person.incomeclassification_id %></td>
-    <td><%=h person.incomeclassification.description %></td>
+    <td><%=h none_on_fail {person.incomeclassification.description} %></td>
     <td><%=h person.occupationclassification_id %></td>
-    <td><%=h person.occupationclassification.description %></td>
+    <td><%=h none_on_fail {person.occupationclassification.description} %></td>
     <td><%= link_to 'Show', person %></td>
     <td><%= link_to 'Edit', edit_person_path(person) %></td>
     <td><%= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete %></td>

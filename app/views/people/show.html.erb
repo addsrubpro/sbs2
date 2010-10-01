@@ -14,13 +14,13 @@
   <b>Income classification ID:</b>
   <%=h @person.incomeclassification_id %>
   <b>Description:</b>
-  <%=h @person.incomeclassification.description %>
+  <%=h none_on_fail {@person.incomeclassification.description} %>
 </p>
 <p>
   <b>Occupation classification ID:</b>
   <%=h @person.occupationclassification_id %>
   <b>Description:</b>
-  <%=h @person.occupationclassification.description %>
+  <%=h none_on_fail {@person.occupationclassification.description} %>
 </p>
 <p>
   <b>Birth date:</b>
