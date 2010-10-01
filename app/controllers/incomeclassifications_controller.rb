@@ -2,7 +2,7 @@ class IncomeclassificationsController < ApplicationController
   # GET /incomeclassifications
   # GET /incomeclassifications.xml
   def index
-    @incomeclassifications = Incomeclassification.all
+    @incomeclassifications = Incomeclassification.all(:order => "id ASC")
 
     respond_to do |format|
       format.html # index.html.erb

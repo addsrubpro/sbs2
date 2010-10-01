@@ -2,7 +2,7 @@ class OccupationclassificationsController < ApplicationController
   # GET /occupationclassifications
   # GET /occupationclassifications.xml
   def index
-    @occupationclassifications = Occupationclassification.all
+    @occupationclassifications = Occupationclassification.all(:order => "description ASC")
 
     respond_to do |format|
       format.html # index.html.erb

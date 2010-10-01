@@ -3382,3 +3382,1241 @@ Rendering people/index
   [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
   [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 5) [0m
 Completed in 109ms (View: 62, DB: 16) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 18:26:06) [GET]
+  [4;36;1mPerson Load (515.6ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 3266ms (View: 2297, DB: 531) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 18:26:49) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-01 18:28:24) [GET]
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 219ms (View: 62, DB: 0) | 200 OK [http://localhost/incomeclassifications]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#new (for 127.0.0.1 at 2010-10-01 18:28:27) [GET]
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/new
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://localhost/incomeclassifications/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#create (for 127.0.0.1 at 2010-10-01 18:28:36) [POST]
+  Parameters: {"authenticity_token"=>"k5FWPhJdYczzw7r8xZ3Tqn8Vbw8fKgNW0wgrwZzjQ0k=", "incomeclassification"=>{"description"=>"class1"}, "commit"=>"Create"}
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mIncomeclassification Create (0.0ms)[0m   [0;1mINSERT INTO `incomeclassifications` (`description`, `created_at`, `updated_at`) VALUES('class1', '2010-10-01 16:28:36', '2010-10-01 16:28:36')[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/incomeclassifications/1
+Completed in 125ms (DB: 78) | 302 Found [http://localhost/incomeclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#show (for 127.0.0.1 at 2010-10-01 18:28:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/show
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/incomeclassifications/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-01 18:28:38) [GET]
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+  [4;35;1mIncomeclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/incomeclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#new (for 127.0.0.1 at 2010-10-01 18:28:40) [GET]
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/new
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/incomeclassifications/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#create (for 127.0.0.1 at 2010-10-01 18:28:47) [POST]
+  Parameters: {"authenticity_token"=>"k5FWPhJdYczzw7r8xZ3Tqn8Vbw8fKgNW0wgrwZzjQ0k=", "incomeclassification"=>{"description"=>"class2"}, "commit"=>"Create"}
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mIncomeclassification Create (0.0ms)[0m   [0mINSERT INTO `incomeclassifications` (`description`, `created_at`, `updated_at`) VALUES('class2', '2010-10-01 16:28:47', '2010-10-01 16:28:47')[0m
+  [4;36;1mSQL (156.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/incomeclassifications/2
+Completed in 203ms (DB: 156) | 302 Found [http://localhost/incomeclassifications]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#show (for 127.0.0.1 at 2010-10-01 18:28:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mIncomeclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/show
+Completed in 141ms (View: 16, DB: 16) | 200 OK [http://localhost/incomeclassifications/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-01 18:28:48) [GET]
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/incomeclassifications]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#new (for 127.0.0.1 at 2010-10-01 18:28:50) [GET]
+  [4;35;1mIncomeclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/new
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/incomeclassifications/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#create (for 127.0.0.1 at 2010-10-01 18:28:55) [POST]
+  Parameters: {"authenticity_token"=>"k5FWPhJdYczzw7r8xZ3Tqn8Vbw8fKgNW0wgrwZzjQ0k=", "incomeclassification"=>{"description"=>"class3"}, "commit"=>"Create"}
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mIncomeclassification Create (0.0ms)[0m   [0;1mINSERT INTO `incomeclassifications` (`description`, `created_at`, `updated_at`) VALUES('class3', '2010-10-01 16:28:55', '2010-10-01 16:28:55')[0m
+  [4;35;1mSQL (109.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/incomeclassifications/3
+Completed in 141ms (DB: 125) | 302 Found [http://localhost/incomeclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#show (for 127.0.0.1 at 2010-10-01 18:28:55) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/show
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/incomeclassifications/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-01 18:28:58) [GET]
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/incomeclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2010-10-01 18:29:05) [GET]
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/index
+Completed in 234ms (View: 203, DB: 0) | 200 OK [http://localhost/occupationclassifications]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#new (for 127.0.0.1 at 2010-10-01 18:29:07) [GET]
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/new
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/occupationclassifications/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#create (for 127.0.0.1 at 2010-10-01 18:29:22) [POST]
+  Parameters: {"authenticity_token"=>"k5FWPhJdYczzw7r8xZ3Tqn8Vbw8fKgNW0wgrwZzjQ0k=", "occupationclassification"=>{"description"=>"Student"}}
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOccupationclassification Create (0.0ms)[0m   [0;1mINSERT INTO `occupationclassifications` (`description`, `created_at`, `updated_at`) VALUES('Student', '2010-10-01 16:29:22', '2010-10-01 16:29:22')[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/occupationclassifications/1
+Completed in 203ms (DB: 78) | 302 Found [http://localhost/occupationclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#show (for 127.0.0.1 at 2010-10-01 18:29:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/show
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/occupationclassifications/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2010-10-01 18:29:25) [GET]
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/index
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://localhost/occupationclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#new (for 127.0.0.1 at 2010-10-01 18:29:27) [GET]
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/occupationclassifications/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#create (for 127.0.0.1 at 2010-10-01 18:29:33) [POST]
+  Parameters: {"authenticity_token"=>"k5FWPhJdYczzw7r8xZ3Tqn8Vbw8fKgNW0wgrwZzjQ0k=", "occupationclassification"=>{"description"=>"Employee"}}
+  [4;35;1mOccupationclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOccupationclassification Create (0.0ms)[0m   [0mINSERT INTO `occupationclassifications` (`description`, `created_at`, `updated_at`) VALUES('Employee', '2010-10-01 16:29:33', '2010-10-01 16:29:33')[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/occupationclassifications/2
+Completed in 125ms (DB: 94) | 302 Found [http://localhost/occupationclassifications]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#show (for 127.0.0.1 at 2010-10-01 18:29:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/show
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/occupationclassifications/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2010-10-01 18:29:35) [GET]
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/index
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/occupationclassifications]
+  [4;35;1mSQL (15.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#new (for 127.0.0.1 at 2010-10-01 18:29:37) [GET]
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/new
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/occupationclassifications/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#create (for 127.0.0.1 at 2010-10-01 18:29:43) [POST]
+  Parameters: {"authenticity_token"=>"k5FWPhJdYczzw7r8xZ3Tqn8Vbw8fKgNW0wgrwZzjQ0k=", "occupationclassification"=>{"description"=>"Pensioner"}, "commit"=>"Create"}
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOccupationclassification Create (0.0ms)[0m   [0;1mINSERT INTO `occupationclassifications` (`description`, `created_at`, `updated_at`) VALUES('Pensioner', '2010-10-01 16:29:43', '2010-10-01 16:29:43')[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/occupationclassifications/3
+Completed in 125ms (DB: 94) | 302 Found [http://localhost/occupationclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#show (for 127.0.0.1 at 2010-10-01 18:29:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 3) [0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/show
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/occupationclassifications/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2010-10-01 18:29:44) [GET]
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/index
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/occupationclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 18:29:49) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:29:51) [GET]
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mOccupationclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 266ms (View: 188, DB: 47) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:35:05) [GET]
+  [4;36;1mPerson Columns (46.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;35;1mIncomeclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 188ms (View: 78, DB: 62) | 200 OK [http://localhost/people/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:35:34) [GET]
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 141ms (View: 78, DB: 16) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:35:47) [GET]
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 141ms (View: 78, DB: 0) | 200 OK [http://localhost/people/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 18:37:05) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:37:13) [GET]
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Load (15.6ms)[0m   [0mSELECT * FROM `incomeclassifications` [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;35;1mIncomeclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 125ms (View: 47, DB: 31) | 200 OK [http://localhost/people/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:38:42) [GET]
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mOccupationclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 375ms (View: 78, DB: 16) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:39:07) [GET]
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 109ms (View: 62, DB: 0) | 200 OK [http://localhost/people/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:39:43) [GET]
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 156ms (View: 109, DB: 0) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:39:47) [GET]
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;35;1mIncomeclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 125ms (View: 47, DB: 47) | 200 OK [http://localhost/people/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 18:40:57) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:40:58) [GET]
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;35;1mIncomeclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 156ms (View: 78, DB: 31) | 200 OK [http://localhost/people/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:56:42) [GET]
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mOccupationclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 156ms (View: 62, DB: 47) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 18:56:45) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:56:46) [GET]
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 141ms (View: 78, DB: 31) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-10-01 18:57:05) [POST]
+  Parameters: {"authenticity_token"=>"/A7Sol+8TDTcQl5bhAShjM423uIUg+2cXG7ZCohFsGY=", "person"=>{"current_last_name"=>"", "current_first_name"=>"", "birth_date(1i)"=>"1942", "birth_date(2i)"=>"10", "birth_date(3i)"=>"10", "incomeclassification_id"=>"1", "occupationclassification_id"=>"1"}, "commit"=>"Create"}
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mParty Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `parties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mParty Create (0.0ms)[0m   [0mINSERT INTO `parties` (`created_at`, `updated_at`) VALUES('2010-10-01 16:57:05', '2010-10-01 16:57:05')[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Create (0.0ms)[0m   [0;1mINSERT INTO `people` (`party_id`, `incomeclassification_id`, `occupationclassification_id`, `current_last_name`, `current_first_name`, `birth_date`, `created_at`, `updated_at`) VALUES(1, 1, 1, '', '', '1942-10-10', '2010-10-01 16:57:05', '2010-10-01 16:57:05')[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people/1
+Completed in 172ms (DB: 78) | 302 Found [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-10-01 18:57:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+Rendering template within layouts/people
+Rendering people/show
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 125ms (View: 78, DB: 31) | 200 OK [http://localhost/people/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-10-01 18:57:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/edit
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mOccupationclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 156ms (View: 78, DB: 31) | 200 OK [http://localhost/people/1/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-10-01 18:57:28) [PUT]
+  Parameters: {"authenticity_token"=>"/A7Sol+8TDTcQl5bhAShjM423uIUg+2cXG7ZCohFsGY=", "person"=>{"current_last_name"=>"person1L", "current_first_name"=>"person1F", "incomeclassification_id"=>"1", "occupationclassification_id"=>"1", "birth_date(1i)"=>"1942", "birth_date(2i)"=>"10", "birth_date(3i)"=>"10"}, "commit"=>"Update", "id"=>"1"}
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Update (0.0ms)[0m   [0mUPDATE `people` SET `current_last_name` = 'person1L', `current_first_name` = 'person1F', `updated_at` = '2010-10-01 16:57:29' WHERE `id` = 1[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/people/1
+Completed in 219ms (DB: 94) | 302 Found [http://localhost/people/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-10-01 18:57:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+Rendering template within layouts/people
+Rendering people/show
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://localhost/people/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 18:57:31) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Columns (78.1ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (15.6ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 156ms (View: 47, DB: 94) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:57:33) [GET]
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mOccupationclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 125ms (View: 31, DB: 47) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-10-01 18:58:00) [POST]
+  Parameters: {"authenticity_token"=>"/A7Sol+8TDTcQl5bhAShjM423uIUg+2cXG7ZCohFsGY=", "person"=>{"current_last_name"=>"P2L", "current_first_name"=>"P2", "birth_date(1i)"=>"1988", "birth_date(2i)"=>"1", "birth_date(3i)"=>"7", "incomeclassification_id"=>"3", "occupationclassification_id"=>"2"}, "commit"=>"Create"}
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mParty Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `parties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mParty Create (0.0ms)[0m   [0mINSERT INTO `parties` (`created_at`, `updated_at`) VALUES('2010-10-01 16:58:00', '2010-10-01 16:58:00')[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Create (0.0ms)[0m   [0;1mINSERT INTO `people` (`party_id`, `incomeclassification_id`, `occupationclassification_id`, `current_last_name`, `current_first_name`, `birth_date`, `created_at`, `updated_at`) VALUES(2, 3, 2, 'P2L', 'P2', '1988-01-07', '2010-10-01 16:58:00', '2010-10-01 16:58:00')[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people/2
+Completed in 219ms (DB: 141) | 302 Found [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-10-01 18:58:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+Rendering template within layouts/people
+Rendering people/show
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+Completed in 94ms (View: 47, DB: 31) | 200 OK [http://localhost/people/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 18:58:06) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+Completed in 203ms (View: 156, DB: 31) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:58:14) [GET]
+  [4;36;1mPerson Columns (31.2ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 172ms (View: 47, DB: 47) | 200 OK [http://localhost/people/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 18:58:18) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+Completed in 109ms (View: 62, DB: 16) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 18:58:22) [GET]
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 141ms (View: 62, DB: 47) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-10-01 18:58:56) [POST]
+  Parameters: {"authenticity_token"=>"/A7Sol+8TDTcQl5bhAShjM423uIUg+2cXG7ZCohFsGY=", "person"=>{"current_last_name"=>"P3", "current_first_name"=>"P3F", "birth_date(1i)"=>"1989", "birth_date(2i)"=>"2", "birth_date(3i)"=>"5", "incomeclassification_id"=>"3", "occupationclassification_id"=>"3"}, "commit"=>"Create"}
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mParty Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `parties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mParty Create (0.0ms)[0m   [0mINSERT INTO `parties` (`created_at`, `updated_at`) VALUES('2010-10-01 16:58:56', '2010-10-01 16:58:56')[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Create (0.0ms)[0m   [0;1mINSERT INTO `people` (`party_id`, `incomeclassification_id`, `occupationclassification_id`, `current_last_name`, `current_first_name`, `birth_date`, `created_at`, `updated_at`) VALUES(3, 3, 3, 'P3', 'P3F', '1989-02-05', '2010-10-01 16:58:56', '2010-10-01 16:58:56')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people/3
+Completed in 203ms (DB: 109) | 302 Found [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-10-01 18:58:56) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 3) [0m
+Rendering template within layouts/people
+Rendering people/show
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 3) [0m
+Completed in 94ms (View: 47, DB: 31) | 200 OK [http://localhost/people/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 18:59:04) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 3) [0m
+Completed in 125ms (View: 94, DB: 16) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 19:00:16) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 3) [0m
+Completed in 109ms (View: 47, DB: 47) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 19:00:42) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 3) [0m
+Completed in 109ms (View: 78, DB: 16) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-10-01 19:00:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` [0m
+  [4;35;1mOccupationclassification Load (15.6ms)[0m   [0mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/edit
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 125ms (View: 62, DB: 31) | 200 OK [http://localhost/people/2/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-10-01 19:00:54) [PUT]
+  Parameters: {"authenticity_token"=>"/A7Sol+8TDTcQl5bhAShjM423uIUg+2cXG7ZCohFsGY=", "person"=>{"current_last_name"=>"P2L", "current_first_name"=>"P2", "incomeclassification_id"=>"1", "occupationclassification_id"=>"2", "birth_date(1i)"=>"1987", "birth_date(2i)"=>"1", "birth_date(3i)"=>"7"}, "commit"=>"Update", "id"=>"2"}
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Update (15.6ms)[0m   [0mUPDATE `people` SET `incomeclassification_id` = 1, `birth_date` = '1987-01-07', `updated_at` = '2010-10-01 17:00:54' WHERE `id` = 2[0m
+  [4;36;1mSQL (62.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/people/2
+Completed in 125ms (DB: 78) | 302 Found [http://localhost/people/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-10-01 19:00:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+Rendering template within layouts/people
+Rendering people/show
+  [4;35;1mIncomeclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+Completed in 188ms (View: 141, DB: 31) | 200 OK [http://localhost/people/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 19:00:56) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 3) [0m
+Completed in 125ms (View: 78, DB: 16) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-10-01 19:01:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/edit
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 125ms (View: 62, DB: 16) | 200 OK [http://localhost/people/1/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-10-01 19:01:17) [PUT]
+  Parameters: {"authenticity_token"=>"/A7Sol+8TDTcQl5bhAShjM423uIUg+2cXG7ZCohFsGY=", "person"=>{"current_last_name"=>"person1Ld", "current_first_name"=>"person1Fddd", "incomeclassification_id"=>"2", "occupationclassification_id"=>"1", "birth_date(1i)"=>"1942", "birth_date(2i)"=>"10", "birth_date(3i)"=>"10"}, "commit"=>"Update", "id"=>"1"}
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Update (0.0ms)[0m   [0;1mUPDATE `people` SET `current_last_name` = 'person1Ld', `current_first_name` = 'person1Fddd', `incomeclassification_id` = 2, `updated_at` = '2010-10-01 17:01:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people/1
+Completed in 125ms (DB: 94) | 302 Found [http://localhost/people/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-10-01 19:01:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+Rendering template within layouts/people
+Rendering people/show
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 109ms (View: 78, DB: 16) | 200 OK [http://localhost/people/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 19:01:19) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 3) [0m
+Completed in 125ms (View: 78, DB: 16) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-01 19:02:17) [GET]
+
+SyntaxError (d:/Rails Application/sbs2/app/controllers/people_controller.rb:5: syntax error, unexpected tCONSTANT, expecting ')'
+    @people = Person.all(:order => :party_id DESC)
+                                                 ^):
+  <internal:prelude>:8:in `synchronize'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (218.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-01 19:02:39) [GET]
+
+SyntaxError (d:/Rails Application/sbs2/app/controllers/people_controller.rb:5: syntax error, unexpected tCONSTANT, expecting ')'
+    @people = Person.all(:order => :party_id ASC)
+                                                ^):
+  <internal:prelude>:8:in `synchronize'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (765.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 19:02:47) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 3) [0m
+Completed in 250ms (View: 203, DB: 16) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 19:03:44) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id DESC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (15.6ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 3) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 109ms (View: 78, DB: 16) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 19:04:04) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 3) [0m
+Completed in 125ms (View: 78, DB: 16) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-01 21:12:55) [GET]
+
+ActionController::RoutingError (No route matches "/incomeclassification" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-01 21:12:59) [GET]
+
+SyntaxError (d:/Rails Application/sbs2/app/controllers/incomeclassifications_controller.rb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+    respond_to do |format|
+              ^):
+  <internal:prelude>:8:in `synchronize'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (484.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-01 21:13:43) [GET]
+  [4;36;1mIncomeclassification Load (15.6ms)[0m   [0;1mSELECT * FROM `incomeclassifications` ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/incomeclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-01 21:13:43) [GET]
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/incomeclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-01 21:13:57) [GET]
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` ORDER BY id DESC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/incomeclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-01 21:14:05) [GET]
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/incomeclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-01 21:14:51) [GET]
+
+ActionController::RoutingError (No route matches "/descriptionclassification" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-01 21:14:55) [GET]
+
+ActionController::RoutingError (No route matches "/descriptionclassifications" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2010-10-01 21:15:06) [GET]
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` ORDER BY description ASC[0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/index
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://localhost/occupationclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2010-10-01 21:15:17) [GET]
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` ORDER BY description DESC[0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/index
+  [4;35;1mOccupationclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/occupationclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2010-10-01 21:15:26) [GET]
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` ORDER BY description ASC[0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/index
+  [4;35;1mOccupationclassification Columns (31.2ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 94ms (View: 47, DB: 31) | 200 OK [http://localhost/occupationclassifications]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-01 21:15:41) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 2) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 3) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 3) [0m
+Completed in 109ms (View: 62, DB: 31) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-01 21:16:54) [GET]
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/new
+  [4;35;1mIncomeclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 125ms (View: 47, DB: 31) | 200 OK [http://localhost/people/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-10-01 21:17:20) [POST]
+  Parameters: {"authenticity_token"=>"/A7Sol+8TDTcQl5bhAShjM423uIUg+2cXG7ZCohFsGY=", "person"=>{"current_last_name"=>"new", "current_first_name"=>"new", "birth_date(1i)"=>"1996", "birth_date(2i)"=>"10", "birth_date(3i)"=>"1", "incomeclassification_id"=>"1", "occupationclassification_id"=>""}, "commit"=>"Create"}
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mParty Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `parties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mParty Create (0.0ms)[0m   [0;1mINSERT INTO `parties` (`created_at`, `updated_at`) VALUES('2010-10-01 19:17:21', '2010-10-01 19:17:21')[0m
+  [4;35;1mSQL (93.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Create (0.0ms)[0m   [0mINSERT INTO `people` (`party_id`, `incomeclassification_id`, `occupationclassification_id`, `current_last_name`, `current_first_name`, `birth_date`, `created_at`, `updated_at`) VALUES(4, 1, NULL, 'new', 'new', '1996-10-01', '2010-10-01 19:17:21', '2010-10-01 19:17:21')[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/people/4
+Completed in 172ms (DB: 125) | 302 Found [http://localhost/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-10-01 21:17:21) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 4) [0m
+Rendering template within layouts/people
+Rendering people/show
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+
+ActionView::TemplateError (undefined method `description' for nil:NilClass) on line #23 of app/views/people/show.html.erb:
+20:   <b>Occupation classification ID:</b>
+21:   <%=h @person.occupationclassification_id %>
+22:   <b>Description:</b>
+23:   <%=h @person.occupationclassification.description %>
+24: </p>
+25: <p>
+26:   <b>Birth date:</b>
+
+    app/views/people/show.html.erb:23
+    app/controllers/people_controller.rb:18:in `show'
+    <internal:prelude>:8:in `synchronize'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (421.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-10-01 21:22:48) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 4) [0m
+Rendering template within layouts/people
+Rendering people/show
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 0) [0m
+
+ActionView::TemplateError (undefined method `description' for nil:NilClass) on line #23 of app/views/people/show.html.erb:
+20:   <b>Occupation classification ID:</b>
+21:   <%=h @person.occupationclassification_id %>
+22:   <b>Description:</b>
+23:   <%=h @person.occupationclassification.description %>
+24: </p>
+25: <p>
+26:   <b>Birth date:</b>
+
+    app/views/people/show.html.erb:23
+    app/controllers/people_controller.rb:18:in `show'
+    <internal:prelude>:8:in `synchronize'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (671.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (15.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-10-01 21:22:54) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 4) [0m
+Rendering template within layouts/people
+Rendering people/show
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 0) [0m
+
+ActionView::TemplateError (undefined method `description' for nil:NilClass) on line #23 of app/views/people/show.html.erb:
+20:   <b>Occupation classification ID:</b>
+21:   <%=h @person.occupationclassification_id %>
+22:   <b>Description:</b>
+23:   <%=h @person.occupationclassification.description %>
+24: </p>
+25: <p>
+26:   <b>Birth date:</b>
+
+    app/views/people/show.html.erb:23
+    app/controllers/people_controller.rb:18:in `show'
+    <internal:prelude>:8:in `synchronize'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (812.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)

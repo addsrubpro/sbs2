@@ -4,16 +4,6 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :party_id %><br />
-    <%= f.text_field :party_id %>
-  </p>
-  <p>Income classification <br />
-    <%= collection_select(:person, :incomeclassification_id, @incomeclass, :id, :description) %>
-  </p>
-  <p>Occupation classification <br />
-    <%= collection_select(:person, :occupationclassification_id, @occupationclass, :id, :description) %>
-  </p>
-  <p>
     <%= f.label :current_last_name %><br />
     <%= f.text_field :current_last_name %>
   </p>
@@ -23,8 +13,15 @@
   </p>
   <p>
     <%= f.label :birth_date %><br />
-    <%= f.date_select :birth_date %>
+    <%= f.date_select(:birth_date, :start_year => 1940) %>
   </p>
+  <p>Income classification <br />
+    <%= collection_select(:person, :incomeclassification_id, @incomeclass, :id, :description, :prompt => true) %>
+  </p>
+  <p>Occupation classification <br />
+    <%= collection_select(:person, :occupationclassification_id, @occupationclass, :id, :description, :prompt => true) %>
+  </p>
+  
   <p>
     <%= f.submit 'Create' %>
   </p>
