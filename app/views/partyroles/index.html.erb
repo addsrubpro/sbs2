@@ -1,0 +1,25 @@
+<h1>Listing partyroles</h1>
+
+<table>
+  <tr>
+    <th>Party</th>
+    <th>Role</th>
+  </tr>
+<% @party_id = @partyrole.party_id %>
+
+<% @partyroles.each do |partyrole| %>
+  <tr>
+    <td><%=h partyrole.party_id %></td>
+    <td><%=h partyrole.role_id %></td>
+    <td><%= link_to 'Show', partyrole %></td>
+    <td><%= link_to 'Edit', edit_partyrole_path(partyrole) %></td>
+    <td><%= link_to 'Destroy', partyrole, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+<%= link_to "New partyrole assignment", :controller => "partyroles", :action => "new", :party_id => @party_id %>|
+<%= link_to 'Quit role assignment', people_path %>

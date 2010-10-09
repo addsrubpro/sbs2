@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 5) do
 
   create_table "incomeclassifications", :force => true do |t|
     t.string   "description", :limit => 30
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 4) do
   end
 
   create_table "occupationclassifications", :force => true do |t|
-    t.string   "description"
+    t.string   "description", :limit => 30
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(:version => 4) do
     t.string   "current_last_name",           :limit => 20
     t.string   "current_first_name",          :limit => 20
     t.date     "birth_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles", :force => true do |t|
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

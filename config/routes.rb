@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :partyroles
+
+  map.resources :roles
+
   map.resources :occupationclassifications
 
   map.resources :incomeclassifications

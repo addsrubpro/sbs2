@@ -1,0 +1,16 @@
+<p>
+  <b>Party:</b>
+  <%=h @partyrole.party_id %>
+</p>
+<b>Role:</b>
+<table>
+<% @partyroles.each do |partyrole| %>
+  <tr>
+  <%=h partyrole.role_id %>
+  </tr>
+<% end %>
+</table>
+
+
+<%= link_to 'Edit', edit_partyrole_path(@partyrole) %> |
+<%= link_to 'Back', partyroles_path %>

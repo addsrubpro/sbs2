@@ -1,0 +1,98 @@
+class PartyrolesController < ApplicationController
+  # GET /partyroles
+  # GET /partyroles.xml
+  def index
+    unless ("#{params[:party_id]}".empty? || "#{params[:party_id]}".nil? || "#{params[:party_id]}" == 0) 
+      $party_id = "%#{params[:party_id]}%"
+    end
+    @partyroles = Partyrole.find(:all, :conditions => ["party_id LIKE ?", $party_id])
+    @partyrole = Person.find(:first, :conditions => ["party_id LIKE ?", $party_id])
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @partyroles }
+    end
+  end
+
+  # GET /partyroles/1
+  # GET /partyroles/1.xml
+  def show
+    @partyroles = Partyrole.find(:all, :conditions => ["party_id LIKE ?", $party_id])
+    @partyrole = Person.find(:first, :conditions => ["party_id LIKE ?", $party_id])
+    
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @partyrole }
+    end
+  end
+
+  # GET /partyroles/new
+  # GET /partyroles/new.xml
+  def new
+    $party_id = "#{params[:party_id]}"
+    @partyrole = Partyrole.new
+    
+    @role_for_party = Partyrole.find(:all, :conditions => ["party_id LIKE ?", $party_id], :select => "role_id")
+    @role_id_for_party = Array.new << 0
+    @length = @role_for_party.length
+    (1..@length).each do |a|
+      @role_id_for_party << @role_for_party[a-1].role_id
+    end
+    
+    @roles = Role.find(:all, :conditions => ["id NOT IN (?)", @role_id_for_party] )
+        
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @partyrole }
+    end
+  end
+
+  # GET /partyroles/1/edit
+  def edit
+    @partyrole = Partyrole.find(params[:id])
+  end
+
+  # POST /partyroles
+  # POST /partyroles.xml
+  def create
+    @partyrole = Partyrole.new(params[:partyrole])
+    
+    respond_to do |format|
+      if @partyrole.save
+        format.html { redirect_to(@partyrole, :notice => 'Partyrole was successfully updated.') }
+        format.xml  { render :xml => @partyrole, :status => :created, :location => @partyrole }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @partyrole.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /partyroles/1
+  # PUT /partyroles/1.xml
+  def update
+    @partyrole = Partyrole.find(params[:id])
+
+    respond_to do |format|
+      if @partyrole.update_attributes(params[:partyrole])
+        format.html { redirect_to(@partyrole, :notice => 'Partyrole was successfully updated.') }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @partyrole.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /partyroles/1
+  # DELETE /partyroles/1.xml
+  def destroy
+    @partyrole = Partyrole.find(params[:id])
+    @partyrole.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(partyroles_url) }
+      format.xml  { head :ok }
+    end
+  end
+end

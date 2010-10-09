@@ -1,0 +1,20 @@
+<h1>New partyrole</h1>
+
+<% form_for @partyrole do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%=  %><br />
+    <%= $party_id %>
+    <%= f.hidden_field :party_id, :value => $party_id %>
+  </p>
+  <p>Role assignment<br />
+    <%= collection_select(:partyrole, :role_id, @roles, :id, :description, :prompt => true) %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', partyroles_path %> |
+<%= link_to 'Quit role assignment', people_path %>
