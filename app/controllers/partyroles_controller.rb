@@ -5,8 +5,8 @@ class PartyrolesController < ApplicationController
     unless ("#{params[:party_id]}".empty? || "#{params[:party_id]}".nil? || "#{params[:party_id]}" == 0) 
       $party_id = "#{params[:party_id]}"
     end
-    @partyroles = Partyrole.find(:all, :conditions => ["party_id LIKE ?", $party_id])
-    @partyrole = Person.find(:first, :conditions => ["party_id LIKE ?", $party_id])
+    @partyroles = Partyrole.find(:all, :conditions => ["party_id = ?", $party_id])
+    @partyrole = Person.find(:first, :conditions => ["party_id = ?", $party_id])
     
     respond_to do |format|
       format.html # index.html.erb
@@ -17,8 +17,8 @@ class PartyrolesController < ApplicationController
   # GET /partyroles/1
   # GET /partyroles/1.xml
   def show
-    @partyroles = Partyrole.find(:all, :conditions => ["party_id LIKE ?", $party_id])
-    @partyrole = Person.find(:first, :conditions => ["party_id LIKE ?", $party_id])
+    @partyroles = Partyrole.find(:all, :conditions => ["party_id = ?", $party_id])
+    @partyrole = Person.find(:first, :conditions => ["party_id = ?", $party_id])
     
     respond_to do |format|
       format.html # show.html.erb
@@ -32,7 +32,7 @@ class PartyrolesController < ApplicationController
     $party_id = "#{params[:party_id]}"
     @partyrole = Partyrole.new
     
-    @role_for_party = Partyrole.find(:all, :conditions => ["party_id LIKE ?", $party_id], :select => "role_id")
+    @role_for_party = Partyrole.find(:all, :conditions => ["party_id = ?", $party_id], :select => "role_id")
     @role_id_for_party = Array.new << 0
     @length = @role_for_party.length
     (1..@length).each do |a|

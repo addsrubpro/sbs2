@@ -36250,3 +36250,825 @@ Rendering people/index
   [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
 Completed in 109ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 10:29:27) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (15.6ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 125ms (View: 62, DB: 31) | 200 OK [http://127.0.0.1/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:29:30) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Completed in 62ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/partyroles?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 10:29:36) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id LIKE '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#create (for 127.0.0.1 at 2010-10-15 10:29:42) [POST]
+  Parameters: {"authenticity_token"=>"4HPB6C1GwT/wEQtGF9Eq/dD0oXh20yz3z1b3tfZ+72Y=", "partyrole"=>{"party_id"=>"2", "role_id"=>"1"}, "commit"=>"Create"}
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPartyrole Create (0.0ms)[0m   [0mINSERT INTO `partyroles` (`party_id`, `role_id`, `created_at`, `updated_at`) VALUES(2, 1, '2010-10-15 08:29:42', '2010-10-15 08:29:42')[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles/5
+Completed in 125ms (DB: 78) | 302 Found [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:29:42) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id LIKE '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id LIKE '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 0, DB: 31) | 200 OK [http://127.0.0.1/partyroles/5]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:29:44) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 0, DB: 47) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:30:13) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 10:30:15) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 109ms (View: 62, DB: 31) | 200 OK [http://127.0.0.1/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:30:17) [GET]
+  Parameters: {"party_id"=>"1"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '1') [0m
+  [4;36;1mPerson Load (15.6ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 109ms (View: 47, DB: 31) | 200 OK [http://127.0.0.1/partyroles?party_id=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 10:30:20) [GET]
+  Parameters: {"party_id"=>"1"}
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id LIKE '1') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1,3)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 10:30:23) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/people]
+  [4;35;1mSQL (15.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:30:29) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/partyroles?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 10:30:34) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id LIKE '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#create (for 127.0.0.1 at 2010-10-15 10:30:37) [POST]
+  Parameters: {"authenticity_token"=>"LnVRkn/T9iR5Ym0zoAwuv3BvIJwGoTDxlxT7/0xZD1s=", "partyrole"=>{"party_id"=>"2", "role_id"=>"2"}, "commit"=>"Create"}
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPartyrole Create (0.0ms)[0m   [0mINSERT INTO `partyroles` (`party_id`, `role_id`, `created_at`, `updated_at`) VALUES(2, 2, '2010-10-15 08:30:37', '2010-10-15 08:30:37')[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles/6
+Completed in 141ms (DB: 94) | 302 Found [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:30:37) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id LIKE '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id LIKE '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 156ms (View: 94, DB: 31) | 200 OK [http://127.0.0.1/partyroles/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:30:38) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (15.6ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 10:30:41) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://127.0.0.1/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 10:31:11) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 94ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:31:13) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 16, DB: 31) | 200 OK [http://127.0.0.1/partyroles?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:31:15) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:31:17) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:31:19) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/partyroles/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:31:23) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 16, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:31:30) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/partyroles/5]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:31:32) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:31:36) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:31:37) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#destroy (for 127.0.0.1 at 2010-10-15 10:31:42) [DELETE]
+  Parameters: {"authenticity_token"=>"LnVRkn/T9iR5Ym0zoAwuv3BvIJwGoTDxlxT7/0xZD1s=", "id"=>"6"}
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (`partyroles`.`id` = 6) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPartyrole Destroy (0.0ms)[0m   [0;1mDELETE FROM `partyroles` WHERE `id` = 6[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles
+Completed in 125ms (DB: 94) | 302 Found [http://127.0.0.1/partyroles/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:31:42) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 109ms (View: 31, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#destroy (for 127.0.0.1 at 2010-10-15 10:31:46) [DELETE]
+  Parameters: {"authenticity_token"=>"LnVRkn/T9iR5Ym0zoAwuv3BvIJwGoTDxlxT7/0xZD1s=", "id"=>"5"}
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (15.6ms)[0m   [0mSELECT * FROM `partyroles` WHERE (`partyroles`.`id` = 5) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPartyrole Destroy (0.0ms)[0m   [0mDELETE FROM `partyroles` WHERE `id` = 5[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles
+Completed in 109ms (DB: 94) | 302 Found [http://127.0.0.1/partyroles/5]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:31:46) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 47ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 10:31:48) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id LIKE '2') [0m
+  [4;36;1mRole Load (15.6ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 78ms (View: 16, DB: 31) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#create (for 127.0.0.1 at 2010-10-15 10:31:54) [POST]
+  Parameters: {"authenticity_token"=>"LnVRkn/T9iR5Ym0zoAwuv3BvIJwGoTDxlxT7/0xZD1s=", "partyrole"=>{"party_id"=>"2", "role_id"=>"1"}, "commit"=>"Create"}
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPartyrole Create (0.0ms)[0m   [0;1mINSERT INTO `partyroles` (`party_id`, `role_id`, `created_at`, `updated_at`) VALUES(2, 1, '2010-10-15 08:31:54', '2010-10-15 08:31:54')[0m
+  [4;35;1mSQL (250.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles/7
+Completed in 281ms (DB: 250) | 302 Found [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:31:54) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 0, DB: 31) | 200 OK [http://127.0.0.1/partyroles/7]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:31:56) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:31:58) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles/7]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:32:00) [GET]
+  [4;36;1mPartyrole Load (15.6ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 172ms (View: 109, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 10:32:03) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id LIKE '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 94ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#create (for 127.0.0.1 at 2010-10-15 10:32:06) [POST]
+  Parameters: {"authenticity_token"=>"LnVRkn/T9iR5Ym0zoAwuv3BvIJwGoTDxlxT7/0xZD1s=", "partyrole"=>{"party_id"=>"2", "role_id"=>"3"}, "commit"=>"Create"}
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPartyrole Create (0.0ms)[0m   [0;1mINSERT INTO `partyroles` (`party_id`, `role_id`, `created_at`, `updated_at`) VALUES(2, 3, '2010-10-15 08:32:06', '2010-10-15 08:32:06')[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles/8
+Completed in 125ms (DB: 94) | 302 Found [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:32:06) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles/8]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:32:07) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (375.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 438ms (View: 31, DB: 375) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:32:09) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles/8]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:32:12) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 16, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:33:32) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 10:33:36) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 109ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:33:37) [GET]
+  Parameters: {"party_id"=>"1"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '1') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles?party_id=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:33:39) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id LIKE '1') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id LIKE '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/partyroles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:33:40) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '1') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:33:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id LIKE '1') [0m
+  [4;35;1mPerson Load (15.6ms)[0m   [0mSELECT * FROM `people` WHERE (party_id LIKE '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 31) | 200 OK [http://127.0.0.1/partyroles/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:33:44) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '1') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 172ms (View: 109, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:33:45) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id LIKE '1') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id LIKE '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:33:46) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '1') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 10:33:47) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 109ms (View: 78, DB: 16) | 200 OK [http://127.0.0.1/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:33:49) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/partyroles?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:33:51) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id LIKE '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id LIKE '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 156ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/partyroles/7]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:33:52) [GET]
+  [4;36;1mPartyrole Load (15.6ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 109ms (View: 47, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:33:54) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id LIKE '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id LIKE '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 156ms (View: 47, DB: 16) | 200 OK [http://127.0.0.1/partyroles/8]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:33:55) [GET]
+  [4;36;1mPartyrole Load (15.6ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:34:18) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''2') LIMIT 1' at line 1: SELECT * FROM `people` WHERE (party_id =qqqq '2') LIMIT 1[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''2')  LIMIT 1' at line 1: SELECT * FROM `people` WHERE (party_id =qqqq '2')  LIMIT 1):
+  app/controllers/partyroles_controller.rb:21:in `show'
+  <internal:prelude>:8:in `synchronize'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (625.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:34:21) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (78.1ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 156ms (View: 47, DB: 78) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 10:34:29) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles/8]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 10:34:31) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 109ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 10:34:33) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 94ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/people]
