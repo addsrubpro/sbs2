@@ -3,7 +3,7 @@ class PartyrolesController < ApplicationController
   # GET /partyroles.xml
   def index
     unless ("#{params[:party_id]}".empty? || "#{params[:party_id]}".nil? || "#{params[:party_id]}" == 0) 
-      $party_id = "%#{params[:party_id]}%"
+      $party_id = "#{params[:party_id]}"
     end
     @partyroles = Partyrole.find(:all, :conditions => ["party_id LIKE ?", $party_id])
     @partyrole = Person.find(:first, :conditions => ["party_id LIKE ?", $party_id])
