@@ -3,11 +3,14 @@
 <% form_for @partyrole do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%=  %><br />
-    <%= $party_id %>
+  <b>
+    Party ID: 
+    <%= @person.party_id %><br />
+    Name: 
+    <%= @person.current_first_name %> 
+    <%= @person.current_last_name %>
     <%= f.hidden_field :party_id, :value => $party_id %>
-  </p>
+  </b>
   <p>Role assignment<br />
     <%= collection_select(:partyrole, :role_id, @roles, :id, :description, :prompt => true) %>
   </p>

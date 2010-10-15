@@ -2,15 +2,19 @@
   <b>Party:</b>
   <%=h @partyrole.party_id %>
 </p>
-<b>Role:</b>
+<b>Role(s):</b>
 <table>
 <% @partyroles.each do |partyrole| %>
-  <tr>
-  <%=h partyrole.role_id %>
+  <tr><br />
+    <nobr>
+    <%=h partyrole.role_id %>
+    <%=h partyrole.role.description %>
+    </nobr>
   </tr>
 <% end %>
 </table>
-
+</nobr> 
+<br />
 
 <%= link_to 'Edit', edit_partyrole_path(@partyrole) %> |
 <%= link_to 'Back', partyroles_path %>

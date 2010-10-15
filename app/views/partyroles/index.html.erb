@@ -1,5 +1,14 @@
 <h1>Listing partyroles</h1>
 
+<b>
+    Party ID: 
+    <%= @person.party_id %><br />
+    Name: 
+    <%= @person.current_first_name %> 
+    <%= @person.current_last_name %>
+</b>
+<br /><br />
+
 <table>
   <tr>
     <th>Party</th>
@@ -10,7 +19,7 @@
 <% @partyroles.each do |partyrole| %>
   <tr>
     <td><%=h partyrole.party_id %></td>
-    <td><%=h partyrole.role_id %></td>
+    <td><%=h partyrole.role.description %></td>
     <td><%= link_to 'Show', partyrole %></td>
     <td><%= link_to 'Edit', edit_partyrole_path(partyrole) %></td>
     <td><%= link_to 'Destroy', partyrole, :confirm => 'Are you sure?', :method => :delete %></td>

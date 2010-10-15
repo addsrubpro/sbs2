@@ -37072,3 +37072,2160 @@ Rendering people/index
   [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
 Completed in 94ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 10:54:52) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 250ms (View: 203, DB: 31) | 200 OK [http://127.0.0.1/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 11:07:26) [GET]
+  Parameters: {"party_id"=>"1"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '1') [0m
+  [4;35;1mPerson Load (15.6ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (1343.8ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (6875.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 8312ms (View: 47, DB: 8234) | 200 OK [http://127.0.0.1/partyroles?party_id=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-10-15 12:45:11) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 328ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/rails/info/properties]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 12:46:43) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (406.2ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (156.2ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 2953ms (View: 2078, DB: 578) | 200 OK [http://127.0.0.1/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 12:46:56) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/partyroles?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 12:47:01) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 109ms (View: 78, DB: 16) | 200 OK [http://127.0.0.1/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 12:47:10) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/partyroles?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 12:47:39) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,1,3)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 203ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 12:47:44) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 16, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 12:51:13) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 12:57:13) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT current_last_name FROM `people` WHERE (party_id = '2') [0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1,3)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+ERROR: compiling _run_erb_app47views47partyroles47new46html46erb RAISED d:/Rails Application/sbs2/app/views/partyroles/new.html.erb:10: syntax error, unexpected '<'
+    <%= f.hidden_field :party_id, ...
+     ^
+Function body: #coding:CP850
+          def _run_erb_app47views47partyroles47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New partyrole</h1>\n\n"
+
+;  form_for @partyrole do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat((  ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( $party_id ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( @person.current_last_name >
+    <%= f.hidden_field :party_id, :value => $party_id ).to_s); @output_buffer.concat "\n  </p>\n  <p>Role assignment<br />\n    "
+
+
+; @output_buffer.concat(( collection_select(:partyrole, :role_id, @roles, :id, :description, :prompt => true) ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', partyroles_path ).to_s); @output_buffer.concat " |\n"
+; @output_buffer.concat(( link_to 'Quit role assignment', people_path ).to_s); @output_buffer.force_encoding(__ENCODING__)
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/renderable.rb:91:in `module_eval'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/renderable.rb:91:in `compile!'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+d:/Programme/Ruby191/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `block in custom'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:175:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:175:in `block in respond'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+d:/Rails Application/sbs2/app/controllers/partyroles_controller.rb:45:in `new'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+d:/Programme/Ruby191/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action_with_flash'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process_with_filters'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `block in call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `block in call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `block in call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (d:/Rails Application/sbs2/app/views/partyroles/new.html.erb:10: syntax error, unexpected '<'
+    <%= f.hidden_field :party_id, ...
+     ^) on line #10 of app/views/partyroles/new.html.erb:
+7:     <%=  %><br />
+8:     <%= $party_id %>
+9:     <%= @person.current_last_name >
+10:     <%= f.hidden_field :party_id, :value => $party_id %>
+11:   </p>
+12:   <p>Role assignment<br />
+13:     <%= collection_select(:partyrole, :role_id, @roles, :id, :description, :prompt => true) %>
+
+    app/controllers/partyroles_controller.rb:45:in `new'
+    <internal:prelude>:8:in `synchronize'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (671.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 12:57:33) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT current_last_name FROM `people` WHERE (party_id = '2') [0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1,3)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+ERROR: compiling _run_erb_app47views47partyroles47new46html46erb RAISED d:/Rails Application/sbs2/app/views/partyroles/new.html.erb:9: syntax error, unexpected '>'
+Function body: #coding:CP850
+          def _run_erb_app47views47partyroles47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New partyrole</h1>\n\n"
+
+;  form_for @partyrole do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat((  ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( $party_id ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( @person.current_last_name% >
+    <%= f.hidden_field :party_id, :value => $party_id ).to_s); @output_buffer.concat "\n  </p>\n  <p>Role assignment<br />\n    "
+
+
+; @output_buffer.concat(( collection_select(:partyrole, :role_id, @roles, :id, :description, :prompt => true) ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', partyroles_path ).to_s); @output_buffer.concat " |\n"
+; @output_buffer.concat(( link_to 'Quit role assignment', people_path ).to_s); @output_buffer.force_encoding(__ENCODING__)
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/renderable.rb:91:in `module_eval'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/renderable.rb:91:in `compile!'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+d:/Programme/Ruby191/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `block in custom'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:175:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:175:in `block in respond'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+d:/Rails Application/sbs2/app/controllers/partyroles_controller.rb:45:in `new'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+d:/Programme/Ruby191/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action_with_flash'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process_with_filters'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `block in call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `block in call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `block in call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (d:/Rails Application/sbs2/app/views/partyroles/new.html.erb:9: syntax error, unexpected '>') on line #9 of app/views/partyroles/new.html.erb:
+6:   <p>
+7:     <%=  %><br />
+8:     <%= $party_id %>
+9:     <%= @person.current_last_name% >
+10:     <%= f.hidden_field :party_id, :value => $party_id %>
+11:   </p>
+12:   <p>Role assignment<br />
+
+    app/controllers/partyroles_controller.rb:45:in `new'
+    <internal:prelude>:8:in `synchronize'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (812.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 12:57:52) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT current_last_name FROM `people` WHERE (party_id = '2') [0m
+  [4;35;1mPartyrole Columns (140.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1,3)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+
+ActionView::TemplateError (undefined method `current_last_name' for [#<Person current_last_name: "person2">]:Array) on line #9 of app/views/partyroles/new.html.erb:
+6:   <p>
+7:     <%=  %><br />
+8:     <%= $party_id %>
+9:     <%= @person.current_last_name %>
+10:     <%= f.hidden_field :party_id, :value => $party_id %>
+11:   </p>
+12:   <p>Role assignment<br />
+
+    app/views/partyroles/new.html.erb:9:in `block in _run_erb_app47views47partyroles47new46html46erb'
+    app/views/partyroles/new.html.erb:3
+    app/controllers/partyroles_controller.rb:45:in `new'
+    <internal:prelude>:8:in `synchronize'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (312.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 12:59:08) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT current_last_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (15.6ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,1,3)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mRole Columns (78.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 391ms (View: 234, DB: 109) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:02:39) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id,current_last_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (15.6ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,1,3)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 141ms (View: 78, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:02:50) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id,current_last_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (15.6ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,1,3)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 109ms (View: 16, DB: 47) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:03:22) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 16, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#destroy (for 127.0.0.1 at 2010-10-15 13:03:31) [DELETE]
+  Parameters: {"authenticity_token"=>"01iaGVZP/zlBDiYYZtdbXfqwyVYoolBpELVVywquREs=", "id"=>"8"}
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (`partyroles`.`id` = 8) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPartyrole Destroy (15.6ms)[0m   [0;1mDELETE FROM `partyroles` WHERE `id` = 8[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles
+Completed in 109ms (DB: 94) | 302 Found [http://127.0.0.1/partyroles/8]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:03:31) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:03:33) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id,current_last_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 234ms (View: 156, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:03:38) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id,current_last_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (15.6ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 109ms (View: 16, DB: 47) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 13:04:45) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:04:52) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 16, DB: 31) | 200 OK [http://127.0.0.1/partyroles?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:04:55) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id,current_last_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 109ms (View: 16, DB: 31) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:05:38) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id,current_last_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+
+ActionView::TemplateError (missing attribute: current_first_name) on line #10 of app/views/partyroles/new.html.erb:
+7:     <%=  %><br />
+8:     <%= @person.party_id %>
+9:     <%= @person.current_last_name %>
+10:     <%= @person.current_first_name %>
+11:     <%= f.hidden_field :party_id, :value => $party_id %>
+12:   </p>
+13:   <p>Role assignment<br />
+
+    app/views/partyroles/new.html.erb:10:in `block in _run_erb_app47views47partyroles47new46html46erb'
+    app/views/partyroles/new.html.erb:3
+    app/controllers/partyroles_controller.rb:45:in `new'
+    <internal:prelude>:8:in `synchronize'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (343.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:06:14) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 125ms (View: 31, DB: 31) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 13:06:25) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 234ms (View: 188, DB: 16) | 200 OK [http://127.0.0.1/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-10-15 13:06:32) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` [0m
+Rendering template within layouts/people
+Rendering people/edit
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+Completed in 156ms (View: 94, DB: 16) | 200 OK [http://127.0.0.1/people/2/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-10-15 13:06:39) [PUT]
+  Parameters: {"authenticity_token"=>"2pm6zWjEFfPPTdL8ltZz1d+ltor3h1qkt13IFXAKfo0=", "person"=>{"current_last_name"=>"person2L", "current_first_name"=>"person2F", "incomeclassification_id"=>"2", "occupationclassification_id"=>"1", "birth_date(1i)"=>"1995", "birth_date(2i)"=>"10", "birth_date(3i)"=>"15"}, "commit"=>"Update", "id"=>"2"}
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Update (0.0ms)[0m   [0;1mUPDATE `people` SET `current_last_name` = 'person2L', `current_first_name` = 'person2F', `updated_at` = '2010-10-15 11:06:39' WHERE `id` = 2[0m
+  [4;35;1mSQL (93.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/people/2
+Completed in 125ms (DB: 94) | 302 Found [http://127.0.0.1/people/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-10-15 13:06:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 2) [0m
+Rendering template within layouts/people
+Rendering people/show
+  [4;36;1mIncomeclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (15.6ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 125ms (View: 78, DB: 16) | 200 OK [http://127.0.0.1/people/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 13:06:41) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mIncomeclassification Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;36;1mOccupationclassification Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 109ms (View: 78, DB: 16) | 200 OK [http://127.0.0.1/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:06:44) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 0, DB: 31) | 200 OK [http://127.0.0.1/partyroles?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:06:46) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 125ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:06:55) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:07:12) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 141ms (View: 62, DB: 31) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:07:25) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 0, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:08:58) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 172ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:09:00) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 172ms (View: 47, DB: 31) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:09:44) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (15.6ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+ERROR: compiling _run_erb_app47views47partyroles47new46html46erb RAISED d:/Rails Application/sbs2/app/views/partyroles/new.html.erb:8: syntax error, unexpected tLABEL
+; @output_buffer.concat((for: ).to_s); @output_buffer.concat "\n    "
+                             ^
+Function body: #coding:CP850
+          def _run_erb_app47views47partyroles47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New partyrole</h1>\n\n"
+
+;  form_for @partyrole do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat((  ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat((for: ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( @person.party_id ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( @person.current_last_name ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( @person.current_first_name ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.hidden_field :party_id, :value => $party_id ).to_s); @output_buffer.concat "\n  </p>\n  <p>Role assignment<br />\n    "
+
+
+; @output_buffer.concat(( collection_select(:partyrole, :role_id, @roles, :id, :description, :prompt => true) ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', partyroles_path ).to_s); @output_buffer.concat " |\n"
+; @output_buffer.concat(( link_to 'Quit role assignment', people_path ).to_s); @output_buffer.force_encoding(__ENCODING__)
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/renderable.rb:91:in `module_eval'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/renderable.rb:91:in `compile!'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+d:/Programme/Ruby191/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `block in custom'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `block in respond'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+d:/Rails Application/sbs2/app/controllers/partyroles_controller.rb:45:in `new'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+d:/Programme/Ruby191/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action_with_flash'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process_with_filters'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `block in call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `block in call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `block in call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+d:/Programme/Ruby191/lib/ruby/gems/1.9.1/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (d:/Rails Application/sbs2/app/views/partyroles/new.html.erb:8: syntax error, unexpected tLABEL
+; @output_buffer.concat((for: ).to_s); @output_buffer.concat "\n    "
+                             ^) on line #8 of app/views/partyroles/new.html.erb:
+5: 
+6:   <p>
+7:     <%=  %><br />
+8:     <%=for: %>
+9:     <%= @person.party_id %>
+10:     <%= @person.current_last_name %>
+11:     <%= @person.current_first_name %>
+
+    app/controllers/partyroles_controller.rb:45:in `new'
+    <internal:prelude>:8:in `synchronize'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (531.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:10:49) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 141ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:11:11) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 156ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:12:27) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 141ms (View: 78, DB: 31) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:14:42) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (15.6ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 266ms (View: 203, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:15:14) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 109ms (View: 16, DB: 31) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:15:21) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 141ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:16:27) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 156ms (View: 94, DB: 31) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:16:49) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 16, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:18:00) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+
+ActionView::TemplateError (undefined method `party_id' for nil:NilClass) on line #5 of app/views/partyroles/index.html.erb:
+2: 
+3: <h3>
+4:     Party ID: 
+5:     <%= @person.party_id %><br />
+6:     Name: 
+7:     <%= @person.current_first_name %> 
+8:     <%= @person.current_last_name %>
+
+    app/views/partyroles/index.html.erb:5
+    app/controllers/partyroles_controller.rb:11:in `index'
+    <internal:prelude>:8:in `synchronize'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (484.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:19:02) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:19:50) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 125ms (View: 62, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:20:25) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 125ms (View: 78, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:20:41) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 109ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:20:53) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:21:27) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 203ms (View: 156, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:21:32) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (15.6ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:22:00) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 172ms (View: 94, DB: 31) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#create (for 127.0.0.1 at 2010-10-15 13:22:14) [POST]
+  Parameters: {"authenticity_token"=>"2pm6zWjEFfPPTdL8ltZz1d+ltor3h1qkt13IFXAKfo0=", "partyrole"=>{"party_id"=>"2", "role_id"=>"2"}, "commit"=>"Create"}
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPartyrole Create (0.0ms)[0m   [0;1mINSERT INTO `partyroles` (`party_id`, `role_id`, `created_at`, `updated_at`) VALUES(2, 2, '2010-10-15 11:22:14', '2010-10-15 11:22:14')[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles/9
+Completed in 125ms (DB: 78) | 302 Found [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:22:14) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/partyroles/9]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:22:18) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 78ms (View: 16, DB: 47) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-15 13:22:31) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mIncomeclassification Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `incomeclassifications`[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 1) [0m
+  [4;35;1mOccupationclassification Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `occupationclassifications`[0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM `incomeclassifications` WHERE (`incomeclassifications`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `occupationclassifications` WHERE (`occupationclassifications`.`id` = 1) [0m
+Completed in 109ms (View: 78, DB: 16) | 200 OK [http://127.0.0.1/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:22:32) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/partyroles?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:23:55) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+
+ActionView::TemplateError (undefined method `roles' for #<Partyrole:0x2da14c0>) on line #22 of app/views/partyroles/index.html.erb:
+19: <% @partyroles.each do |partyrole| %>
+20:   <tr>
+21:     <td><%=h partyrole.party_id %></td>
+22:     <td><%=h partyrole.roles.description %></td>
+23:     <td><%= link_to 'Show', partyrole %></td>
+24:     <td><%= link_to 'Edit', edit_partyrole_path(partyrole) %></td>
+25:     <td><%= link_to 'Destroy', partyrole, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/partyroles/index.html.erb:22:in `block in _run_erb_app47views47partyroles47index46html46erb'
+    app/views/partyroles/index.html.erb:19:in `each'
+    app/views/partyroles/index.html.erb:19
+    app/controllers/partyroles_controller.rb:12:in `index'
+    <internal:prelude>:8:in `synchronize'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (406.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:24:07) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://127.0.0.1/partyroles?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:25:27) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (15.6ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,1,2)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 109ms (View: 16, DB: 47) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:25:30) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+Completed in 94ms (View: 31, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (15.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:25:32) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,1,2)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 203ms (View: 47, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#create (for 127.0.0.1 at 2010-10-15 13:25:36) [POST]
+  Parameters: {"authenticity_token"=>"2pm6zWjEFfPPTdL8ltZz1d+ltor3h1qkt13IFXAKfo0=", "partyrole"=>{"party_id"=>"2", "role_id"=>"3"}, "commit"=>"Create"}
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPartyrole Create (0.0ms)[0m   [0mINSERT INTO `partyroles` (`party_id`, `role_id`, `created_at`, `updated_at`) VALUES(2, 3, '2010-10-15 11:25:36', '2010-10-15 11:25:36')[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles/10
+Completed in 109ms (DB: 78) | 302 Found [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:25:36) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+Completed in 62ms (View: 0, DB: 31) | 200 OK [http://127.0.0.1/partyroles/10]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:25:38) [GET]
+  [4;35;1mPartyrole Load (15.6ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (15.6ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+Completed in 141ms (View: 62, DB: 47) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#destroy (for 127.0.0.1 at 2010-10-15 13:25:49) [DELETE]
+  Parameters: {"authenticity_token"=>"2pm6zWjEFfPPTdL8ltZz1d+ltor3h1qkt13IFXAKfo0=", "id"=>"9"}
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (`partyroles`.`id` = 9) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPartyrole Destroy (0.0ms)[0m   [0mDELETE FROM `partyroles` WHERE `id` = 9[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles
+Completed in 109ms (DB: 94) | 302 Found [http://127.0.0.1/partyroles/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:25:50) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:25:53) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPartyrole Columns (46.9ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,1,3)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 141ms (View: 16, DB: 78) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:25:58) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:27:21) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:27:25) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,1,3)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 125ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#create (for 127.0.0.1 at 2010-10-15 13:27:28) [POST]
+  Parameters: {"authenticity_token"=>"2pm6zWjEFfPPTdL8ltZz1d+ltor3h1qkt13IFXAKfo0=", "partyrole"=>{"party_id"=>"2", "role_id"=>"2"}, "commit"=>"Create"}
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPartyrole Create (0.0ms)[0m   [0mINSERT INTO `partyroles` (`party_id`, `role_id`, `created_at`, `updated_at`) VALUES(2, 2, '2010-10-15 11:27:28', '2010-10-15 11:27:28')[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles/11
+Completed in 125ms (DB: 94) | 302 Found [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:27:29) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (15.6ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+Completed in 234ms (View: 78, DB: 31) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:28:30) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+Completed in 125ms (View: 62, DB: 31) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:29:02) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (15.6ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+Completed in 125ms (View: 47, DB: 31) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:29:15) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+Completed in 156ms (View: 78, DB: 47) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:29:22) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (15.6ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+  [4;35;1mRole Load (15.6ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+Completed in 203ms (View: 141, DB: 47) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:29:27) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (15.6ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+Completed in 94ms (View: 16, DB: 47) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:29:31) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;35;1mRole Load (15.6ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+Completed in 109ms (View: 47, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:30:44) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,1,3,2)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 109ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:30:50) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (id NOT IN (0,1,3,2)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Completed in 109ms (View: 47, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:30:53) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+Completed in 203ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#destroy (for 127.0.0.1 at 2010-10-15 13:31:09) [DELETE]
+  Parameters: {"authenticity_token"=>"01iaGVZP/zlBDiYYZtdbXfqwyVYoolBpELVVywquREs=", "id"=>"7"}
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (`partyroles`.`id` = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPartyrole Destroy (0.0ms)[0m   [0mDELETE FROM `partyroles` WHERE `id` = 7[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles
+Completed in 109ms (DB: 94) | 302 Found [http://127.0.0.1/partyroles/7]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:31:10) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 3) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+Completed in 109ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#destroy (for 127.0.0.1 at 2010-10-15 13:31:14) [DELETE]
+  Parameters: {"authenticity_token"=>"01iaGVZP/zlBDiYYZtdbXfqwyVYoolBpELVVywquREs=", "id"=>"10"}
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (`partyroles`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPartyrole Destroy (0.0ms)[0m   [0;1mDELETE FROM `partyroles` WHERE `id` = 10[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles
+Completed in 109ms (DB: 94) | 302 Found [http://127.0.0.1/partyroles/10]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:31:14) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+Completed in 109ms (View: 47, DB: 16) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-15 13:31:16) [GET]
+  Parameters: {"party_id"=>"2"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT role_id FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (id NOT IN (0,2)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 109ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/partyroles/new?party_id=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#create (for 127.0.0.1 at 2010-10-15 13:31:22) [POST]
+  Parameters: {"authenticity_token"=>"01iaGVZP/zlBDiYYZtdbXfqwyVYoolBpELVVywquREs=", "partyrole"=>{"party_id"=>"2", "role_id"=>"1"}, "commit"=>"Create"}
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPartyrole Create (0.0ms)[0m   [0mINSERT INTO `partyroles` (`party_id`, `role_id`, `created_at`, `updated_at`) VALUES(2, 1, '2010-10-15 11:31:22', '2010-10-15 11:31:22')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/partyroles/12
+Completed in 47ms (DB: 16) | 302 Found [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:31:22) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/partyroles/12]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:31:43) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 125ms (View: 47, DB: 62) | 200 OK [http://127.0.0.1/partyroles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:31:47) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://127.0.0.1/partyroles/12]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-15 13:31:51) [GET]
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 94ms (View: 31, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:33:42) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 219ms (View: 172, DB: 0) | 200 OK [http://127.0.0.1/partyroles/12]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:34:55) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 156ms (View: 78, DB: 47) | 200 OK [http://127.0.0.1/partyroles/12]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:36:04) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (15.6ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 141ms (View: 78, DB: 31) | 200 OK [http://127.0.0.1/partyroles/12]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:36:16) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:37:38) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mPartyrole Load (15.6ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 125ms (View: 62, DB: 47) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:37:41) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 94ms (View: 31, DB: 31) | 200 OK [http://127.0.0.1/partyroles/12]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:38:57) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 172ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:39:24) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 125ms (View: 62, DB: 31) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;35;1mSQL (15.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:39:52) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 125ms (View: 78, DB: 31) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:40:08) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 203ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:40:16) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 125ms (View: 78, DB: 16) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:40:50) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 125ms (View: 62, DB: 47) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:41:04) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:41:16) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 312ms (View: 266, DB: 0) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:41:41) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 156ms (View: 94, DB: 16) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:41:54) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:42:25) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 125ms (View: 94, DB: 16) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:42:51) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 484ms (View: 453, DB: 0) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:43:00) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 172ms (View: 125, DB: 16) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:43:12) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 125ms (View: 78, DB: 16) | 200 OK [http://127.0.0.1/partyroles/11]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:43:17) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mPerson Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPartyrole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `partyroles`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 94ms (View: 31, DB: 31) | 200 OK [http://127.0.0.1/partyroles/12]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-15 13:44:31) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM `partyroles` WHERE (party_id = '2') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (party_id = '2') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPartyrole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `partyroles`[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+Completed in 141ms (View: 78, DB: 31) | 200 OK [http://127.0.0.1/partyroles/12]

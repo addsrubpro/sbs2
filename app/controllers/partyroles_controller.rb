@@ -7,6 +7,7 @@ class PartyrolesController < ApplicationController
     end
     @partyroles = Partyrole.find(:all, :conditions => ["party_id = ?", $party_id])
     @partyrole = Person.find(:first, :conditions => ["party_id = ?", $party_id])
+    @person = Person.find(:first, :conditions => ["party_id = ?", $party_id], :select => "party_id, current_last_name, current_first_name")
     
     respond_to do |format|
       format.html # index.html.erb
@@ -30,6 +31,7 @@ class PartyrolesController < ApplicationController
   # GET /partyroles/new.xml
   def new
     $party_id = "#{params[:party_id]}"
+    @person = Person.find(:first, :conditions => ["party_id = ?", $party_id], :select => "party_id, current_last_name, current_first_name")
     @partyrole = Partyrole.new
     
     @role_for_party = Partyrole.find(:all, :conditions => ["party_id = ?", $party_id], :select => "role_id")
