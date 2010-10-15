@@ -9,16 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 5) do
+ActiveRecord::Schema.define(:version => 6) do
 
   create_table "incomeclassifications", :force => true do |t|
-    t.string   "description", :limit => 30
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "occupationclassifications", :force => true do |t|
-    t.string   "description", :limit => 30
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -28,12 +28,19 @@ ActiveRecord::Schema.define(:version => 5) do
     t.datetime "updated_at"
   end
 
+  create_table "partyroles", :force => true do |t|
+    t.integer  "party_id"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "people", :force => true do |t|
     t.integer  "party_id"
     t.integer  "incomeclassification_id"
     t.integer  "occupationclassification_id"
-    t.string   "current_last_name",           :limit => 20
-    t.string   "current_first_name",          :limit => 20
+    t.string   "current_last_name"
+    t.string   "current_first_name"
     t.date     "birth_date"
     t.datetime "created_at"
     t.datetime "updated_at"
