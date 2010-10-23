@@ -39660,3 +39660,444 @@ Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 17
 Rendering template within layouts/incomeclassifications
 Rendering incomeclassifications/index
 Completed in 47ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 17:38:02) [GET]
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 18:07:49) [GET]
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#new (for 127.0.0.1 at 2010-10-23 18:07:54) [GET]
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/new
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/new]
+
+
+Processing IncomeclassificationsController#create (for 127.0.0.1 at 2010-10-23 18:08:01) [POST]
+  Parameters: {"authenticity_token"=>"5ohgNLD+RhkK5i/EICLJcr4881Sq9F+iXiyEjevdVwc=", "incomeclassification"=>{"description"=>"incomeclass1"}, "commit"=>"Create"}
+  [4;36;1mIncomeclassification Create (0.0ms)[0m   [0;1mINSERT INTO "incomeclassifications" ("description", "created_at", "updated_at") VALUES('incomeclass1', '2010-10-23 16:08:01', '2010-10-23 16:08:01')[0m
+Redirected to http://127.0.0.1:3000/incomeclassifications/1
+Completed in 578ms (DB: 0) | 302 Found [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#show (for 127.0.0.1 at 2010-10-23 18:08:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/1]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 18:08:04) [GET]
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#new (for 127.0.0.1 at 2010-10-23 18:08:05) [GET]
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/new
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/new]
+
+
+Processing IncomeclassificationsController#create (for 127.0.0.1 at 2010-10-23 18:08:11) [POST]
+  Parameters: {"authenticity_token"=>"5ohgNLD+RhkK5i/EICLJcr4881Sq9F+iXiyEjevdVwc=", "incomeclassification"=>{"description"=>"incomeclass2"}, "commit"=>"Create"}
+  [4;35;1mIncomeclassification Create (0.0ms)[0m   [0mINSERT INTO "incomeclassifications" ("description", "created_at", "updated_at") VALUES('incomeclass2', '2010-10-23 16:08:11', '2010-10-23 16:08:11')[0m
+Redirected to http://127.0.0.1:3000/incomeclassifications/2
+Completed in 312ms (DB: 0) | 302 Found [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#show (for 127.0.0.1 at 2010-10-23 18:08:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 2) [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/2]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 18:08:13) [GET]
+  [4;35;1mIncomeclassification Load (15.6ms)[0m   [0mSELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2010-10-23 18:08:28) [GET]
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" ORDER BY description ASC[0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/index
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications]
+
+
+Processing OccupationclassificationsController#new (for 127.0.0.1 at 2010-10-23 18:08:30) [GET]
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications/new]
+
+
+Processing OccupationclassificationsController#create (for 127.0.0.1 at 2010-10-23 18:08:35) [POST]
+  Parameters: {"authenticity_token"=>"5ohgNLD+RhkK5i/EICLJcr4881Sq9F+iXiyEjevdVwc=", "occupationclassification"=>{"description"=>"occu1"}, "commit"=>"Create"}
+  [4;35;1mOccupationclassification Create (0.0ms)[0m   [0mINSERT INTO "occupationclassifications" ("description", "created_at", "updated_at") VALUES('occu1', '2010-10-23 16:08:35', '2010-10-23 16:08:35')[0m
+Redirected to http://127.0.0.1:3000/occupationclassifications/1
+Completed in 594ms (DB: 0) | 302 Found [http://127.0.0.1/occupationclassifications]
+
+
+Processing OccupationclassificationsController#show (for 127.0.0.1 at 2010-10-23 18:08:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/show
+Completed in 188ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications/1]
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2010-10-23 18:08:37) [GET]
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" ORDER BY description ASC[0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications]
+
+
+Processing OccupationclassificationsController#edit (for 127.0.0.1 at 2010-10-23 18:08:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/edit
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications/1/edit]
+
+
+Processing OccupationclassificationsController#update (for 127.0.0.1 at 2010-10-23 18:08:52) [PUT]
+  Parameters: {"authenticity_token"=>"5ohgNLD+RhkK5i/EICLJcr4881Sq9F+iXiyEjevdVwc=", "occupationclassification"=>{"description"=>"Student"}, "commit"=>"Update", "id"=>"1"}
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+  [4;36;1mOccupationclassification Update (0.0ms)[0m   [0;1mUPDATE "occupationclassifications" SET "description" = 'Student', "updated_at" = '2010-10-23 16:08:52' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/occupationclassifications/1
+Completed in 297ms (DB: 0) | 302 Found [http://127.0.0.1/occupationclassifications/1]
+
+
+Processing OccupationclassificationsController#show (for 127.0.0.1 at 2010-10-23 18:08:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications/1]
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2010-10-23 18:08:55) [GET]
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" ORDER BY description ASC[0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/index
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications]
+
+
+Processing OccupationclassificationsController#new (for 127.0.0.1 at 2010-10-23 18:08:56) [GET]
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications/new]
+
+
+Processing OccupationclassificationsController#create (for 127.0.0.1 at 2010-10-23 18:09:04) [POST]
+  Parameters: {"authenticity_token"=>"5ohgNLD+RhkK5i/EICLJcr4881Sq9F+iXiyEjevdVwc=", "occupationclassification"=>{"description"=>"Pensioner"}, "commit"=>"Create"}
+  [4;35;1mOccupationclassification Create (0.0ms)[0m   [0mINSERT INTO "occupationclassifications" ("description", "created_at", "updated_at") VALUES('Pensioner', '2010-10-23 16:09:04', '2010-10-23 16:09:04')[0m
+Redirected to http://127.0.0.1:3000/occupationclassifications/2
+Completed in 641ms (DB: 0) | 302 Found [http://127.0.0.1/occupationclassifications]
+
+
+Processing OccupationclassificationsController#show (for 127.0.0.1 at 2010-10-23 18:09:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 2) [0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications/2]
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2010-10-23 18:09:06) [GET]
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" ORDER BY description ASC[0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications]
+
+
+Processing OccupationclassificationsController#new (for 127.0.0.1 at 2010-10-23 18:09:08) [GET]
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications/new]
+
+
+Processing OccupationclassificationsController#create (for 127.0.0.1 at 2010-10-23 18:09:53) [POST]
+  Parameters: {"authenticity_token"=>"5ohgNLD+RhkK5i/EICLJcr4881Sq9F+iXiyEjevdVwc=", "occupationclassification"=>{"description"=>"Employee"}, "commit"=>"Create"}
+  [4;36;1mOccupationclassification Create (15.6ms)[0m   [0;1mINSERT INTO "occupationclassifications" ("description", "created_at", "updated_at") VALUES('Employee', '2010-10-23 16:09:53', '2010-10-23 16:09:53')[0m
+Redirected to http://127.0.0.1:3000/occupationclassifications/3
+Completed in 500ms (DB: 16) | 302 Found [http://127.0.0.1/occupationclassifications]
+
+
+Processing OccupationclassificationsController#show (for 127.0.0.1 at 2010-10-23 18:09:54) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 3) [0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/show
+Completed in 250ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications/3]
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2010-10-23 18:09:56) [GET]
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" ORDER BY description ASC[0m
+Rendering template within layouts/occupationclassifications
+Rendering occupationclassifications/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-10-23 18:10:02) [GET]
+  [4;35;1mRole Load (15.6ms)[0m   [0mSELECT * FROM "roles" [0m
+Rendering template within layouts/roles
+Rendering roles/index
+Completed in 203ms (View: 172, DB: 16) | 200 OK [http://127.0.0.1/roles]
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-10-23 18:10:04) [GET]
+Rendering template within layouts/roles
+Rendering roles/new
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/roles/new]
+
+
+Processing RolesController#create (for 127.0.0.1 at 2010-10-23 18:10:10) [POST]
+  Parameters: {"authenticity_token"=>"5ohgNLD+RhkK5i/EICLJcr4881Sq9F+iXiyEjevdVwc=", "role"=>{"description"=>"Customer"}, "commit"=>"Create"}
+  [4;36;1mRole Create (0.0ms)[0m   [0;1mINSERT INTO "roles" ("description", "created_at", "updated_at") VALUES('Customer', '2010-10-23 16:10:11', '2010-10-23 16:10:11')[0m
+Redirected to http://127.0.0.1:3000/roles/1
+Completed in 578ms (DB: 0) | 302 Found [http://127.0.0.1/roles]
+
+
+Processing RolesController#show (for 127.0.0.1 at 2010-10-23 18:10:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+Rendering template within layouts/roles
+Rendering roles/show
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/roles/1]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-10-23 18:10:13) [GET]
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM "roles" [0m
+Rendering template within layouts/roles
+Rendering roles/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/roles]
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-10-23 18:10:15) [GET]
+Rendering template within layouts/roles
+Rendering roles/new
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/roles/new]
+
+
+Processing RolesController#create (for 127.0.0.1 at 2010-10-23 18:10:24) [POST]
+  Parameters: {"authenticity_token"=>"5ohgNLD+RhkK5i/EICLJcr4881Sq9F+iXiyEjevdVwc=", "role"=>{"description"=>"Employee"}, "commit"=>"Create"}
+  [4;35;1mRole Create (0.0ms)[0m   [0mINSERT INTO "roles" ("description", "created_at", "updated_at") VALUES('Employee', '2010-10-23 16:10:24', '2010-10-23 16:10:24')[0m
+Redirected to http://127.0.0.1:3000/roles/2
+Completed in 781ms (DB: 0) | 302 Found [http://127.0.0.1/roles]
+
+
+Processing RolesController#show (for 127.0.0.1 at 2010-10-23 18:10:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 2) [0m
+Rendering template within layouts/roles
+Rendering roles/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/roles/2]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-10-23 18:10:27) [GET]
+  [4;35;1mRole Load (15.6ms)[0m   [0mSELECT * FROM "roles" [0m
+Rendering template within layouts/roles
+Rendering roles/index
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/roles]
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-10-23 18:10:28) [GET]
+Rendering template within layouts/roles
+Rendering roles/new
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/roles/new]
+
+
+Processing RolesController#create (for 127.0.0.1 at 2010-10-23 18:10:40) [POST]
+  Parameters: {"authenticity_token"=>"5ohgNLD+RhkK5i/EICLJcr4881Sq9F+iXiyEjevdVwc=", "role"=>{"description"=>"Contact"}, "commit"=>"Create"}
+  [4;36;1mRole Create (0.0ms)[0m   [0;1mINSERT INTO "roles" ("description", "created_at", "updated_at") VALUES('Contact', '2010-10-23 16:10:40', '2010-10-23 16:10:40')[0m
+Redirected to http://127.0.0.1:3000/roles/3
+Completed in 734ms (DB: 0) | 302 Found [http://127.0.0.1/roles]
+
+
+Processing RolesController#show (for 127.0.0.1 at 2010-10-23 18:10:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 3) [0m
+Rendering template within layouts/roles
+Rendering roles/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/roles/3]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-10-23 18:10:42) [GET]
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM "roles" [0m
+Rendering template within layouts/roles
+Rendering roles/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/roles]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-23 18:10:52) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM "people" ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 297ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-10-23 18:10:54) [GET]
+  [4;36;1mIncomeclassification Load (15.6ms)[0m   [0;1mSELECT * FROM "incomeclassifications" [0m
+  [4;35;1mOccupationclassification Load (15.6ms)[0m   [0mSELECT * FROM "occupationclassifications" [0m
+Rendering template within layouts/people
+Rendering people/new
+Completed in 250ms (View: 188, DB: 31) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-10-23 18:11:08) [POST]
+  Parameters: {"authenticity_token"=>"5ohgNLD+RhkK5i/EICLJcr4881Sq9F+iXiyEjevdVwc=", "person"=>{"current_last_name"=>"p1", "current_first_name"=>"p1", "birth_date(1i)"=>"2004", "birth_date(2i)"=>"10", "birth_date(3i)"=>"23", "incomeclassification_id"=>"1", "occupationclassification_id"=>"1"}, "commit"=>"Create"}
+  [4;36;1mParty Create (0.0ms)[0m   [0;1mINSERT INTO "parties" ("created_at", "updated_at") VALUES('2010-10-23 16:11:08', '2010-10-23 16:11:08')[0m
+  [4;35;1mPerson Create (0.0ms)[0m   [0mINSERT INTO "people" ("party_id", "incomeclassification_id", "occupationclassification_id", "current_last_name", "current_first_name", "birth_date", "created_at", "updated_at") VALUES(1, 1, 1, 'p1', 'p1', '2004-10-23', '2010-10-23 16:11:09', '2010-10-23 16:11:09')[0m
+Redirected to http://127.0.0.1:3000/people/1
+Completed in 1656ms (DB: 0) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-10-23 18:11:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/show
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+Completed in 828ms (View: 781, DB: 0) | 200 OK [http://127.0.0.1/people/1]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-23 18:11:14) [GET]
+  [4;35;1mPerson Load (15.6ms)[0m   [0mSELECT * FROM "people" ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+Completed in 266ms (View: 234, DB: 16) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-23 18:11:17) [GET]
+  Parameters: {"party_id"=>"1"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+Completed in 203ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/partyroles?party_id=1]
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-23 18:11:20) [GET]
+  Parameters: {"party_id"=>"1"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT role_id FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM "roles" WHERE (id NOT IN (0)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+Completed in 141ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/partyroles/new?party_id=1]
+
+
+Processing PartyrolesController#create (for 127.0.0.1 at 2010-10-23 18:11:26) [POST]
+  Parameters: {"authenticity_token"=>"5ohgNLD+RhkK5i/EICLJcr4881Sq9F+iXiyEjevdVwc=", "partyrole"=>{"party_id"=>"1", "role_id"=>"1"}, "commit"=>"Create"}
+  [4;36;1mPartyrole Create (0.0ms)[0m   [0;1mINSERT INTO "partyroles" ("party_id", "role_id", "created_at", "updated_at") VALUES(1, 1, '2010-10-23 16:11:26', '2010-10-23 16:11:26')[0m
+Redirected to http://127.0.0.1:3000/partyroles/1
+Completed in 875ms (DB: 0) | 302 Found [http://127.0.0.1/partyroles]
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-23 18:11:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/partyroles/1]
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-23 18:11:29) [GET]
+  [4;36;1mPartyrole Load (15.6ms)[0m   [0;1mSELECT * FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;35;1mPerson Load (15.6ms)[0m   [0mSELECT * FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+Completed in 94ms (View: 47, DB: 31) | 200 OK [http://127.0.0.1/partyroles]
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-23 18:11:31) [GET]
+  Parameters: {"party_id"=>"1"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT role_id FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM "roles" WHERE (id NOT IN (0,1)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+Completed in 109ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/partyroles/new?party_id=1]
+
+
+Processing PartyrolesController#create (for 127.0.0.1 at 2010-10-23 18:11:41) [POST]
+  Parameters: {"authenticity_token"=>"5ohgNLD+RhkK5i/EICLJcr4881Sq9F+iXiyEjevdVwc=", "partyrole"=>{"party_id"=>"1", "role_id"=>"2"}, "commit"=>"Create"}
+  [4;35;1mPartyrole Create (0.0ms)[0m   [0mINSERT INTO "partyroles" ("party_id", "role_id", "created_at", "updated_at") VALUES(1, 2, '2010-10-23 16:11:41', '2010-10-23 16:11:41')[0m
+Redirected to http://127.0.0.1:3000/partyroles/2
+Completed in 2656ms (DB: 0) | 302 Found [http://127.0.0.1/partyroles]
+
+
+Processing PartyrolesController#show (for 127.0.0.1 at 2010-10-23 18:11:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/show
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mRole Load (15.6ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) [0m
+Completed in 94ms (View: 31, DB: 16) | 200 OK [http://127.0.0.1/partyroles/2]
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-23 18:11:46) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 2) [0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+
+
+Processing PartyrolesController#new (for 127.0.0.1 at 2010-10-23 18:11:48) [GET]
+  Parameters: {"party_id"=>"1"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+  [4;36;1mPartyrole Load (15.6ms)[0m   [0;1mSELECT role_id FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM "roles" WHERE (id NOT IN (0,1,2)) [0m
+Rendering template within layouts/partyroles
+Rendering partyroles/new
+Completed in 188ms (View: 47, DB: 16) | 200 OK [http://127.0.0.1/partyroles/new?party_id=1]
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-10-23 18:11:53) [GET]
+  [4;36;1mPartyrole Load (0.0ms)[0m   [0;1mSELECT * FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT party_id, current_last_name, current_first_name FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/partyroles
+Rendering partyroles/index
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 2) [0m
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/partyroles]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-10-23 18:11:55) [GET]
+  [4;35;1mPerson Load (15.6ms)[0m   [0mSELECT * FROM "people" ORDER BY party_id ASC[0m
+Rendering template within layouts/people
+Rendering people/index
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+Completed in 94ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/people]
