@@ -39229,3 +39229,231 @@ Rendering partyroles/show
   [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 2) [0m
   [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
 Completed in 141ms (View: 78, DB: 31) | 200 OK [http://127.0.0.1/partyroles/12]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (718.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (312.5ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateParties (1)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "parties" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreatePeople (2)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "party_id" integer, "incomeclassification_id" integer, "occupationclassification_id" integer, "current_last_name" varchar(255), "current_first_name" varchar(255), "birth_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+Migrating to CreateIncomeclassifications (3)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "incomeclassifications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('3')[0m
+Migrating to CreateOccupationclassifications (4)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "occupationclassifications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('4')[0m
+Migrating to CreateRoles (5)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('5')[0m
+Migrating to CreatePartyroles (6)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "partyroles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "party_id" integer, "role_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('6')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (15.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("incomeclassifications")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("occupationclassifications")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("parties")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("partyroles")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("roles")[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-10-23 12:35:07) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 328ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/rails/info/properties]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 12:36:08) [GET]
+  [4;36;1mIncomeclassification Load (15.6ms)[0m   [0;1mSELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 2234ms (View: 2000, DB: 16) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#new (for 127.0.0.1 at 2010-10-23 12:36:15) [GET]
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/new
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/new]
+
+
+Processing IncomeclassificationsController#create (for 127.0.0.1 at 2010-10-23 12:36:25) [POST]
+  Parameters: {"authenticity_token"=>"lklf8bMvBYrzlY9E5Klls3LRXT3+rerMq6rWkh6RTno=", "incomeclassification"=>{"description"=>"incomeclass1"}, "commit"=>"Create"}
+  [4;35;1mIncomeclassification Create (0.0ms)[0m   [0mINSERT INTO "incomeclassifications" ("description", "created_at", "updated_at") VALUES('incomeclass1', '2010-10-23 10:36:25', '2010-10-23 10:36:25')[0m
+Redirected to http://127.0.0.1:3000/incomeclassifications/1
+Completed in 2188ms (DB: 0) | 302 Found [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#show (for 127.0.0.1 at 2010-10-23 12:36:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/show
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/1]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 12:36:30) [GET]
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 141ms (View: 109, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 13:20:46) [GET]
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#show (for 127.0.0.1 at 2010-10-23 13:20:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/1]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 13:20:54) [GET]
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#new (for 127.0.0.1 at 2010-10-23 13:20:58) [GET]
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/new]
+
+
+Processing IncomeclassificationsController#create (for 127.0.0.1 at 2010-10-23 13:21:07) [POST]
+  Parameters: {"authenticity_token"=>"lklf8bMvBYrzlY9E5Klls3LRXT3+rerMq6rWkh6RTno=", "incomeclassification"=>{"description"=>"incomeclass2"}, "commit"=>"Create"}
+  [4;35;1mIncomeclassification Create (0.0ms)[0m   [0mINSERT INTO "incomeclassifications" ("description", "created_at", "updated_at") VALUES('incomeclass2', '2010-10-23 11:21:07', '2010-10-23 11:21:07')[0m
+Redirected to http://127.0.0.1:3000/incomeclassifications/2
+Completed in 1594ms (DB: 0) | 302 Found [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#show (for 127.0.0.1 at 2010-10-23 13:21:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 2) [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/2]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 13:21:11) [GET]
+  [4;35;1mIncomeclassification Load (15.6ms)[0m   [0mSELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#show (for 127.0.0.1 at 2010-10-23 13:21:14) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 2) [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/2]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 13:21:15) [GET]
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#show (for 127.0.0.1 at 2010-10-23 13:47:32) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::StatementInvalid (Could not find table 'incomeclassifications'):
+  app/controllers/incomeclassifications_controller.rb:16:in `show'
+  <internal:prelude>:8:in `synchronize'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (312.5ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 13:47:47) [GET]
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: incomeclassifications: SELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: incomeclassifications: SELECT * FROM "incomeclassifications"  ORDER BY id ASC):
+  app/controllers/incomeclassifications_controller.rb:5:in `index'
+  <internal:prelude>:8:in `synchronize'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (375.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IncomeclassificationsController#show (for 127.0.0.1 at 2010-10-23 13:49:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 2) [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/2]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 13:49:08) [GET]
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#new (for 127.0.0.1 at 2010-10-23 13:49:10) [GET]
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/new
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/new]
+
+
+Processing IncomeclassificationsController#create (for 127.0.0.1 at 2010-10-23 13:49:19) [POST]
+  Parameters: {"authenticity_token"=>"lklf8bMvBYrzlY9E5Klls3LRXT3+rerMq6rWkh6RTno=", "incomeclassification"=>{"description"=>"incomeclass3"}, "commit"=>"Create"}
+  [4;35;1mIncomeclassification Create (0.0ms)[0m   [0mINSERT INTO "incomeclassifications" ("description", "created_at", "updated_at") VALUES('incomeclass3', '2010-10-23 11:49:19', '2010-10-23 11:49:19')[0m
+Redirected to http://127.0.0.1:3000/incomeclassifications/3
+Completed in 828ms (DB: 0) | 302 Found [http://127.0.0.1/incomeclassifications]
+
+
+Processing IncomeclassificationsController#show (for 127.0.0.1 at 2010-10-23 13:49:20) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 3) [0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications/3]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2010-10-23 13:49:22) [GET]
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" ORDER BY id ASC[0m
+Rendering template within layouts/incomeclassifications
+Rendering incomeclassifications/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/incomeclassifications]
