@@ -1,0 +1,29 @@
+<h1>Editing user account</h1>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="field">
+    <%= f.label :party_id %> <br />
+    <%= f.text_field :party_id %>
+  </div>
+  <div class="field">
+    <%= f.label :username %> <br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %> <br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Password confirmation" %> <br />
+    <%= f.password_field :password_confirmation %>
+  </div>  
+  <div class="action">
+    <%= f.submit "Update" %>
+  </div>
+  
+<% end %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

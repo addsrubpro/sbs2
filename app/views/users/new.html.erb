@@ -1,0 +1,28 @@
+<h2>Create User Account</h2>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+    Party ID: 
+    <%= @person.party_id %><br />
+    Name: 
+    <%= @person.current_first_name %> 
+    <%= @person.current_last_name %>
+    <%= f.hidden_field :party_id, :value => $party_id %>
+  <div class="field">
+    <%= f.label :username %> <br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %> <br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Password confirmation" %> <br />
+    <%= f.password_field :password_confirmation %>
+  </div>  
+  <div class="action">
+    <%= f.submit "Create account" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', users_path %>
