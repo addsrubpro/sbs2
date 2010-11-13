@@ -22,7 +22,10 @@
     <td><%=h none_on_fail {person.incomeclassification.description} %></td>
     <td><%=h person.occupationclassification_id %></td>
     <td><%=h none_on_fail {person.occupationclassification.description} %></td>
-    <td><%= link_to "Manage Roles", :controller => "partyroles", :action => "index", :party_id => person.party_id %></td>
+    <td><%= link_to "Roles management", :controller => "partyroles", :action => "index", :party_id => person.party_id %></td>
+    <% if @usermanage == 1 %>
+    <td><%= link_to "User account management", :controller => "users", :action => "index", :party_id => person.party_id %></td>
+    <% end %>
     <td><%= link_to 'Show', person %></td>
     <td><%= link_to 'Edit', edit_person_path(person) %></td>
     <td><%= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete %></td>

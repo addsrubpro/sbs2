@@ -3,6 +3,7 @@ class PeopleController < ApplicationController
   # GET /people.xml
   def index
     @people = Person.all(:order => "party_id ASC")
+    @usermanage = 1       #placeholder for conditions e.g. "User Management" link in the view only for special roles
     
     respond_to do |format|
       format.html # index.html.erb

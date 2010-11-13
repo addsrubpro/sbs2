@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  party_id: 1
+  email: MyString
+  encrypted_password: MyString
+  salt: MyString
+
+two:
+  party_id: 1
+  email: MyString
+  encrypted_password: MyString
+  salt: MyString
