@@ -8,4 +8,12 @@ module ApplicationHelper
       end
   end
 
+  def no_account_on_fail
+      begin
+          return yield
+      rescue
+          return "(no account)"
+      end
+  end
+
 end
