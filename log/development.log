@@ -8785,3 +8785,28 @@ Rendering people/index
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users".party_id = 5) LIMIT 1[0m
 Completed in 156ms (View: 125, DB: 16) | 200 OK [http://127.0.0.1/people]
 >>>>>>> signin-user:log/development.log
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-19 16:42:15) [GET]
+
+ActionController::RoutingError (No route matches "/home" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#home (for 127.0.0.1 at 2010-11-19 16:58:04) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"home"}
+
+NameError (uninitialized constant PagesController):
+  <internal:prelude>:8:in `synchronize'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
