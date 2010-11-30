@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Student Banking Solution | <%= @title %></title>
+        <%= render 'layouts/stylesheets' %>
+    </head>
+    <body>
+        <div class="container">
+            <%= render 'layouts/header' %>
+            <div id="content" class="round">
+                <% flash.each do |key, value| %>
+                    <div class="flash <%= key %>"><%= value %></div>
+                <% end %>
+                <%= yield %>
+            </div>
+            <% @footerpath = "layouts" %>
+            <%= render "#{@footerpath}" + '/footer' %>
+            <!-- Display debug information in development environment --> 
+            <%= debug(params) if Rails.env.development? %>
+       </div>
+    </body>
+</html>
+
+

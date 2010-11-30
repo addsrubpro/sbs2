@@ -44,7 +44,8 @@ class PartiesController < ApplicationController
 
     respond_to do |format|
       if @party.save
-        format.html { redirect_to(@party, :notice => 'Party was successfully created.') }
+        flash[:success] = "Party was successfully created."
+        format.html { redirect_to(@party) }
         format.xml  { render :xml => @party, :status => :created, :location => @party }
       else
         format.html { render :action => "new" }
@@ -60,7 +61,8 @@ class PartiesController < ApplicationController
 
     respond_to do |format|
       if @party.update_attributes(params[:party])
-        format.html { redirect_to(@party, :notice => 'Party was successfully updated.') }
+        flash[:success] = "Party was successfully updated."
+        format.html { redirect_to(@party) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

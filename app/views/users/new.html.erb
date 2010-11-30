@@ -2,12 +2,17 @@
 
 <% form_for(@user) do |f| %>
   <%= f.error_messages %>
-    Party ID: 
-    <%= @person.party_id %><br />
-    Name: 
+    
+  <div class="field">
+    <%= f.label :party_ID %> 
+    <%= @person.party_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %> 
     <%= @person.current_first_name %> 
     <%= @person.current_last_name %>
     <%= f.hidden_field :party_id, :value => $party_id %>
+  </div>  
   <div class="field">
     <%= f.label :username %> <br />
     <%= f.text_field :username %>
@@ -20,7 +25,7 @@
     <%= f.label :password_confirmation, "Password confirmation" %> <br />
     <%= f.password_field :password_confirmation %>
   </div>  
-  <div class="action">
+  <div class="actions">
     <%= f.submit "Create account" %>
   </div>
 <% end %>

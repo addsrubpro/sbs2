@@ -2,6 +2,7 @@ class IncomeclassificationsController < ApplicationController
   # GET /incomeclassifications
   # GET /incomeclassifications.xml
   def index
+    @title = "Income classifications"
     @incomeclassifications = Incomeclassification.all(:order => "id ASC")
 
     respond_to do |format|
@@ -24,6 +25,7 @@ class IncomeclassificationsController < ApplicationController
   # GET /incomeclassifications/new
   # GET /incomeclassifications/new.xml
   def new
+    @title = "New income classification"
     @incomeclassification = Incomeclassification.new
 
     respond_to do |format|
@@ -44,7 +46,8 @@ class IncomeclassificationsController < ApplicationController
 
     respond_to do |format|
       if @incomeclassification.save
-        format.html { redirect_to(@incomeclassification, :notice => 'Incomeclassification was successfully created.') }
+        flash[:success] = "Income classification was successfully created."
+        format.html { redirect_to(@incomeclassification) }
         format.xml  { render :xml => @incomeclassification, :status => :created, :location => @incomeclassification }
       else
         format.html { render :action => "new" }
@@ -60,7 +63,8 @@ class IncomeclassificationsController < ApplicationController
 
     respond_to do |format|
       if @incomeclassification.update_attributes(params[:incomeclassification])
-        format.html { redirect_to(@incomeclassification, :notice => 'Incomeclassification was successfully updated.') }
+        flash[:success] = "Income classification was successfully updated."
+        format.html { redirect_to(@incomeclassification) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
