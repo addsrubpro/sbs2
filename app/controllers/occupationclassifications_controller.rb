@@ -44,7 +44,8 @@ class OccupationclassificationsController < ApplicationController
 
     respond_to do |format|
       if @occupationclassification.save
-        format.html { redirect_to(@occupationclassification, :notice => 'Occupationclassification was successfully created.') }
+        flash[:success] = "Occupation classification was successfully created."
+        format.html { redirect_to(@occupationclassification) }
         format.xml  { render :xml => @occupationclassification, :status => :created, :location => @occupationclassification }
       else
         format.html { render :action => "new" }
@@ -60,7 +61,8 @@ class OccupationclassificationsController < ApplicationController
 
     respond_to do |format|
       if @occupationclassification.update_attributes(params[:occupationclassification])
-        format.html { redirect_to(@occupationclassification, :notice => 'Occupationclassification was successfully updated.') }
+        flash[:success] = "Occupation classification was successfully updated."
+        format.html { redirect_to(@occupationclassification) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

@@ -14,6 +14,7 @@ class PeopleController < ApplicationController
   # GET /people/1.xml
   def show
     @person = Person.find(params[:id])
+    @title = @person.current_first_name + ' ' + @person.current_last_name
 
     respond_to do |format|
       format.html # show.html.erb
@@ -49,7 +50,8 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
-        format.html { redirect_to(@person, :notice => 'Person was successfully created.') }
+        flash[:success] = "Person was successfully created."
+        format.html { redirect_to(@person) }
         format.xml  { render :xml => @person, :status => :created, :location => @person }
       else
         format.html { render :action => "new" }
@@ -65,7 +67,8 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.update_attributes(params[:person])
-        format.html { redirect_to(@person, :notice => 'Person was successfully updated.') }
+        flash[:success] = "Person was successfully updated."
+        format.html { redirect_to(@person) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

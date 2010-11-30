@@ -61,7 +61,8 @@ class PartyrolesController < ApplicationController
     
     respond_to do |format|
       if @partyrole.save
-        format.html { redirect_to(@partyrole, :notice => 'Partyrole was successfully updated.') }
+        flash[:success] = "Party role was successfully created."
+        format.html { redirect_to(@partyrole) }
         format.xml  { render :xml => @partyrole, :status => :created, :location => @partyrole }
       else
         format.html { render :action => "new" }
@@ -77,7 +78,8 @@ class PartyrolesController < ApplicationController
 
     respond_to do |format|
       if @partyrole.update_attributes(params[:partyrole])
-        format.html { redirect_to(@partyrole, :notice => 'Partyrole was successfully updated.') }
+        flash[:success] = "Party role was successfully updated."
+        format.html { redirect_to(@partyrole) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

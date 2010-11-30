@@ -1,0 +1,21 @@
+<div id="header" class="round">
+    <%= link_to logo, root_path %>
+    <ul class="navigation round">
+        <li><%= link_to "Home", root_path %></li>
+        <% if signed_in? %>
+            <li><%= link_to "Profile", current_user %></li>
+        <% end %>
+        <li><%= link_to "Help", '#' %></li>
+        <li><%= link_to "About", about_path %></li>
+        <% if signed_in? %>
+            <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+        <% else %>    
+            <li><%= link_to "Sign in", signin_path %></li>
+        <% end %>
+    </ul>
+    <ul class="currentuser">
+    <% if signed_in? %>
+        <li><%= "Signed in as: #{current_user.username}" %></li>
+    <% end %>
+    </ul>
+</div>

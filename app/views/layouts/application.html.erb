@@ -3,25 +3,22 @@
     >
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title><%= title %></title>
-        <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-        <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
-        <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
-        <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+        <title>Student Banking Solution | <%= @title %></title>
+        <%= render 'layouts/stylesheets' %>
     </head>
     <body>
         <div class="container">
-            <div id="header">
-                <%= image_tag("logo.png", :alt => "Sample App", :class => "round") %>
-                <ul class="navigation round">
-                    <li><%= link_to "Home", '#' %></li>
-                    <li><%= link_to "Help", '#' %></li>
-                    <li><%= link_to "Sign in", '#' %></li>
-                </ul>
-            </div>
+            <%= render 'layouts/header' %>
             <div id="content" class="round">
+                <% flash.each do |key, value| %>
+                    <div class="flash <%= key %>"><%= value %></div>
+                <% end %>
                 <%= yield %>
             </div>
-        </div>
+            <% @footerpath = "layouts" %>
+            <%= render "#{@footerpath}" + '/footer' %>
+            <!-- Display debug information in development environment --> 
+            <%= debug(params) if Rails.env.development? %>
+       </div>
     </body>
 </html>
