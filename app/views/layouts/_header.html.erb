@@ -1,5 +1,7 @@
 <div id="header" class="round">
+      
     <%= link_to logo, root_path %>
+    
     <ul class="navigation round">
         <li><%= link_to "Home", root_path %></li>
         <% if signed_in? %>
@@ -15,7 +17,7 @@
     </ul>
     <ul class="currentuser">
     <% if signed_in? %>
-        <li><%= "Signed in as: #{current_user.username}" %></li>
+        <li><%= "Signed in as: <strong>#{current_user.username}</strong>" %></li>
     <% end %>
     </ul>
 </div>

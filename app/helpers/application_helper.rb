@@ -33,5 +33,5 @@ module ApplicationHelper
   def logo
     image_tag("SBS_logo2.png", :alt => "Student Banking Application", :class => "round")
   end
-
+  
 end

@@ -1,0 +1,9 @@
+<div id="actionsbox" class="round">
+    <% form_tag(:controller => 'pages', :action => 'select_view') do %>
+        <strong>Select an action:  </strong>
+        <select id="selection" name="selection">
+            <%= select_view_options_tags %>
+        </select>
+        <%= submit_tag "View" %>
+    <% end %>
+</div>

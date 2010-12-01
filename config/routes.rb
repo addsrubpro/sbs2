@@ -10,8 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.about   '/about',   :controller => 'pages', :action => 'about'
   map.signin '/signin',   :controller => 'sessions', :action => 'new'
   map.signout '/signout', :controller => 'sessions', :action => 'destroy'
-
-
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
