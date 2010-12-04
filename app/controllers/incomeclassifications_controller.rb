@@ -1,9 +1,11 @@
 class IncomeclassificationsController < ApplicationController
+  before_filter :authenticate
+  
   # GET /incomeclassifications
   # GET /incomeclassifications.xml
   def index
     @title = "Income classifications"
-    @incomeclassifications = Incomeclassification.all(:order => "id ASC")
+    @incomeclassifications = Incomeclassification.paginate(:page => params[:page], :per_page => 4,:order => "id ASC")
 
     respond_to do |format|
       format.html # index.html.erb

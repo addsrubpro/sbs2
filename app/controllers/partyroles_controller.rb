@@ -1,4 +1,6 @@
 class PartyrolesController < ApplicationController
+  before_filter :authenticate
+  
   # GET /partyroles
   # GET /partyroles.xml
   def index
@@ -61,7 +63,7 @@ class PartyrolesController < ApplicationController
     
     respond_to do |format|
       if @partyrole.save
-        flash[:success] = "Party role was successfully created."
+        flash[:success] = "Party role was successfully assigned."
         format.html { redirect_to(@partyrole) }
         format.xml  { render :xml => @partyrole, :status => :created, :location => @partyrole }
       else
@@ -78,7 +80,7 @@ class PartyrolesController < ApplicationController
 
     respond_to do |format|
       if @partyrole.update_attributes(params[:partyrole])
-        flash[:success] = "Party role was successfully updated."
+        flash[:success] = "Party role assignment was successfully updated."
         format.html { redirect_to(@partyrole) }
         format.xml  { head :ok }
       else

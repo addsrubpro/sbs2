@@ -1,3 +1,6 @@
-<h1>Pages#home</h1>
-
-    
+<h1>Student Banking Solution</h1>
+<% if signed_in? %>
+    <p><strong>Please select an action.</strong></p>
+<% else %>
+    <p><strong>Please sign in to get access to the actions.</strong></p>
+<% end %>

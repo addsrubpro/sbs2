@@ -1,0 +1,21 @@
+  <tr>
+    <td><%=h person.party_id %></td>
+    <td><%=h person.current_last_name %></td>
+    <td><%=h person.current_first_name %></td>
+    <td><%=h person.birth_date %></td>
+    <td><%=h none_on_fail {person.incomeclassification.description} %></td>
+    <td><%=h none_on_fail {person.occupationclassification.description} %></td>
+    <td><%=h no_account_on_fail {person.user.username} %></td>
+    
+    <% if person.user == nil %>
+    <td><%= link_to "Create user account", :controller => "users", :action => "index", :party_id => person.party_id %></td>
+    <% else %>
+    <td><%= link_to "Manage user account", :controller => "users", :action => "index", :party_id => person.party_id %></td>
+    <% end %>
+    
+    <td><%= link_to "Manage people roles", :controller => "partyroles", :action => "index", :party_id => person.party_id %></td>
+    
+    <td><%= link_to 'Show', :controller => "people", :action => "show", :party_id => person.party_id %></td>
+    <td><%= link_to 'Edit', edit_person_path(person) %></td>
+    <td><%= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>

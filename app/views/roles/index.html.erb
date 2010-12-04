@@ -1,5 +1,6 @@
 <h1>Listing roles</h1>
 
+<div class="paginate"><%= will_paginate %></div><br />
 <table>
   <tr>
     <th>Description</th>
@@ -15,6 +16,6 @@
 <% end %>
 </table>
 
-<br />
+<div class="paginate"><%= will_paginate %></div><br />
 
 <%= link_to 'New role', new_role_path %>

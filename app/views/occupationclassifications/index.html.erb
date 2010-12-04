@@ -1,5 +1,6 @@
 <h1>Listing occupation classifications</h1>
 
+<div class="paginate"><%= will_paginate %></div><br />
 <table>
   <tr>
     <th>Description</th>
@@ -14,7 +15,6 @@
   </tr>
 <% end %>
 </table>
-
-<br />
+<div class="paginate"><%= will_paginate %></div><br />
 
 <%= link_to 'New occupationclassification', new_occupationclassification_path %>

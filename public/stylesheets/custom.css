@@ -39,17 +39,28 @@ div.field, div.actions {
 
 a {
   color: #006600;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
   color: #006600;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:visited {
   color: #006600;
 }
+
+/*
+.paginate {
+  font-weight: bold;
+}
+
+.paginate a {
+  color: red;
+}
+
+*/
 
 /* Navigation */
 .navigation {
@@ -86,16 +97,18 @@ ul.currentuser {
 }
 
 .navigation li a:visited {
-  color: #09c;
+  color: #006600;
 }
 
 .navigation li a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #006600;
 }
 
 /* Round corners */
 .round {
-  -moz-border-radius: 10px;
+  border-radius: 10px;            /* IE: lowest version for IE is 9.0*/
+  -moz-border-radius: 10px;       /* not for IE*/
   -webkit-border-radius: 10px;
 }
 

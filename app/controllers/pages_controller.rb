@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_filter :authenticate, :only => [:income_classes, :occupation_classes, :roles, :people]
 
   # To define the selectable actions for the dropdown box in _header.html.erb
   SELECTABLE_ACTIONS = [:home, :about, :income_classes, :occupation_classes, :roles, :people]

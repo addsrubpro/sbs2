@@ -1,35 +1,51 @@
-<h2>
-  <%= h @person.current_first_name + ' ' + @person.current_last_name %>
-</h2>
-<p>
-  <b>Party ID:</b>
-  <%=h @person.party_id %>
-</p>
-<p>
-  <b>Current last name:</b>
-  <%=h @person.current_last_name %>
-</p>
-<p>
-  <b>Current first name:</b>
-  <%=h @person.current_first_name %>
-</p>
-<p>
-  <b>Income classification ID:</b>
-  <%=h @person.incomeclassification_id %>
-  <b>Description:</b>
-  <%=h none_on_fail {@person.incomeclassification.description} %>
-</p>
-<p>
-  <b>Occupation classification ID:</b>
-  <%=h @person.occupationclassification_id %>
-  <b>Description:</b>
-  <%=h none_on_fail {@person.occupationclassification.description} %>
-</p>
-<p>
-  <b>Birth date:</b>
-  <%=h @person.birth_date %>
-</p>
+<h2><%= "Show person: #{h @person.current_first_name} #{h @person.current_last_name}"  %></h2>
 
+<table>
+  <tr>
+    <td width=200px>Party ID</td>
+    <td><%=h @person.party_id %></td>
+  </tr>
+  <tr>
+    <td>Current last name</td>
+    <td><%=h @person.current_last_name %></td>
+  </tr>
+  <tr>
+    <td>Current first name</td>
+    <td><%=h @person.current_first_name %></td>
+  </tr>
+  <tr>
+    <td>Roles assigned</td>
+    <td>
+      <% @partyroles.each do |partyrole| %>
+          - <%=h partyrole.role.description %> -
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td>Income classification ID</td>
+    <td><%=h @person.incomeclassification_id %></td>
+  </tr>
+  <tr>
+    <td>Income classification</td>
+    <td><%=h none_on_fail {@person.incomeclassification.description} %></td>
+  </tr>
+  <tr>
+    <td>Occupation classification ID</td>
+    <td><%=h @person.occupationclassification_id %></td>
+  </tr>
+  <tr>
+    <td>Occupation classification</td>
+    <td><%=h none_on_fail {@person.occupationclassification.description} %></td>
+  </tr>
+  <tr>
+    <td>Birth date</td>
+    <td><%=h @person.birth_date %></td>
+  </tr>
+  <tr>
+    <td>User account name</td>
+    <td><%=h no_account_on_fail {@person.user.username} %></td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>

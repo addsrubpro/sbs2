@@ -1,42 +1,19 @@
 <h1>Listing people</h1>
 
+<div class="paginate"><%= will_paginate %></div><br />
 <table>
   <tr>
     <th>Party ID</th>
     <th>Current last name</th>
     <th>Current first name</th>
     <th>Birth date</th>
-    <th>ID</th>
     <th>Income classification</th>
-    <th>ID</th>
     <th>Occupation classification</th>
     <th>User account name</th>
   </tr>
-
-<% @people.each do |person| %>
-  <tr>
-    <td><%=h person.party_id %></td>
-    <td><%=h person.current_last_name %></td>
-    <td><%=h person.current_first_name %></td>
-    <td><%=h person.birth_date %></td>
-    <td><%=h person.incomeclassification_id %></td>
-    <td><%=h none_on_fail {person.incomeclassification.description} %></td>
-    <td><%=h person.occupationclassification_id %></td>
-    <td><%=h none_on_fail {person.occupationclassification.description} %></td>
-    <td><%=h no_account_on_fail {person.user.username} %></td>
-    <td><%= link_to "Manage people roles", :controller => "partyroles", :action => "index", :party_id => person.party_id %></td>
-    <% if person.user == nil %>
-    <td><%= link_to "Create user account", :controller => "users", :action => "index", :party_id => person.party_id %></td>
-    <% else %>
-    <td><%= link_to "Manage user account", :controller => "users", :action => "index", :party_id => person.party_id %></td>
-    <% end %>
-    <td><%= link_to 'Show', person %></td>
-    <td><%= link_to 'Edit', edit_person_path(person) %></td>
-    <td><%= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+  <%= render @people %>     <!-- calls the partial _person.html.erb for each Person object collected in the @people array-->
 </table>
 
-<br />
+<div class="paginate"><%= will_paginate %></div><br />
 
 <%= link_to 'New person', new_person_path %>

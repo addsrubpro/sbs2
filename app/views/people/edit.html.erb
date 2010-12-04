@@ -3,31 +3,33 @@
 <% form_for(@person) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    Party ID<br />
-    <%=h @person.party_id %>
-  </p>
-  <p>
+  <div class="field">
+    <%= f.label :party_ID %><br />
+    <%= f.text_field :party_id, 'disabled' => 'true' %>
+  </div>
+  <div class="field">
     <%= f.label :current_last_name %><br />
     <%= f.text_field :current_last_name %>
-  </p>
-  <p>
+  </div>
+  <div class="field">
     <%= f.label :current_first_name %><br />
     <%= f.text_field :current_first_name %>
-  </p>
-  <p>Income classification <br />
+  </div>
+  <div class="field">
+    <%= f.label :income_classification %> <br />
     <%= collection_select(:person, :incomeclassification_id, @incomeclass, :id, :description, :prompt => "none selected") %>
-  </p>
-  <p>Occupation classification <br />
+  </div>
+  <div class="field">
+    <%= f.label :occupation_classification%> <br />
     <%= collection_select(:person, :occupationclassification_id, @occupationclass, :id, :description, :prompt => "none selected") %>
-  </p>
-  <p>
+  </div>
+  <div class="field">
     <%= f.label :birth_date %><br />
     <%= date_select(:person, :birth_date, :start_year => 1940) %>
-  </p>
-  <p>
+  </div>
+  <div class="actions">
     <%= f.submit 'Update' %>
-  </p>
+  </div>
 <% end %>
 
 <%= link_to 'Show', @person %> |

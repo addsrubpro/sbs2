@@ -1,8 +1,12 @@
 class PeopleController < ApplicationController
+  before_filter :authenticate
+  
   # GET /people
   # GET /people.xml
   def index
-    @people = Person.all(:order => "party_id ASC")
+    @title = "People index"
+    @people = Person.paginate(:page => params[:page], :per_page => 4, :order => "party_id ASC")
+                              #(:order => "party_id ASC")
     
     respond_to do |format|
       format.html # index.html.erb
@@ -13,9 +17,13 @@ class PeopleController < ApplicationController
   # GET /people/1
   # GET /people/1.xml
   def show
-    @person = Person.find(params[:id])
+    unless ("#{params[:party_id]}".empty? || "#{params[:party_id]}".nil? || "#{params[:party_id]}" == 0) 
+      $party_id = "#{params[:party_id]}"
+    end
+    @person = Person.find(params[:party_id])
+    @partyroles = Partyrole.find(:all, :conditions => ["party_id = ?", $party_id])
     @title = @person.current_first_name + ' ' + @person.current_last_name
-
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @person }

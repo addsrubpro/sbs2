@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_filter :authenticate
+  before_filter :correct_user, :only => [:edit, :update]
+  
   # GET /users
   # GET /users.xml
   def index
@@ -41,7 +44,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
+    #@user = User.find(params[:id])  # to find the user is already done by: before_filter :correct_user
   end
 
   # POST /users
@@ -65,7 +68,7 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.xml
   def update
-    @user = User.find(params[:id])
+    #@user = User.find(params[:id])  # to find the user is already done by: before_filter :correct_user
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
@@ -73,6 +76,7 @@ class UsersController < ApplicationController
         format.html { redirect_to(@user) }
         format.xml  { head :ok }
       else
+        @title = "Edit user account"
         format.html { render :action => "edit" }
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end

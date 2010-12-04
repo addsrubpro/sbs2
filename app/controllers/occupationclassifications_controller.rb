@@ -1,8 +1,10 @@
 class OccupationclassificationsController < ApplicationController
+  before_filter :authenticate
+  
   # GET /occupationclassifications
   # GET /occupationclassifications.xml
   def index
-    @occupationclassifications = Occupationclassification.all(:order => "description ASC")
+    @occupationclassifications = Occupationclassification.paginate(:page => params[:page], :per_page => 4, :order => "description ASC")
 
     respond_to do |format|
       format.html # index.html.erb
