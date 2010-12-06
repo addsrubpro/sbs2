@@ -1,0 +1,24 @@
+<h1>
+  <%= "New partyrole -> #{ @person.current_first_name } #{ @person.current_last_name }" %>
+</h1>
+
+
+<% form_for(@userright) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="field">
+    <%= f.label :party_id %><br />
+    <%= f.text_field :party_id, :value => $party_id, :disabled => true %>
+    <%= f.hidden_field :party_id, :value => $party_id %>
+  </div>
+  <div class="field">
+    <%= f.label :right_assignment %><br />
+    <%= collection_select(:userright, :right_id, @rights, :id, :description, :prompt => true) %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Create' %>
+  </div>
+<% end %>
+
+<br />
+<%= link_to 'Back', userrights_path %>

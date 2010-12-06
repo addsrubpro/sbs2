@@ -2,7 +2,7 @@
     <% form_tag(:controller => 'pages', :action => 'select_view') do %>
         <strong>Select an action to manage:  </strong>
         <select id="selection" name="selection">
-            <%= select_view_options_tags %>
+            <%= select_view_options_tags %> <!-- define selectable actions in: pages_controller.rb -->
         </select>
         <%= submit_tag "View" %>
     <% end %>

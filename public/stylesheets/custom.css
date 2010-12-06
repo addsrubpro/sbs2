@@ -107,10 +107,11 @@ ul.currentuser {
 
 /* Round corners */
 .round {
-  border-radius: 10px;            /* IE: lowest version for IE is 9.0*/
-  -moz-border-radius: 10px;       /* not for IE*/
+  border-radius: 10px;           /*  IE: lowest version for IE is 9.0 */
+  -moz-border-radius: 10px;      /*  not for IE */
   -webkit-border-radius: 10px;
 }
+
 
 /* Footer layout */
 #footer {

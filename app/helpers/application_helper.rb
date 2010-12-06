@@ -50,7 +50,7 @@ module ApplicationHelper
     def correct_user
       @user = User.find(params[:id])
       redirect_to(root_path, :notice => "You are not
-                  allowed to perform this action.") unless current_user?(@user)
+                  allowed to perform this action.") unless (current_user?(@user) || admin_user?)
     end
     
     def current_user?(user)
@@ -70,4 +70,31 @@ module ApplicationHelper
     def clear_return_to
       session[:return_to] = nil
     end
+    
+    # method to check for admin user
+    def admin_user
+      $admin_right = Userright.find(:all, :conditions => ["party_id = ?", current_user.party_id], :select => "right_id")
+      @right_id = Array.new << 0
+      @length = $admin_right.length
+    
+      (1..@length).each do |a|
+        @right_id << $admin_right[a-1].right_id
+      end
+      
+      redirect_to(root_path) unless @right_id.include?(1) 
+    end
+    
+    def admin_user?
+      $admin_right = Userright.find(:all, :conditions => ["party_id = ?", current_user.party_id], :select => "right_id")
+      @right_id = Array.new
+      @length = $admin_right.length
+    
+      (1..@length).each do |a|
+        @right_id << $admin_right[a-1].right_id
+      end
+      
+      @right_id.include?(1) 
+    end
+    
+    
 end

@@ -1,11 +1,14 @@
 <h1>Editing person</h1>
 
+<% $party_id = @person.party_id %>
+
 <% form_for(@person) do |f| %>
   <%= f.error_messages %>
 
   <div class="field">
     <%= f.label :party_ID %><br />
     <%= f.text_field :party_id, 'disabled' => 'true' %>
+    <%= f.hidden_field :party_id, :value => $party_id %>
   </div>
   <div class="field">
     <%= f.label :current_last_name %><br />

@@ -8,6 +8,13 @@ class CreateUsers < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    User.create :id => 1,
+                :party_id => 1,
+                :username => "admin",
+                :password => "start",
+                :password_confirmation => "start"
+    
   end
 
   def self.down

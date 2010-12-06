@@ -10,6 +10,11 @@ class CreatePeople < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    Person.create :party_id => 1,
+                  :current_last_name => "Administrator",
+                  :current_first_name => "Administrator"
+    
   end
 
   def self.down

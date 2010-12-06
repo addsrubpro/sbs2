@@ -12,6 +12,7 @@
   <tr>
     <td><%=h user.party_id %></td>
     <td><%=h user.username %></td>
+    <td><%= link_to 'Manage user rights', :controller => "userrights", :action => "index", :party_id => @party_id %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>

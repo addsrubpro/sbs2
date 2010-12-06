@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   helper :all               # include all helpers in all views
   include SessionsHelper    # include the SessionsHelper in all controllers
   include ApplicationHelper # include the ApplicationHelper in all controllers
+  
   protect_from_forgery      # See ActionController::RequestForgeryProtection for details
 
   # Scrub sensitive parameters from your log

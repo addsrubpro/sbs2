@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :userrights
+
+  map.resources :rights
+
   map.resources :users
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.resources :partyroles

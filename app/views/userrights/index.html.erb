@@ -1,0 +1,22 @@
+<h1>Listing userrights</h1>
+
+<table>
+  <tr>
+    <th>Party ID</th>
+    <th>Right ID</th>
+  </tr>
+
+<% @userrights.each do |userright| %>
+  <tr>
+    <td><%=h userright.party_id %></td>
+    <td><%=h userright.right.description %></td>
+    <td><%= link_to 'Show', userright %></td>
+    <td><%= link_to 'Edit', edit_userright_path(userright) %></td>
+    <td><%= link_to 'Destroy', userright, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New userright', :controller => "userrights", :action => "new", :party_id => $party_id %>

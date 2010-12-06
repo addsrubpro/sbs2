@@ -4,6 +4,9 @@ class CreateParties < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    Party.create :id => 1
+    
   end
 
   def self.down

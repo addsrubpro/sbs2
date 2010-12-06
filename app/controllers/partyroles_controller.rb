@@ -36,9 +36,11 @@ class PartyrolesController < ApplicationController
     @person = Person.find(:first, :conditions => ["party_id = ?", $party_id], :select => "party_id, current_last_name, current_first_name")
     @partyrole = Partyrole.new
     
+    # dropdown box should contain only not yet assigned roles
     @role_for_party = Partyrole.find(:all, :conditions => ["party_id = ?", $party_id], :select => "role_id")
     @role_id_for_party = Array.new << 0
     @length = @role_for_party.length
+    
     (1..@length).each do |a|
       @role_id_for_party << @role_for_party[a-1].role_id
     end

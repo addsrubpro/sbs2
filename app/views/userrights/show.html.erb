@@ -1,0 +1,13 @@
+<p>
+  <b>Party id:</b>
+  <%=h @userright.party_id %>
+</p>
+
+<p>
+  <b>Right:</b>
+  <%=h @userright.right.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_userright_path(@userright) %> |
+<%= link_to 'Back', userrights_path %>

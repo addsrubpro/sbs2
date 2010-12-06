@@ -20,7 +20,7 @@ class PeopleController < ApplicationController
     unless ("#{params[:party_id]}".empty? || "#{params[:party_id]}".nil? || "#{params[:party_id]}" == 0) 
       $party_id = "#{params[:party_id]}"
     end
-    @person = Person.find(params[:party_id])
+    @person = Person.find($party_id)
     @partyroles = Partyrole.find(:all, :conditions => ["party_id = ?", $party_id])
     @title = @person.current_first_name + ' ' + @person.current_last_name
     
@@ -55,11 +55,12 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(params[:person])
     @person.party_id = Party.create[:id]
+    $party_id = @person.party_id
 
     respond_to do |format|
       if @person.save
         flash[:success] = "Person was successfully created."
-        format.html { redirect_to(@person) }
+        format.html { redirect_to @person }
         format.xml  { render :xml => @person, :status => :created, :location => @person }
       else
         format.html { render :action => "new" }
@@ -76,7 +77,7 @@ class PeopleController < ApplicationController
     respond_to do |format|
       if @person.update_attributes(params[:person])
         flash[:success] = "Person was successfully updated."
-        format.html { redirect_to(@person) }
+        format.html { redirect_to @person }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

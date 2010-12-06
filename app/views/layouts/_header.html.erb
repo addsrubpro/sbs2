@@ -19,6 +19,9 @@
     <ul class="currentuser">
     <% if signed_in? %>
         <li><%= "Signed in as: <strong>#{current_user.username}</strong>" %></li>
+        <% if admin_user? %>
+            <li><%= "ADMIN" %></li>
+        <% end %>
     <% else %>
         <li>You are not signed in.</li>
     <% end %>
