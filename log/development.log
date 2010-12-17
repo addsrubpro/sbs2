@@ -52424,3 +52424,193 @@ Rendered layouts/_header (15.6ms)
 Rendered layouts/_actions_box (0.0ms)
 Rendered layouts/_footer (0.0ms)
 Completed in 141ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-12-17 10:47:42) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"home"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.0ms)
+Rendered layouts/_header (15.6ms)
+Rendered layouts/_actions_box (1875.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 2812ms (View: 2812, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2010-12-17 10:48:15) [POST]
+  Parameters: {"authenticity_token"=>"YllmdOi8GOXUe0tdi2UQn5UC6barY64zNiIYAlc7NRU=", "selection"=>"sign_in", "commit"=>"View", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/sign_in
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#sign_in (for 127.0.0.1 at 2010-12-17 10:48:15) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"sign_in"}
+Redirected to http://127.0.0.1:3000/signin
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-12-17 10:48:16) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (15.6ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-12-17 10:48:32) [POST]
+  Parameters: {"authenticity_token"=>"YllmdOi8GOXUe0tdi2UQn5UC6barY64zNiIYAlc7NRU=", "session"=>{"username"=>"fritzuser", "password"=>"[FILTERED]"}, "commit"=>"Sign in", "controller"=>"sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'fritzuser') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.0ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 188ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-12-17 10:48:41) [POST]
+  Parameters: {"authenticity_token"=>"YllmdOi8GOXUe0tdi2UQn5UC6barY64zNiIYAlc7NRU=", "session"=>{"username"=>"jensuser", "password"=>"[FILTERED]"}, "commit"=>"Sign in", "controller"=>"sessions", "action"=>"create"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'jensuser') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.0ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-12-17 10:49:40) [POST]
+  Parameters: {"authenticity_token"=>"YllmdOi8GOXUe0tdi2UQn5UC6barY64zNiIYAlc7NRU=", "session"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Sign in", "controller"=>"sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+  [4;35;1mUser Update (968.8ms)[0m   [0mUPDATE "users" SET "remember_token" = '8c1efb9d9f472d75958b6f6d12c96842aaa1c805db97d7141d3a6044d97be7cb', "updated_at" = '2010-12-17 09:49:40' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/users/1
+Completed in 1359ms (DB: 969) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-12-17 10:49:41) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show", "id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '8c1efb9d9f472d75958b6f6d12c96842aaa1c805db97d7141d3a6044d97be7cb') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2010-12-17 10:50:01) [POST]
+  Parameters: {"authenticity_token"=>"YllmdOi8GOXUe0tdi2UQn5UC6barY64zNiIYAlc7NRU=", "selection"=>"people", "commit"=>"View", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/people
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#people (for 127.0.0.1 at 2010-12-17 10:50:01) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"people"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '8c1efb9d9f472d75958b6f6d12c96842aaa1c805db97d7141d3a6044d97be7cb') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/pages/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-12-17 10:50:01) [GET]
+  Parameters: {"controller"=>"people", "action"=>"index"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '8c1efb9d9f472d75958b6f6d12c96842aaa1c805db97d7141d3a6044d97be7cb') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" ORDER BY party_id ASC LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users".party_id = 1) LIMIT 1[0m
+Rendered people/_person (140.6ms)
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users".party_id = 2) LIMIT 1[0m
+Rendered people/_person (46.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users".party_id = 4) LIMIT 1[0m
+Rendered people/_person (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users".party_id = 5) LIMIT 1[0m
+Rendered people/_person (15.6ms)
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 391ms (View: 328, DB: 0) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-12-17 10:50:07) [GET]
+  Parameters: {"party_id"=>"1", "controller"=>"partyroles", "action"=>"index"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '8c1efb9d9f472d75958b6f6d12c96842aaa1c805db97d7141d3a6044d97be7cb') LIMIT 1[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering partyroles/index
+Rendered layouts/_stylesheets (15.6ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 172ms (View: 109, DB: 0) | 200 OK [http://127.0.0.1/partyroles?party_id=1]
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-12-17 10:50:39) [GET]
+  Parameters: {"party_id"=>"1", "controller"=>"partyroles", "action"=>"index"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '8c1efb9d9f472d75958b6f6d12c96842aaa1c805db97d7141d3a6044d97be7cb') LIMIT 1[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering partyroles/index
+Rendered layouts/_stylesheets (15.6ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 250ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/partyroles?party_id=1]
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-12-17 10:51:35) [GET]
+  Parameters: {"party_id"=>"1", "controller"=>"partyroles", "action"=>"index"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '8c1efb9d9f472d75958b6f6d12c96842aaa1c805db97d7141d3a6044d97be7cb') LIMIT 1[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering partyroles/index
+Rendered layouts/_stylesheets (15.6ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (46.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (31.2ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 266ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/partyroles?party_id=1]
+
+
+Processing PartyrolesController#index (for 127.0.0.1 at 2010-12-17 10:52:09) [GET]
+  Parameters: {"party_id"=>"1", "controller"=>"partyroles", "action"=>"index"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '8c1efb9d9f472d75958b6f6d12c96842aaa1c805db97d7141d3a6044d97be7cb') LIMIT 1[0m
+  [4;35;1mPartyrole Load (0.0ms)[0m   [0mSELECT * FROM "partyroles" WHERE (party_id = '1') [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT party_id, current_last_name, current_first_name FROM "people" WHERE (party_id = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering partyroles/index
+Rendered layouts/_stylesheets (15.6ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (140.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 281ms (View: 219, DB: 0) | 200 OK [http://127.0.0.1/partyroles?party_id=1]
