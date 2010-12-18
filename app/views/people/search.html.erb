@@ -1,9 +1,6 @@
-<h1>Listing people</h1>
+<h1>Listing people - search result</h1> 
 
-<div class="paginate">
-    <%= will_paginate %>
-</div><br />
-
+<div class="paginate"><%= will_paginate %></div><br />
 <table>
   <tr>
     <th>Party ID</th>
@@ -19,5 +16,5 @@
 
 <div class="paginate"><%= will_paginate %></div><br />
 
-<%= link_to 'New person', new_person_path %> |
-<%= link_to 'Search', :controller => "people", :action => "search_form" %>
+<%= link_to 'New person', new_person_path %>  |  
+<%= link_to 'Clear search', people_path %>

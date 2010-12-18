@@ -6,10 +6,30 @@ class PeopleController < ApplicationController
   def index
     @title = "People index"
     @people = Person.paginate(:page => params[:page], :per_page => 4, :order => "party_id ASC")
-                              #(:order => "party_id ASC")
     
     respond_to do |format|
       format.html # index.html.erb
+      format.xml  { render :xml => @people }
+    end
+  end
+  
+  def search_form
+    @title = "Search form"
+    render "search_form"
+    
+  end
+  
+  def search
+    @title = "People search result"
+    
+    current_last_name = params[:current_last_name]
+    current_first_name = params[:current_first_name]
+    
+    #@people = Person.paginate(:page => params[:page], :per_page => 4, :conditions => {:current_last_name => current_last_name})
+    @people = Person.paginate(:page => params[:page], :per_page => 4, :conditions => ['current_last_name LIKE ? AND current_first_name LIKE ?', "#{current_last_name}%", "#{current_first_name}%"])
+    
+    respond_to do |format|
+      format.html # search.html.erb   <-- search result page
       format.xml  { render :xml => @people }
     end
   end

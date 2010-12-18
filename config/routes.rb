@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :roles
   map.resources :occupationclassifications
   map.resources :incomeclassifications
-  map.resources :people
+  map.resources :people, :only => [:index, :edit, :new, :create, :destroy] #without action "searchform" because Rails would assume the format: controller/action/id (but in serach_form an id does not exist)
   map.resources :parties
   map.about   '/about',   :controller => 'pages', :action => 'about'
   map.signin '/signin',   :controller => 'sessions', :action => 'new'
