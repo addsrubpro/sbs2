@@ -2,18 +2,22 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :userrights
 
   map.resources :rights
-
+  
   map.resources :users
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.resources :partyroles
   map.resources :roles
   map.resources :occupationclassifications
   map.resources :incomeclassifications
-  map.resources :people, :only => [:index, :edit, :new, :create, :destroy] #without action "searchform" because Rails would assume the format: controller/action/id (but in serach_form an id does not exist)
+  map.resources :people
   map.resources :parties
   map.about   '/about',   :controller => 'pages', :action => 'about'
   map.signin '/signin',   :controller => 'sessions', :action => 'new'
   map.signout '/signout', :controller => 'sessions', :action => 'destroy'
+  
+  # map.search 'search', :controller => 'people', :action => 'search'
+  map.search_form 'search_form', :controller => 'people', :action => 'search_form'
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
 

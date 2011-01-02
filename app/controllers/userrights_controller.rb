@@ -2,8 +2,8 @@ class UserrightsController < ApplicationController
   # GET /userrights
   # GET /userrights.xml
   def index
-    unless ("#{params[:party_id]}".empty? || "#{params[:party_id]}".nil? || "#{params[:party_id]}" == 0) 
-      $party_id = "#{params[:party_id]}"
+    unless (params[:party_id].nil? || params[:party_id] == 0) 
+      $party_id = params[:party_id]
     end
     @userrights = Userright.find(:all, :conditions => ["party_id = ?", $party_id])
     
@@ -27,7 +27,7 @@ class UserrightsController < ApplicationController
   # GET /userrights/new
   # GET /userrights/new.xml
   def new
-    $party_id = "#{params[:party_id]}"
+    $party_id = params[:party_id]
     @person = Person.find(:first, :conditions => ["party_id = ?", $party_id], :select => "party_id, current_last_name, current_first_name")
     @userright = Userright.new
 

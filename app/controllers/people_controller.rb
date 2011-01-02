@@ -1,6 +1,8 @@
 class PeopleController < ApplicationController
   before_filter :authenticate
   
+  AGE = {0 => 0, 18 => 18, 25 => 25, 35 => 35, 55 => 55, 65 => 65, 'unlimited' => 200}
+  
   # GET /people
   # GET /people.xml
   def index
@@ -15,30 +17,65 @@ class PeopleController < ApplicationController
   
   def search_form
     @title = "Search form"
+    @incomeclass = Incomeclassification.find(:all)
+    @occupationclass = Occupationclassification.find(:all, :order => 'description ASC')
+    
     render "search_form"
     
   end
   
   def search
     @title = "People search result"
-    
-    current_last_name = params[:current_last_name]
-    current_first_name = params[:current_first_name]
-    
-    #@people = Person.paginate(:page => params[:page], :per_page => 4, :conditions => {:current_last_name => current_last_name})
-    @people = Person.paginate(:page => params[:page], :per_page => 4, :conditions => ['current_last_name LIKE ? AND current_first_name LIKE ?', "#{current_last_name}%", "#{current_first_name}%"])
-    
+   
+    @people = Person.paginate(:page => params[:page], :per_page => 6,
+                              :conditions => ['current_last_name LIKE :current_last_name AND
+                                               current_first_name LIKE :current_first_name AND
+                                               party_id = :party_id' ,
+                                              :current_last_name => params[:current_last_name].to_s+"%" ,
+                                              :current_first_name => params[:current_first_name].to_s+"%" ,
+                                              :party_id => params[:party_id] ])                  # the % sign is the SQL LIKE wildcard which is added to the search string delivered by the relevant params
+       
     respond_to do |format|
-      format.html # search.html.erb   <-- search result page
+      format.html # search.html.erb   <-- search results page
       format.xml  { render :xml => @people }
     end
+  end
+  
+  def search_classi
+    @title = "Search form incomeclassification"
+    @birthdate_low = Date.today - params[:age_high][:key].to_i.years
+    @birthdate_high = Date.today - params[:age_low][:key].to_i.years
+        
+    if params[:person][:incomeclassification_id].empty?
+      @ic_description = "not selected"
+      sql_insert_ic = "OR p.incomeclassification_id IS NULL "
+      params[:person][:incomeclassification_id] = "%"
+    else
+      @ic_description = Incomeclassification.find(params[:person][:incomeclassification_id]).description
+      sql_insert_ic = ""
+    end
+    
+    if params[:person][:occupationclassification_id].empty?
+      @oc_description = "not selected"
+      sql_insert_oc = "OR p.occupationclassification_id IS NULL "
+      params[:person][:occupationclassification_id] = "%"
+    else
+      @oc_description = Occupationclassification.find(params[:person][:occupationclassification_id]).description
+      sql_insert_oc = ""
+    end
+    
+    sql_query = "SELECT * FROM people p WHERE (p.incomeclassification_id LIKE ? " + sql_insert_ic + ") AND (p.occupationclassification_id LIKE ? " + sql_insert_oc + ") AND p.birth_date BETWEEN ? AND ?"
+    @people = Person.find_by_sql [sql_query, params[:person][:incomeclassification_id], params[:person][:occupationclassification_id], @birthdate_low, @birthdate_high]
+    
+    render "search" # search.html.erb   <-- search results page
+    
   end
 
   # GET /people/1
   # GET /people/1.xml
   def show
-    unless ("#{params[:party_id]}".empty? || "#{params[:party_id]}".nil? || "#{params[:party_id]}" == 0) 
-      $party_id = "#{params[:party_id]}"
+    unless (params[:party_id].nil? || params[:party_id] == 0) 
+      $party_id = params[:party_id]
     end
     @person = Person.find($party_id)
     @partyroles = Partyrole.find(:all, :conditions => ["party_id = ?", $party_id])
@@ -54,8 +91,8 @@ class PeopleController < ApplicationController
   # GET /people/new.xml
   def new
     @person = Person.new
-    @incomeclass = Incomeclassification.find(:all)
-    @occupationclass = Occupationclassification.find(:all)
+    @incomeclass = Incomeclassification.find(:all, :order => "description ASC")
+    @occupationclass = Occupationclassification.find(:all, :order => "description ASC")
 
     respond_to do |format|
       format.html # new.html.erb
@@ -66,8 +103,8 @@ class PeopleController < ApplicationController
   # GET /people/1/edit
   def edit
     @person = Person.find(params[:id])
-    @incomeclass = Incomeclassification.find(:all)
-    @occupationclass = Occupationclassification.find(:all)
+    @incomeclass = Incomeclassification.find(:all, :order => "description ASC")
+    @occupationclass = Occupationclassification.find(:all, :order => "description ASC")
   end
 
   # POST /people

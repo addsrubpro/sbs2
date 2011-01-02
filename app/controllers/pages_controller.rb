@@ -56,6 +56,6 @@ class PagesController < ApplicationController
   
   def people_search
     @title = "People search"
-    redirect_to :controller => 'people', :action => 'search_form'
+    redirect_to search_form_path
   end
 end

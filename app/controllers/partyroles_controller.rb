@@ -4,8 +4,8 @@ class PartyrolesController < ApplicationController
   # GET /partyroles
   # GET /partyroles.xml
   def index
-    unless ("#{params[:party_id]}".empty? || "#{params[:party_id]}".nil? || "#{params[:party_id]}" == 0) 
-      $party_id = "#{params[:party_id]}"
+    unless (params[:party_id].nil? || params[:party_id] == 0) 
+      $party_id = params[:party_id]
     end
     @partyroles = Partyrole.find(:all, :conditions => ["party_id = ?", $party_id])
     @partyrole = Person.find(:first, :conditions => ["party_id = ?", $party_id])
@@ -32,7 +32,7 @@ class PartyrolesController < ApplicationController
   # GET /partyroles/new
   # GET /partyroles/new.xml
   def new
-    $party_id = "#{params[:party_id]}"
+    $party_id = params[:party_id]
     @person = Person.find(:first, :conditions => ["party_id = ?", $party_id], :select => "party_id, current_last_name, current_first_name")
     @partyrole = Partyrole.new
     

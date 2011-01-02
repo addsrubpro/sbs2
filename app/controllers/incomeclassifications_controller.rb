@@ -49,7 +49,7 @@ class IncomeclassificationsController < ApplicationController
     respond_to do |format|
       if @incomeclassification.save
         flash[:success] = "Income classification was successfully created."
-        format.html { redirect_to(@incomeclassification) }
+        format.html { redirect_to @incomeclassification }
         format.xml  { render :xml => @incomeclassification, :status => :created, :location => @incomeclassification }
       else
         format.html { render :action => "new" }
@@ -66,7 +66,7 @@ class IncomeclassificationsController < ApplicationController
     respond_to do |format|
       if @incomeclassification.update_attributes(params[:incomeclassification])
         flash[:success] = "Income classification was successfully updated."
-        format.html { redirect_to(@incomeclassification) }
+        format.html { redirect_to @incomeclassification }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -82,7 +82,7 @@ class IncomeclassificationsController < ApplicationController
     @incomeclassification.destroy
 
     respond_to do |format|
-      format.html { redirect_to(incomeclassifications_url) }
+      format.html { redirect_to incomeclassifications_url }
       format.xml  { head :ok }
     end
   end

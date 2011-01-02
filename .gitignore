@@ -4,8 +4,8 @@ tmp/**/*
 doc/api
 doc/app
 db/*.sqlite3
-db/sbs2_development
-db/sbs2-development
+sbs2_development
+sbs2-development
 db/*.DS_Store
 *.swp
 *˜

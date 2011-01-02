@@ -1,10 +1,41 @@
+<!-- contains search fields for part_id and names of the person -->
 <div id="form">
     <% form_tag :controller => "people", :action => "search", :method => :get do %>
         <div class="field">
+            <%= label_tag 'party_id', 'Party ID' %><br />
+            <%= text_field_tag :party_id, params[:party_id] %>
+        </div>
+        <div class="field">
+            <%= label_tag 'current_last_name' %><br />
             <%= text_field_tag :current_last_name, params[:current_last_name] %>
         </div>
         <div class="field">
+            <%= label_tag 'current_first_name' %><br />
             <%= text_field_tag :current_first_name, params[:current_first_name] %>
+        </div>
+        <div class="actions">
+            <%= submit_tag "Search", :name => nil %>
+        </div>
+    <% end %>
+</div>
+<hr />
+
+<!-- contains search fields for people classifications -->
+<div id="form">
+    <% form_tag :controller => "people", :action => "search_classi", :method => :get do %>
+        <div class="field">
+            <%= label_tag 'income_classification' %> <br />
+            <%= collection_select(:person, :incomeclassification_id, @incomeclass, :id, :description, :prompt => true) %>
+        </div>
+        <div class="field">
+            <%= label_tag 'occupation_classification' %> <br />
+            <%= collection_select(:person, :occupationclassification_id, @occupationclass, :id, :description, :prompt => true) %>
+        </div>
+        <div class="field">
+            <%= label_tag 'age_range_in_years_between' %> <br />
+            <%= select("age_low", "key", PeopleController::AGE) %>
+            <%= label_tag 'age_high', 'and' %> 
+            <%= select("age_high", "key", PeopleController::AGE, :selected => 200) %> 
         </div>
         <div class="actions">
             <%= submit_tag "Search", :name => nil %>
