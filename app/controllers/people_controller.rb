@@ -30,7 +30,10 @@ class PeopleController < ApplicationController
     @people = Person.paginate(:page => params[:page], :per_page => 6,
                               :conditions => ['current_last_name LIKE :current_last_name AND
                                                current_first_name LIKE :current_first_name AND
-                                               party_id = :party_id', :current_last_name => params[:current_last_name].to_s+"%", :current_first_name => params[:current_first_name].to_s+"%" , :party_id => params[:party_id] ])
+                                               party_id = :party_id',
+                                              {:current_last_name => params[:current_last_name].to_s+"%",
+                                               :current_first_name => params[:current_first_name].to_s+"%",
+                                               :party_id => params[:party_id]} ])
                                                # the % sign is the SQL LIKE wildcard which is added to the search string delivered by the relevant params
        
     respond_to do |format|
