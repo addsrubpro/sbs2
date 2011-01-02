@@ -1,7 +1,7 @@
 class PeopleController < ApplicationController
   before_filter :authenticate
   
-  AGE = {0 => 0, 18 => 18, 25 => 25, 35 => 35, 55 => 55, 65 => 65, 'unlimited' => 200}
+  AGE = {'0' => 0, '18' => 18, '25' => 25, '35' => 35, '55' => 55, '65' => 65, 'unlimited' => 200}
   
   # GET /people
   # GET /people.xml
