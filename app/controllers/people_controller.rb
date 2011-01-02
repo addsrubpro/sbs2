@@ -26,11 +26,15 @@ class PeopleController < ApplicationController
   
   def search
     @title = "People search result"
-   
+    
+    if params[:party_id].empty?
+      params[:party_id] = "%"
+    end
+
     @people = Person.paginate(:page => params[:page], :per_page => 6,
                               :conditions => ['current_last_name LIKE :current_last_name AND
                                                current_first_name LIKE :current_first_name AND
-                                               party_id = :party_id',
+                                               party_id LIKE :party_id',
                                               {:current_last_name => params[:current_last_name].to_s+"%",
                                                :current_first_name => params[:current_first_name].to_s+"%",
                                                :party_id => params[:party_id]} ])
