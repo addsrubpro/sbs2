@@ -1,6 +1,6 @@
 <!-- Search results page -->
 <h1>Listing people - search result</h1> 
-<%= "<b>Birthdate</b> between <i>#{@birthdate_low}</i> and <i>#{@birthdate_high}</i> AND <b>Income classification</b> is <i>#{@ic_description}</i> AND <b>Occupation classification</b> is <i>#{@oc_description}</i>. " %> 
+<%= "<b>Birthdate</b> is between <i>#{@birthdate_low}</i> and <i>#{@birthdate_high}</i> AND <b>Income classification</b> is <i>#{@ic_description}</i> AND <b>Occupation classification</b> is <i>#{@oc_description}</i>. " %> 
 
 <table>
   <tr>
@@ -14,6 +14,7 @@
   </tr>
   <%= render @people %>     <!-- calls the partial _person.html.erb for each Person object collected in the @people array-->
 </table>
+
 
 <%= link_to 'New person', new_person_path %>  |  
 <%= link_to 'Clear search', people_path %>

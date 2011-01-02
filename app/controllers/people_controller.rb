@@ -27,18 +27,19 @@ class PeopleController < ApplicationController
   def search
     @title = "People search result"
     
-    if params[:party_id].empty?
-      params[:party_id] = "%"
+    if !params[:party_id].empty?
+      sql_insert_pid = ' AND party_id = :pid'
+    else
+      sql_insert_pid = ''
     end
-
+        
     @people = Person.paginate(:page => params[:page], :per_page => 10,
-                              :conditions => ['current_last_name LIKE ? AND
-                                               current_first_name LIKE ? AND
-                                               party_id LIKE ?',
-                                               params[:current_last_name].to_s+"%",
-                                               params[:current_first_name].to_s+"%",
-                                               params[:party_id] ])
-                                               # the % sign is the SQL LIKE wildcard which is added to the search string delivered by the relevant params
+                              :conditions => ['current_last_name LIKE :cln AND
+                                               current_first_name LIKE :cfn' + sql_insert_pid,
+                                               {:cln => params[:current_last_name].to_s+"%",
+                                               :cfn => params[:current_first_name].to_s+"%",
+                                               :pid => params[:party_id]} ])
+                                               # the % sign is the SQL LIKE wildcard which is added to search strings with type VARCHAR delivered by the relevant params (does not work with INTEGER attributes on PostgreSQL DB)
        
     respond_to do |format|
       format.html # search.html.erb   <-- search results page
@@ -51,26 +52,24 @@ class PeopleController < ApplicationController
     @birthdate_low = Date.today - params[:age_high][:key].to_i.years
     @birthdate_high = Date.today - params[:age_low][:key].to_i.years
         
-    if params[:person][:incomeclassification_id].empty?
-      @ic_description = "not selected"
-      sql_insert_ic = "OR p.incomeclassification_id IS NULL "
-      params[:person][:incomeclassification_id] = "%"
-    else
+    if !params[:person][:incomeclassification_id].empty?
       @ic_description = Incomeclassification.find(params[:person][:incomeclassification_id]).description
+      sql_insert_ic = "p.incomeclassification_id = :ic_id AND "
+    else
+      @ic_description = "not selected"
       sql_insert_ic = ""
     end
     
-    if params[:person][:occupationclassification_id].empty?
-      @oc_description = "not selected"
-      sql_insert_oc = "OR p.occupationclassification_id IS NULL "
-      params[:person][:occupationclassification_id] = "%"
-    else
+    if !params[:person][:occupationclassification_id].empty?
       @oc_description = Occupationclassification.find(params[:person][:occupationclassification_id]).description
+      sql_insert_oc = "p.occupationclassification_id = :oc_id AND "
+    else
+      @oc_description = "not selected"
       sql_insert_oc = ""
     end
     
-    sql_query = "SELECT * FROM people p WHERE (p.incomeclassification_id LIKE ? " + sql_insert_ic + ") AND (p.occupationclassification_id LIKE ? " + sql_insert_oc + ") AND p.birth_date BETWEEN ? AND ?"
-    @people = Person.find_by_sql [sql_query, params[:person][:incomeclassification_id], params[:person][:occupationclassification_id], @birthdate_low, @birthdate_high]
+    sql_query = "SELECT * FROM people p WHERE " + sql_insert_ic + sql_insert_oc + "p.birth_date BETWEEN :bdl AND :bdh"
+    @people = Person.find_by_sql [sql_query, {:ic_id => params[:person][:incomeclassification_id], :oc_id => params[:person][:occupationclassification_id], :bdl => @birthdate_low, :bdh => @birthdate_high}]
     
     render "search" # search.html.erb   <-- search results page
     
