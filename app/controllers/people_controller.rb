@@ -1,8 +1,8 @@
 class PeopleController < ApplicationController
   before_filter :authenticate
   
-  AGE = {'0' => 0, '18' => 18, '25' => 25, '35' => 35, '55' => 55, '65' => 65, 'unlimited' => 200}
-  
+  AGE = { "0" => 0, "18" => 18, "25" => 25, "35" => 35, "55" => 55, "65" => 65, "unlimited" => 200 }.sort
+    
   # GET /people
   # GET /people.xml
   def index
@@ -40,7 +40,12 @@ class PeopleController < ApplicationController
                                                :cfn => params[:current_first_name].to_s+"%",
                                                :pid => params[:party_id]} ])
                                                # the % sign is the SQL LIKE wildcard which is added to search strings with type VARCHAR delivered by the relevant params (does not work with INTEGER attributes on PostgreSQL DB)
-       
+    if !params[:party_id].empty? 
+      @was_selected = "Selected Party ID: " + params[:party_id]
+    else
+      @was_selected = "Party ID not selected."
+    end
+    
     respond_to do |format|
       format.html # search.html.erb   <-- search results page
       format.xml  { render :xml => @people }
@@ -49,27 +54,29 @@ class PeopleController < ApplicationController
   
   def search_classi
     @title = "Search form incomeclassification"
-    @birthdate_low = Date.today - params[:age_high][:key].to_i.years
-    @birthdate_high = Date.today - params[:age_low][:key].to_i.years
+    birthdate_low = Date.today - params[:age_high][:key].to_i.years
+    birthdate_high = Date.today - params[:age_low][:key].to_i.years
         
     if !params[:person][:incomeclassification_id].empty?
-      @ic_description = Incomeclassification.find(params[:person][:incomeclassification_id]).description
+      ic_description = Incomeclassification.find(params[:person][:incomeclassification_id]).description
       sql_insert_ic = "p.incomeclassification_id = :ic_id AND "
     else
-      @ic_description = "not selected"
+      ic_description = "not selected"
       sql_insert_ic = ""
     end
     
     if !params[:person][:occupationclassification_id].empty?
-      @oc_description = Occupationclassification.find(params[:person][:occupationclassification_id]).description
+      oc_description = Occupationclassification.find(params[:person][:occupationclassification_id]).description
       sql_insert_oc = "p.occupationclassification_id = :oc_id AND "
     else
-      @oc_description = "not selected"
+      oc_description = "not selected"
       sql_insert_oc = ""
     end
     
     sql_query = "SELECT * FROM people p WHERE " + sql_insert_ic + sql_insert_oc + "p.birth_date BETWEEN :bdl AND :bdh"
-    @people = Person.find_by_sql [sql_query, {:ic_id => params[:person][:incomeclassification_id], :oc_id => params[:person][:occupationclassification_id], :bdl => @birthdate_low, :bdh => @birthdate_high}]
+    @people = Person.find_by_sql [sql_query, {:ic_id => params[:person][:incomeclassification_id], :oc_id => params[:person][:occupationclassification_id], :bdl => birthdate_low, :bdh => birthdate_high}]
+    
+    @was_selected = "<b>Birthdate</b> is between <i>#{birthdate_low}</i> and <i>#{birthdate_high}</i> AND <b>Income classification</b> is <i>#{ic_description}</i> AND <b>Occupation classification</b> is <i>#{oc_description}</i>."
     
     render "search" # search.html.erb   <-- search results page
     
