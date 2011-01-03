@@ -36608,3 +36608,731 @@ Rendered layouts/_header (0.0ms)
 Rendered layouts/_actions_box (15.6ms)
 Rendered layouts/_footer (0.0ms)
 Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-01-04 00:13:05) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"home"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (15.6ms)
+Rendered layouts/_header (15.6ms)
+Rendered layouts/_actions_box (1734.4ms)
+Rendered layouts/_footer (15.6ms)
+Completed in 2266ms (View: 2266, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:13:17) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"sign_in", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+
+ActionController::RoutingError (No route matches {:action=>"sign_in"}):
+  app/controllers/pages_controller.rb:13:in `select_view'
+  <internal:prelude>:8:in `synchronize'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/Programme/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-01-04 00:14:53) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"home"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.0ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:14:55) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"sign_in", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/sign_in
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#sign_in (for 127.0.0.1 at 2011-01-04 00:14:55) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"sign_in"}
+Redirected to http://127.0.0.1:3000/signin
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-01-04 00:14:55) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.0ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/signin]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:15:13) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"home", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-01-04 00:15:13) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"home"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.0ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_actions_box (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:15:15) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"about", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/about
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-01-04 00:15:15) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"about"}
+Rendering template within layouts/application
+Rendering pages/about
+Rendered layouts/_stylesheets (0.0ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_actions_box (0.0ms)
+Rendered layouts/_footer (15.6ms)
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/about]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:15:20) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"sign_in", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/sign_in
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#sign_in (for 127.0.0.1 at 2011-01-04 00:15:20) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"sign_in"}
+Redirected to http://127.0.0.1:3000/signin
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-01-04 00:15:20) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.0ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_actions_box (93.8ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 141ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/signin]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:15:24) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"home", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-01-04 00:15:24) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"home"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (15.6ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_actions_box (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:15:26) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"about", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/about
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-01-04 00:15:26) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"about"}
+Rendering template within layouts/application
+Rendering pages/about
+Rendered layouts/_stylesheets (0.0ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/about]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:15:28) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"sign_in", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/sign_in
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#sign_in (for 127.0.0.1 at 2011-01-04 00:15:28) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"sign_in"}
+Redirected to http://127.0.0.1:3000/signin
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-01-04 00:15:28) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.0ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-01-04 00:15:46) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "session"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Sign in", "controller"=>"sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+  [4;35;1mUser Update (359.4ms)[0m   [0mUPDATE "users" SET "remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30', "updated_at" = '2011-01-03 23:15:46' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/users/1
+Completed in 734ms (DB: 359) | 302 Found [http://127.0.0.1/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-01-04 00:15:47) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show", "id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-01-04 00:15:50) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"home"}
+Rendering template within layouts/application
+Rendering pages/home
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+Rendered layouts/_stylesheets (0.0ms)
+  [4;35;1mUserright Load (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 172ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:15:53) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"about", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/about
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-01-04 00:15:54) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"about"}
+Rendering template within layouts/application
+Rendering pages/about
+Rendered layouts/_stylesheets (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (46.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/about]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:15:57) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"income_classes", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/income_classes
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#income_classes (for 127.0.0.1 at 2011-01-04 00:15:58) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"income_classes"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/incomeclassifications
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/pages/income_classes]
+
+
+Processing IncomeclassificationsController#index (for 127.0.0.1 at 2011-01-04 00:15:58) [GET]
+  Parameters: {"controller"=>"incomeclassifications", "action"=>"index"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;36;1mIncomeclassification Load (15.6ms)[0m   [0;1mSELECT * FROM "incomeclassifications" ORDER BY id ASC LIMIT 4 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering incomeclassifications/index
+Rendered layouts/_stylesheets (0.0ms)
+  [4;35;1mUserright Load (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 156ms (View: 109, DB: 16) | 200 OK [http://127.0.0.1/incomeclassifications]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:16:02) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"occupation_classes", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/occupation_classes
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#occupation_classes (for 127.0.0.1 at 2011-01-04 00:16:03) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"occupation_classes"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/occupationclassifications
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/pages/occupation_classes]
+
+
+Processing OccupationclassificationsController#index (for 127.0.0.1 at 2011-01-04 00:16:03) [GET]
+  Parameters: {"controller"=>"occupationclassifications", "action"=>"index"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" ORDER BY description ASC LIMIT 4 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering occupationclassifications/index
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (109.4ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 453ms (View: 406, DB: 0) | 200 OK [http://127.0.0.1/occupationclassifications]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:16:09) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"rights", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/rights
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#rights (for 127.0.0.1 at 2011-01-04 00:16:09) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"rights"}
+Redirected to http://127.0.0.1:3000/rights
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/rights]
+
+
+Processing RightsController#index (for 127.0.0.1 at 2011-01-04 00:16:09) [GET]
+  Parameters: {"controller"=>"rights", "action"=>"index"}
+  [4;36;1mRight Load (0.0ms)[0m   [0;1mSELECT * FROM "rights" [0m
+Rendering template within layouts/application
+Rendering rights/index
+Rendered layouts/_stylesheets (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (46.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 141ms (View: 109, DB: 0) | 200 OK [http://127.0.0.1/rights]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:16:14) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"roles", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/roles
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#roles (for 127.0.0.1 at 2011-01-04 00:16:14) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"roles"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/roles
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/pages/roles]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2011-01-04 00:16:14) [GET]
+  Parameters: {"controller"=>"roles", "action"=>"index"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM "roles" LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (31.2ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 172ms (View: 109, DB: 0) | 200 OK [http://127.0.0.1/roles]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2011-01-04 00:16:20) [GET]
+  Parameters: {"page"=>"2", "controller"=>"roles", "action"=>"index"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM "roles" LIMIT 4 OFFSET 4[0m
+Rendering template within layouts/application
+Rendering roles/index
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (15.6ms)
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/roles?page=2]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:16:25) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"people", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/people
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#people (for 127.0.0.1 at 2011-01-04 00:16:25) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"people"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/pages/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2011-01-04 00:16:25) [GET]
+  Parameters: {"controller"=>"people", "action"=>"index"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" ORDER BY party_id ASC LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered people/_person (31.2ms)
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 3) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendered people/_person (46.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered people/_person (15.6ms)
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 3) [0m
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+Rendered people/_person (15.6ms)
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 266ms (View: 203, DB: 31) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2011-01-04 00:16:30) [GET]
+  Parameters: {"page"=>"2", "controller"=>"people", "action"=>"index"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM "people" ORDER BY party_id ASC LIMIT 4 OFFSET 4[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+Rendered people/_person (31.2ms)
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 4) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+Rendered people/_person (15.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 4) [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 3) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered people/_person (31.2ms)
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+Rendered people/_person (15.6ms)
+Rendered layouts/_stylesheets (15.6ms)
+  [4;35;1mUserright Load (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 219ms (View: 156, DB: 16) | 200 OK [http://127.0.0.1/people?page=2]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:16:36) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"people_search", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/people_search
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#people_search (for 127.0.0.1 at 2011-01-04 00:16:36) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"people_search"}
+Redirected to http://127.0.0.1:3000/search_form
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/people_search]
+
+
+Processing PeopleController#search_form (for 127.0.0.1 at 2011-01-04 00:16:37) [GET]
+  Parameters: {"controller"=>"people", "action"=>"search_form"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" ORDER BY description ASC[0m
+Rendering template within layouts/application
+Rendering people/search_form
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 281ms (View: 141, DB: 0) | 200 OK [http://127.0.0.1/search_form]
+
+
+Processing PeopleController#search (for 127.0.0.1 at 2011-01-04 00:16:47) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "party_id"=>"", "current_last_name"=>"%r", "current_first_name"=>"", "method"=>"get", "controller"=>"people", "action"=>"search"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM "people" WHERE (current_last_name LIKE '%r%' AND
+ current_first_name LIKE '%') LIMIT 2 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "people" WHERE (current_last_name LIKE '%r%' AND
+ current_first_name LIKE '%') [0m
+Rendering template within layouts/application
+Rendering people/search
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered people/_person (15.6ms)
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered people/_person (46.9ms)
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 219ms (View: 172, DB: 0) | 200 OK [http://127.0.0.1/people/search/*?method=get]
+
+
+Processing PeopleController#search (for 127.0.0.1 at 2011-01-04 00:16:52) [GET]
+  Parameters: {"page"=>"2", "controller"=>"people", "action"=>"search"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM "people" WHERE (current_last_name LIKE '%r%' AND
+ current_first_name LIKE '%') LIMIT 2 OFFSET 2[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "people" WHERE (current_last_name LIKE '%r%' AND
+ current_first_name LIKE '%') [0m
+Rendering template within layouts/application
+Rendering people/search
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+Rendered people/_person (46.9ms)
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 4) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 3) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered people/_person (31.2ms)
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 281ms (View: 234, DB: 0) | 200 OK [http://127.0.0.1/people/search/*?page=2]
+
+
+Processing PeopleController#search (for 127.0.0.1 at 2011-01-04 00:16:55) [GET]
+  Parameters: {"page"=>"1", "controller"=>"people", "action"=>"search"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM "people" WHERE (current_last_name LIKE '%r%' AND
+ current_first_name LIKE '%') LIMIT 2 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "people" WHERE (current_last_name LIKE '%r%' AND
+ current_first_name LIKE '%') [0m
+Rendering template within layouts/application
+Rendering people/search
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered people/_person (31.2ms)
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendered people/_person (46.9ms)
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 188ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/people/search/*?page=1]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:16:59) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"people_search", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/people_search
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#people_search (for 127.0.0.1 at 2011-01-04 00:17:00) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"people_search"}
+Redirected to http://127.0.0.1:3000/search_form
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/people_search]
+
+
+Processing PeopleController#search_form (for 127.0.0.1 at 2011-01-04 00:17:00) [GET]
+  Parameters: {"controller"=>"people", "action"=>"search_form"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" [0m
+  [4;36;1mOccupationclassification Load (15.6ms)[0m   [0;1mSELECT * FROM "occupationclassifications" ORDER BY description ASC[0m
+Rendering template within layouts/application
+Rendering people/search_form
+Rendered layouts/_stylesheets (0.0ms)
+  [4;35;1mUserright Load (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (46.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (31.2ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 172ms (View: 109, DB: 16) | 200 OK [http://127.0.0.1/search_form]
+
+
+Processing PeopleController#search (for 127.0.0.1 at 2011-01-04 00:17:14) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "party_id"=>"2", "current_last_name"=>"", "current_first_name"=>"", "method"=>"get", "controller"=>"people", "action"=>"search"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM "people" WHERE (current_last_name LIKE '%' AND
+ current_first_name LIKE '%' AND party_id = '2') LIMIT 2 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering people/search
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 3) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendered people/_person (62.5ms)
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 172ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/people/search/*?method=get]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:17:22) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"people_search", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/people_search
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#people_search (for 127.0.0.1 at 2011-01-04 00:17:22) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"people_search"}
+Redirected to http://127.0.0.1:3000/search_form
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/people_search]
+
+
+Processing PeopleController#search_form (for 127.0.0.1 at 2011-01-04 00:17:22) [GET]
+  Parameters: {"controller"=>"people", "action"=>"search_form"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" ORDER BY description ASC[0m
+Rendering template within layouts/application
+Rendering people/search_form
+Rendered layouts/_stylesheets (15.6ms)
+  [4;35;1mUserright Load (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 156ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/search_form]
+
+
+Processing PeopleController#search_classi (for 127.0.0.1 at 2011-01-04 00:17:30) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "classify"=>{"incomeclassification_id"=>"1", "occupationclassification_id"=>"3"}, "age_low"=>{"key"=>"0"}, "age_high"=>{"key"=>"200"}, "method"=>"get", "controller"=>"people", "action"=>"search_classi"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 3) [0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM people p WHERE p.incomeclassification_id = '1' AND p.occupationclassification_id = '3' AND p.birth_date BETWEEN '1811-01-04' AND '2011-01-04' LIMIT 2 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering people/search
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 3) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendered people/_person (31.2ms)
+Rendered layouts/_stylesheets (15.6ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (15.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (31.2ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 281ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/people/search_classi/*?method=get]
+
+
+Processing PagesController#select_view (for 127.0.0.1 at 2011-01-04 00:17:40) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "selection"=>"people_search", "commit"=>"Start", "controller"=>"pages", "action"=>"select_view"}
+Redirected to http://127.0.0.1:3000/pages/people_search
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/pages/select_view]
+
+
+Processing PagesController#people_search (for 127.0.0.1 at 2011-01-04 00:17:40) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"people_search"}
+Redirected to http://127.0.0.1:3000/search_form
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/pages/people_search]
+
+
+Processing PeopleController#search_form (for 127.0.0.1 at 2011-01-04 00:17:40) [GET]
+  Parameters: {"controller"=>"people", "action"=>"search_form"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;35;1mIncomeclassification Load (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" ORDER BY description ASC[0m
+Rendering template within layouts/application
+Rendering people/search_form
+Rendered layouts/_stylesheets (15.6ms)
+  [4;35;1mUserright Load (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (15.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 156ms (View: 94, DB: 16) | 200 OK [http://127.0.0.1/search_form]
+
+
+Processing PeopleController#search_classi (for 127.0.0.1 at 2011-01-04 00:17:45) [POST]
+  Parameters: {"authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "classify"=>{"incomeclassification_id"=>"4", "occupationclassification_id"=>""}, "age_low"=>{"key"=>"0"}, "age_high"=>{"key"=>"200"}, "method"=>"get", "controller"=>"people", "action"=>"search_classi"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 4) [0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM people p WHERE p.incomeclassification_id = '4' AND p.birth_date BETWEEN '1811-01-04' AND '2011-01-04' LIMIT 2 OFFSET 0[0m
+  [4;36;1mPerson Count (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM (SELECT * FROM people p WHERE p.incomeclassification_id = '4' AND p.birth_date BETWEEN '1811-01-04' AND '2011-01-04') AS count_table[0m
+Rendering template within layouts/application
+Rendering people/search
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 4) [0m
+  [4;36;1mOccupationclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 3) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+Rendered people/_person (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 4) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+Rendered people/_person (15.6ms)
+Rendered layouts/_stylesheets (15.6ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (15.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 188ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/people/search_classi/*?method=get]
+
+
+Processing PeopleController#search_classi (for 127.0.0.1 at 2011-01-04 00:17:49) [GET]
+  Parameters: {"page"=>"2", "controller"=>"people", "action"=>"search_classi"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '73c3127af050f5da692da538bbde5dc87b4c36dd758377a192dbf710b87b8d30') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM people p WHERE p.incomeclassification_id = '4' AND p.birth_date BETWEEN '1811-01-04' AND '2011-01-04' LIMIT 2 OFFSET 2[0m
+Rendering template within layouts/application
+Rendering people/search
+  [4;36;1mIncomeclassification Load (0.0ms)[0m   [0;1mSELECT * FROM "incomeclassifications" WHERE ("incomeclassifications"."id" = 4) [0m
+  [4;35;1mOccupationclassification Load (0.0ms)[0m   [0mSELECT * FROM "occupationclassifications" WHERE ("occupationclassifications"."id" = 3) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered people/_person (62.5ms)
+Rendered layouts/_stylesheets (0.0ms)
+  [4;36;1mUserright Load (0.0ms)[0m   [0;1mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_header (31.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT right_id FROM "userrights" WHERE (party_id = 1) [0m
+Rendered layouts/_actions_box (15.6ms)
+Rendered layouts/_footer (15.6ms)
+Completed in 188ms (View: 141, DB: 0) | 200 OK [http://127.0.0.1/people/search_classi/*?page=2]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-01-04 00:17:53) [DELETE]
+  Parameters: {"_method"=>"delete", "authenticity_token"=>"CBJIkO5Ll1XahP+Gs7OWhpA3/KQKxJ/RARa5N7LPzL4=", "controller"=>"sessions", "action"=>"destroy"}
+Redirected to http://127.0.0.1:3000/
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-01-04 00:17:54) [GET]
+  Parameters: {"controller"=>"pages", "action"=>"home"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (15.6ms)
+Rendered layouts/_header (0.0ms)
+Rendered layouts/_actions_box (0.0ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]

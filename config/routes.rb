@@ -14,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'people/search_classi/*', :controller => 'people', :action => 'search_classi'
   
   map.connect 'pages/select_view', :controller => 'pages', :action => 'select_view'
+  map.connect 'pages/sign_in', :controller => 'pages', :action => 'sign_in'
   map.connect 'pages/rights', :controller => 'pages', :action => 'rights'
   map.connect 'pages/income_classes', :controller => 'pages', :action => 'income_classes'
   map.connect 'pages/occupation_classes', :controller => 'pages', :action => 'occupation_classes'
