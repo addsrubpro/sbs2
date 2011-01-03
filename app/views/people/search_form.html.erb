@@ -25,11 +25,11 @@
     <% form_tag :controller => "people", :action => "search_classi", :method => :get do %>
         <div class="field">
             <%= label_tag 'income_classification' %> <br />
-            <%= collection_select(:person, :incomeclassification_id, @incomeclass, :id, :description, :prompt => true) %>
+            <%= collection_select(:classify, :incomeclassification_id, @incomeclass, :id, :description, :prompt => true) %>
         </div>
         <div class="field">
             <%= label_tag 'occupation_classification' %> <br />
-            <%= collection_select(:person, :occupationclassification_id, @occupationclass, :id, :description, :prompt => true) %>
+            <%= collection_select(:classify, :occupationclassification_id, @occupationclass, :id, :description, :prompt => true) %>
         </div>
         <div class="field">
             <%= label_tag 'age_range_in_years_between' %> <br />

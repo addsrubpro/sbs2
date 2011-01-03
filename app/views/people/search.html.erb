@@ -1,6 +1,9 @@
 <!-- Search results page -->
 <h1>Listing people - search result</h1> 
-<%= @was_selected %> 
+
+<div class="paginate">
+    <%= will_paginate %>
+</div><br />
 
 <table>
   <tr>
@@ -15,6 +18,9 @@
   <%= render @people %>     <!-- calls the partial _person.html.erb for each Person object collected in the @people array-->
 </table>
 
+<div class="paginate">
+    <%= will_paginate %>
+</div><br />
 
 <%= link_to 'New person', new_person_path %>  |  
 <%= link_to 'Clear search', people_path %>
