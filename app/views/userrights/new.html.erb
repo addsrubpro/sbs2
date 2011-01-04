@@ -1,5 +1,5 @@
 <h1>
-  <%= "New partyrole -> #{ @person.current_first_name } #{ @person.current_last_name }" %>
+  <%= "New userright assignment for: #{@user.username}" %>
 </h1>
 
 
@@ -7,7 +7,7 @@
   <%= f.error_messages %>
 
   <div class="field">
-    <%= f.label :party_id %><br />
+    <%= f.label :party_id, 'Party ID' %><br />
     <%= f.text_field :party_id, :value => $party_id, :disabled => true %>
     <%= f.hidden_field :party_id, :value => $party_id %>
   </div>
@@ -20,5 +20,4 @@
   </div>
 <% end %>
 
-<br />
 <%= link_to 'Back', userrights_path %>

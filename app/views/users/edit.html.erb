@@ -19,11 +19,11 @@
     <%= f.label :password_confirmation, "Password confirmation" %> <br />
     <%= f.password_field :password_confirmation %>
   </div>  
-  <div class="action">
+  <div class="actions">
     <%= f.submit "Update" %>
   </div>
   
 <% end %>
 
 <%= link_to 'Show', @user %> |
-<%= link_to 'Quit edit', root_path %>
+<%= link_to "Back", :controller => "users", :action => "index" %>

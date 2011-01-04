@@ -1,13 +1,27 @@
-<p>
-  <b>Party id:</b>
-  <%=h @userright.party_id %>
-</p>
+<h1>Show userright</h1>
 
-<p>
-  <b>Right:</b>
-  <%=h @userright.right.description %>
-</p>
-
+<table>
+  <tr>
+    <td width=200px><b>Party ID</b></td>
+    <td><b><%=h @userright.party_id %></b></td>
+  </tr>
+  <tr>
+    <td><b>Username</b></td>
+    <td><b><%=h @userright.user.username %></b></td>
+  </tr>
+  <tr>
+    <td><b>Right description</b></td>
+    <td><b><%=h @userright.right.description %></b></td>
+  </tr>
+  <tr>
+    <td> Record created at</td>
+    <td><%=h @userright.created_at %></td>
+  </tr>
+  <tr>
+    <td> Record updated at</td>
+    <td><%=h @userright.updated_at %></td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_userright_path(@userright) %> |
 <%= link_to 'Back', userrights_path %>

@@ -45,6 +45,14 @@
     <td>User account name</td>
     <td><%=h no_account_on_fail {@person.user.username} %></td>
   </tr>
+  <tr>
+    <td>Record created at</td>
+    <td><%=h @person.created_at %></td>
+  </tr>
+  <tr>
+    <td>Record updated at</td>
+    <td><%=h @person.updated_at %></td>
+  </tr>
 </table>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |

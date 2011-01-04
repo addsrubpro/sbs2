@@ -1,8 +1,19 @@
-<p>
-  <b>Description:</b>
-  <%=h @right.description %>
-</p>
+<h1>Show right</h1>
 
+<table>
+  <tr>
+    <td width=200px><b>Description</b></td>
+    <td><b><%=h @right.description %></b></td>
+  </tr>
+  <tr>
+    <td> Record created at</td>
+    <td><%=h @right.created_at %></td>
+  </tr>
+  <tr>
+    <td> Record updated at</td>
+    <td><%=h @right.updated_at %></td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_right_path(@right) %> |
 <%= link_to 'Back', rights_path %>

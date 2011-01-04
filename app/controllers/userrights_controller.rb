@@ -27,20 +27,19 @@ class UserrightsController < ApplicationController
   # GET /userrights/new
   # GET /userrights/new.xml
   def new
-    $party_id = params[:party_id]
-    @person = Person.find(:first, :conditions => ["party_id = ?", $party_id], :select => "party_id, current_last_name, current_first_name")
+    @user = User.find(params[:party_id], :select => "username")
     @userright = Userright.new
 
-    # dropdown box should contain only not yet assigned rights
-    @right_for_user = Userright.find(:all, :conditions => ["party_id = ?", $party_id], :select => "right_id")
-    @right_id_for_user = Array.new << 0
-    @length = @right_for_user.length
+    # dropdown box shall contain only not yet assigned rights
+    right_for_user = Userright.find(:all, :conditions => ["party_id = ?", params[:party_id]], :select => "right_id")
+    right_id_for_user = Array.new << 0
+    length = right_for_user.length
     
-    (1..@length).each do |a|
-      @right_id_for_user << @right_for_user[a-1].right_id
+    (1..length).each do |a|
+      right_id_for_user << right_for_user[a-1].right_id
     end
     
-    @rights = Right.find(:all, :conditions => ["id NOT IN (?)", @right_id_for_user] )
+    @rights = Right.find(:all, :conditions => ["id NOT IN (?)", right_id_for_user] )
 
     respond_to do |format|
       format.html # new.html.erb
@@ -50,7 +49,7 @@ class UserrightsController < ApplicationController
 
   # GET /userrights/1/edit
   def edit
-    @userright = Userright.find(params[:id])
+    # there is no edit view for userright objects    
   end
 
   # POST /userrights
@@ -74,17 +73,7 @@ class UserrightsController < ApplicationController
   # PUT /userrights/1
   # PUT /userrights/1.xml
   def update
-    @userright = Userright.find(params[:id])
-
-    respond_to do |format|
-      if @userright.update_attributes(params[:userright])
-        format.html { redirect_to(@userright, :notice => 'Userright was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @userright.errors, :status => :unprocessable_entity }
-      end
-    end
+    # update is not provided for userright objects (destroy and create a new object)  
   end
 
   # DELETE /userrights/1

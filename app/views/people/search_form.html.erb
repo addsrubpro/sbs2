@@ -33,9 +33,9 @@
         </div>
         <div class="field">
             <%= label_tag 'age_range_in_years_between' %> <br />
-            <%= select("age_low", "key", PeopleController::AGE, :selected => 0) %>
+            <%= select("age_low", "value", PeopleController::AGE, :selected => 0) %>
             <%= label_tag 'age_high', 'and' %> 
-            <%= select("age_high", "key", PeopleController::AGE, :selected => 200) %> 
+            <%= select("age_high", "value", PeopleController::AGE, :selected => 200) %> 
         </div>
         <div class="actions">
             <%= submit_tag "Search", :name => nil %>

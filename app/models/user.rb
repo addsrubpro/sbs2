@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_one :person
-  has_many :userrights #, :foreign_key => "right_id"
+  has_many :userrights
   
   attr_accessor :password           #to create a virtual attribute
   attr_accessible :party_id, :username, :password, :password_confirmation  #:party_id is a hidden field in the new.html.erb

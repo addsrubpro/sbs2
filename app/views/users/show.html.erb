@@ -1,14 +1,24 @@
-<p>
-  <b>Party:</b>
-  <%=h @user.party_id %>
-</p>
+<h1>Show user</h1>
 
-<p>
-  <b>Username:</b>
-  <%=h @user.username %>
-</p>
-
+<table>
+  <tr>
+    <td width=200px><b>Party ID</b></td>
+    <td><b><%=h @user.party_id %></b></td>
+  </tr>
+  <tr>
+    <td><b>Username</b></td>
+    <td><b><%=h @user.username %></b></td>
+  </tr>
+  <tr>
+    <td> Record created at</td>
+    <td><%=h @user.created_at %></td>
+  </tr>
+  <tr>
+    <td> Record updated at</td>
+    <td><%=h @user.updated_at %></td>
+  </tr>
+</table>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Home', root_path %>
+<%= link_to "Back", :controller => "users", :action => "index", :party_id => @user.party_id %>

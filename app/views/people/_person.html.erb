@@ -13,7 +13,7 @@
     <td><%= link_to "Manage user account", :controller => "users", :action => "index", :party_id => person.party_id %></td>
     <% end %>
     
-    <td><%= link_to "Manage people roles", :controller => "partyroles", :action => "index", :party_id => person.party_id %></td>
+    <td><%= link_to "Manage party roles", :controller => "partyroles", :action => "index", :party_id => person.party_id %></td>
     
     <td><%= link_to 'Show', :controller => "people", :action => "show", :party_id => person.party_id %></td>
     <td><%= link_to 'Edit', edit_person_path(person) %></td>

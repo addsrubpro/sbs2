@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :userrights
+  map.resources :userrights, :except => [:edit, :update]
   map.resources :rights
   map.resources :users
   map.resources :sessions, :only => [:new, :create, :destroy]
@@ -24,7 +24,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :parties
   
-  map.about   '/about',   :controller => 'pages', :action => 'about'
+  map.help   '/help',   :controller => 'pages', :action => 'help'
   map.signin '/signin',   :controller => 'sessions', :action => 'new'
   map.signout '/signout', :controller => 'sessions', :action => 'destroy'
   

@@ -1,8 +1,19 @@
-<p>
-  <b>Description:</b>
-  <%=h @incomeclassification.description %>
-</p>
+<h1>Show Income classification </h1>
 
+<table>
+  <tr>
+    <td width=200px><b>Description</b></td>
+    <td><b><%=h @incomeclassification.description %></b></td>
+  </tr>
+  <tr>
+    <td> Record created at</td>
+    <td><%=h @incomeclassification.created_at %></td>
+  </tr>
+  <tr>
+    <td> Record updated at</td>
+    <td><%=h @incomeclassification.updated_at %></td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_incomeclassification_path(@incomeclassification) %> |
 <%= link_to 'Back', incomeclassifications_path %>

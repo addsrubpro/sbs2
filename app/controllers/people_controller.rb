@@ -26,19 +26,20 @@ class PeopleController < ApplicationController
   
   def search
     @title = "People search result"
+
+    $cln = params[:current_last_name].to_s + "%" unless params[:current_last_name].nil?
+    $cfn = params[:current_first_name].to_s + "%" unless params[:current_first_name].nil?   # the % sign is the SQL LIKE wildcard which is added to search strings of type VARCHAR delivered by the relevant params (does not work with INTEGER attributes on PostgreSQL DB)
    
     unless params[:party_id].nil?
       if params[:party_id].empty?
         $sql_insert_pid = ''
-        flash.now[:notice] = "Party ID was not selected."
+        pid_selected_param = ''
       else
         $sql_insert_pid = ' AND party_id = :pid'
-        flash.now[:notice] = "Party ID " + params[:party_id] + " was selected."
+        pid_selected_param = "Party ID: " + params[:party_id]
       end
+      flash.now[:notice] = "Selected parameters:<br />" + pid_selected_param + "<br /> current last name: " + $cln + "<br /> current first name: " +$cfn
     end
-    
-    $cln = params[:current_last_name].to_s + "%" unless params[:current_last_name].nil?
-    $cfn = params[:current_first_name].to_s + "%" unless params[:current_first_name].nil?   # the % sign is the SQL LIKE wildcard which is added to search strings of type VARCHAR delivered by the relevant params (does not work with INTEGER attributes on PostgreSQL DB)
     
     @people = Person.paginate(:page => params[:page], :per_page => 2,
                               :conditions => ['current_last_name LIKE :cln AND
@@ -56,32 +57,43 @@ class PeopleController < ApplicationController
   def search_classi
     @title = "Search form incomeclassification"
     
-    $birthdate_low = Date.today - params[:age_high][:key].to_i.years unless params[:age_high].nil?
-    $birthdate_high = Date.today - params[:age_low][:key].to_i.years unless params[:age_low].nil?
+    $birthdate_low = Date.today - params[:age_high][:value].to_i.years unless params[:age_high].nil?
+    $birthdate_high = Date.today - params[:age_low][:value].to_i.years unless params[:age_low].nil?
     
     
     unless params[:classify].nil?
       if params[:classify][:incomeclassification_id].empty?
-        ic_description = "not selected"
+        ic_selected_param = ""
         sql_insert_ic = ""
       else
         ic_description = Incomeclassification.find(params[:classify][:incomeclassification_id]).description
+        ic_selected_param = "<br />Income classification: <b>#{ic_description}</b>"
         $ic_id = params[:classify][:incomeclassification_id]
         sql_insert_ic = "p.incomeclassification_id = :ic_id AND "
       end
       
       if params[:classify][:occupationclassification_id].empty?
-        oc_description = "not selected"
+        oc_selected_param = ""
         sql_insert_oc = ""
       else
         oc_description = Occupationclassification.find(params[:classify][:occupationclassification_id]).description
+        oc_selected_param = "<br />Occupation classification: <b>#{oc_description}</b>"
         $oc_id = params[:classify][:occupationclassification_id]
         sql_insert_oc = "p.occupationclassification_id = :oc_id AND "
       end
       
       $sql_query = "SELECT * FROM people p WHERE " + sql_insert_ic + sql_insert_oc + "p.birth_date BETWEEN :bdl AND :bdh"
+      sql_count = "SELECT COUNT(*) FROM people p WHERE " + sql_insert_ic + sql_insert_oc + "p.birth_date BETWEEN :bdl AND :bdh"
       
-      flash.now[:notice] = "<b>Birthdate</b> is between <i>#{$birthdate_low}</i> and <i>#{$birthdate_high}</i> AND <b>Income classification</b> is <i>#{ic_description}</i> AND <b>Occupation classification</b> is <i>#{oc_description}</i>."
+      people_counter = Person.count_by_sql [sql_count, {:ic_id => $ic_id, :oc_id => $oc_id, :bdl => $birthdate_low, :bdh => $birthdate_high}]
+      
+      if people_counter > 1
+        flash.now[:info] = people_counter.to_s + " records have been found."
+      else
+        flash.now[:info] = people_counter.to_s + " record has been found."
+      end
+      
+      flash.now[:notice] = "Selected parameters: <br />Birthdate range from: <b>#{$birthdate_low}</b> to: <b>#{$birthdate_high}</b>" + ic_selected_param + oc_selected_param
     end
       
     @people = Person.paginate_by_sql [$sql_query, {:ic_id => $ic_id, :oc_id => $oc_id, :bdl => $birthdate_low, :bdh => $birthdate_high}], :page => params[:page], :per_page => 2
