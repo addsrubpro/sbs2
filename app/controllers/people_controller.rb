@@ -1,6 +1,8 @@
 class PeopleController < ApplicationController
   before_filter :authenticate
-  
+  before_filter :admin_user, :only => :destroy
+  #before_filter :correct_user, :only => [:edit, :update, :destroy]
+    
   AGE = { "0" => 0, "18" => 18, "25" => 25, "35" => 35, "55" => 55, "65" => 65, "unlimited" => 200 }.sort
     
   # GET /people

@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   belongs_to :person
-  has_many :userrights , :foreign_key => "party_id"
+  has_many :userrights , :foreign_key => "user_id", :dependent => :delete_all  # if a user is deleted the related records in the userrights table will be deleted too 
   has_many :rights, :through => :userrights  , :foreign_key => "party_id"  # pay attention to the PLURAL in :userrights (in the case of has_many)!
   
   attr_accessor :password           #to create a virtual attribute

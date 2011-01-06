@@ -1,5 +1,5 @@
 class Userright < ActiveRecord::Base
-  belongs_to :user  , :foreign_key => "party_id"      # see footnote:1
+  belongs_to :user  , :foreign_key => "user_id"      # see footnote:1
   belongs_to :right  , :foreign_key => "right_id"     # see footnote:2
 end
 

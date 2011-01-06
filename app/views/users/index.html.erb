@@ -12,14 +12,14 @@
     <td><%=h user.username %></td>
     
     <% if user.rights.empty? %>
-        <td><%= link_to 'Assign user rights', :controller => "userrights", :action => "new", :party_id => user.party_id %></td>
+        <td><%= link_to 'Assign user rights', :controller => "userrights", :action => "new", :user_id => user.id %></td>
     <% else %>
         
-           <td><%= link_to 'Manage user rights assignment', :controller => "userrights", :action => "index", :party_id => user.party_id %></td>
+           <td><%= link_to 'Manage user rights assignment', :controller => "userrights", :action => "index", :user_id => user.id %></td>
         
     <% end %>
         
-    <td><%= link_to 'Show', :controller => "users", :action => "show", :party_id => user.party_id %></td>
+    <td><%= link_to 'Show', :controller => "users", :action => "show", :user_id => user.id %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
@@ -29,5 +29,4 @@
 <div class="paginate"><%= will_paginate %></div><br />
 
 <br />
-<%= link_to 'New', new_user_path %> |    
 <%= link_to 'Back', root_path %>

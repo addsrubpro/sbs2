@@ -1,13 +1,13 @@
 class CreateUserrights < ActiveRecord::Migration
   def self.up
     create_table :userrights do |t|
-      t.integer :party_id
+      t.integer :user_id
       t.integer :right_id
 
       t.timestamps
     end
     
-    Userright.create :party_id => 1,
+    Userright.create :user_id => 1,
                      :right_id => 1
     
   end

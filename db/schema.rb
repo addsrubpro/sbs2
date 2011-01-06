@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(:version => 20101205122557) do
   end
 
   create_table "userrights", :force => true do |t|
-    t.integer  "party_id"
+    t.integer  "user_id"
     t.integer  "right_id"
     t.datetime "created_at"
     t.datetime "updated_at"

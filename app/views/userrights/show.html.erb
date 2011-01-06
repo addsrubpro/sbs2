@@ -3,7 +3,7 @@
 <table>
   <tr>
     <td width=200px><b>Party ID</b></td>
-    <td><b><%=h @userright.party_id %></b></td>
+    <td><b><%=h @userright.user.party_id %></b></td>
   </tr>
   <tr>
     <td><b>Username</b></td>
@@ -23,4 +23,4 @@
   </tr>
 </table>
 
-<%= link_to 'Back', userrights_path(:party_id => @userright.party_id) %>
+<%= link_to 'Back', userrights_path(:user_id => @userright.user_id) %>

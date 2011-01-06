@@ -6,10 +6,11 @@
 <% form_for(@userright) do |f| %>
   <%= f.error_messages %>
 
+  <%= f.hidden_field :user_id, :value => @user.id %>  <!-- This attribute is not shown. However, it is necessary for the user model. -->
+  
   <div class="field">
     <%= f.label :party_id, 'Party ID' %><br />
-    <%= f.text_field :party_id, :value => $party_id, :disabled => true %>
-    <%= f.hidden_field :party_id, :value => $party_id %>
+    <%= f.text_field :party_id, :value => @user.party_id, :disabled => true %>
   </div>
   <div class="field">
     <%= f.label :right_assignment %><br />
@@ -20,4 +21,4 @@
   </div>
 <% end %>
 
-<%= link_to 'Back', userrights_path(:party_id => $party_id) %>
+<%= link_to 'Back', users_path %>

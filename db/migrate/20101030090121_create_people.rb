@@ -13,7 +13,7 @@ class CreatePeople < ActiveRecord::Migration
     
     Person.create :party_id => 1,
                   :current_last_name => "Administrator",
-                  :current_first_name => "Administrator"
+                  :birth_date => "1000-01-01"
     
   end
 

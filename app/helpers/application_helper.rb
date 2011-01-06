@@ -73,7 +73,7 @@ module ApplicationHelper
     
     # method to check for admin user
     def admin_user
-      $admin_right = Userright.find(:all, :conditions => ["party_id = ?", current_user.party_id], :select => "right_id")
+      $admin_right = Userright.find(:all, :conditions => ["user_id = ?", current_user.id], :select => "right_id")
       @right_id = Array.new << 0
       @length = $admin_right.length
     
@@ -81,11 +81,14 @@ module ApplicationHelper
         @right_id << $admin_right[a-1].right_id
       end
       
-      redirect_to(root_path) unless @right_id.include?(1) 
+      unless @right_id.include?(1)
+        flash[:notice] = "You do not have appropriate privileges."
+        redirect_to(root_path)
+      end
     end
     
     def admin_user?
-      $admin_right = Userright.find(:all, :conditions => ["party_id = ?", current_user.party_id], :select => "right_id")
+      $admin_right = Userright.find(:all, :conditions => ["user_id = ?", current_user.id], :select => "right_id")
       @right_id = Array.new
       @length = $admin_right.length
     
