@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     unless (params[:party_id].nil? || params[:party_id] == 0) 
       $party_id = params[:party_id]
     end
-    @users = User.find(:all, :conditions => ["party_id = ?", $party_id])
+    @users = User.paginate(:page => params[:page], :per_page => 4)
     @user = User.find(:first, :conditions => ["party_id = ?", $party_id])
-    @person = Person.find(:first, :conditions => ["party_id = ?", $party_id], :select => "party_id, current_last_name, current_first_name")
+    # @person = Person.find(:first, :conditions => ["party_id = ?", $party_id], :select => "party_id, current_last_name, current_first_name")
     
     respond_to do |format|
       format.html # index.html.erb
@@ -22,7 +22,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.xml
   def show
-    @user = User.find(params[:id])
+    #@user = User.find(:id)
+    @user = User.find_by_party_id(params[:party_id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -33,7 +34,7 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.xml
   def new
-    #$party_id = params[:party_id]
+    $party_id = params[:party_id]
     @person = Person.find(:first, :conditions => ["party_id = ?", params[:party_id]], :select => "party_id, current_last_name, current_first_name")
     @user = User.new
         
@@ -51,13 +52,13 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.xml
   def create
-    #@person = Person.find(:first, :conditions => ["party_id = ?", params[:party_id]], :select => "party_id, current_last_name, current_first_name")
+    @person = Person.find(:first, :conditions => ["party_id = ?", $party_id], :select => "party_id, current_last_name, current_first_name")
     @user = User.new(params[:user])
 
     respond_to do |format|
       if @user.save
         flash[:success] = "User was successfully created."
-        format.html { redirect_to(@user) }
+        format.html { redirect_to :controller => "users", :action => "show", :party_id => $party_id }  # show.html.erb
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }

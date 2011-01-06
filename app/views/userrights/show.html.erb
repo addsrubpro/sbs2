@@ -23,5 +23,4 @@
   </tr>
 </table>
 
-<%= link_to 'Edit', edit_userright_path(@userright) %> |
-<%= link_to 'Back', userrights_path %>
+<%= link_to 'Back', userrights_path(:party_id => @userright.party_id) %>

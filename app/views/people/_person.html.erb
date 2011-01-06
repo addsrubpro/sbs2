@@ -8,9 +8,9 @@
     <td><%=h no_account_on_fail {person.user.username} %></td>
     
     <% if person.user == nil %>
-    <td><%= link_to "Create user account", :controller => "users", :action => "index", :party_id => person.party_id %></td>
+    <td><%= link_to "Create user account", :controller => "users", :action => "new", :party_id => person.party_id %></td>
     <% else %>
-    <td><%= link_to "Manage user account", :controller => "users", :action => "index", :party_id => person.party_id %></td>
+    <td><%= link_to "Show user account", :controller => "users", :action => "show", :party_id => person.party_id %></td>
     <% end %>
     
     <td><%= link_to "Manage party roles", :controller => "partyroles", :action => "index", :party_id => person.party_id %></td>

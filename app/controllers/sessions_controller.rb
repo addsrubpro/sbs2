@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     else
       sign_in user
       flash[:success] = "You have been successfully signed in."
-      redirect_back_or user
+      redirect_back_or root_path
     end
   end
   

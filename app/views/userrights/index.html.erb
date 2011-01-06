@@ -1,9 +1,11 @@
-<h1><%= "Lising user rights for: #{@userrights.first.user.username}" %></h1>
+<% unless @userright.nil? %>
+    <%=h @userrights.first.user.username %>
+<% end %>
 
 <table>
   <tr>
     <th>Party ID</th>
-    <th>Right ID</th>
+    <th>Right description</th>
   </tr>
 
 <% @userrights.each do |userright| %>

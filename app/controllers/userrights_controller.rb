@@ -2,10 +2,12 @@ class UserrightsController < ApplicationController
   # GET /userrights
   # GET /userrights.xml
   def index
-    unless (params[:party_id].nil? || params[:party_id] == 0) 
-      $party_id = params[:party_id]
+   $party_id = params[:party_id]
+    @userrights = Userright.find_all_by_party_id(params[:party_id])
+    
+    unless !@userrights.empty?
+      flash.now[:notice] = "No user right has been assigned yet!"
     end
-    @userrights = Userright.find(:all, :conditions => ["party_id = ?", $party_id])
     
     respond_to do |format|
       format.html # index.html.erb
@@ -27,8 +29,9 @@ class UserrightsController < ApplicationController
   # GET /userrights/new
   # GET /userrights/new.xml
   def new
-    @user = User.find(params[:party_id], :select => "username")
+    @user = User.find_by_party_id(params[:party_id])
     @userright = Userright.new
+    $party_id = params[:party_id]
 
     # dropdown box shall contain only not yet assigned rights
     right_for_user = Userright.find(:all, :conditions => ["party_id = ?", params[:party_id]], :select => "right_id")

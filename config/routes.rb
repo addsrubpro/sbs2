@@ -1,7 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
+  
+  map.connect 'userrights/new/:party_id', :controller => 'userrights', :action => 'new'
   map.resources :userrights, :except => [:edit, :update]
+    
   map.resources :rights
-  map.resources :users
+  
+  map.resources :users, :except => [:show]
+  map.connect 'users/:party_id', :controller => 'users', :action => 'show'
+  
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.resources :partyroles
   map.resources :roles
@@ -21,6 +27,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'pages/roles', :controller => 'pages', :action => 'roles'
   map.connect 'pages/people', :controller => 'pages', :action => 'people'
   map.connect 'pages/people_search', :controller => 'pages', :action => 'people_search'
+  map.connect 'pages/users', :controller => 'pages', :action => 'users'
   
   map.resources :parties
   
