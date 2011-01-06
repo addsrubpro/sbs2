@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_filter :authenticate
   before_filter :admin_user #, :only => :destroy
-  # before_filter :correct_user, :only => [:edit, :update]
+  before_filter :correct_user, :only => [:edit, :update]
   
   # GET /users
   # GET /users.xml
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   # GET /users/new.xml
   def new
     $party_id = params[:party_id]
-    @person = Person.find(:first, :conditions => ["party_id = ?", params[:party_id]], :select => "party_id, current_last_name, current_first_name")
+    @person = Person.find_by_party_id($party_id, :select => "party_id, current_last_name, current_first_name")
     @user = User.new
         
     respond_to do |format|
@@ -52,7 +52,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.xml
   def create
-    #@person = Person.find(:first, :conditions => ["party_id = ?", $party_id], :select => "party_id, current_last_name, current_first_name")
+    @person = Person.find_by_party_id($party_id, :select => "party_id, current_last_name, current_first_name")  # is necessary in the case of multiple calls for this method - this is the case if user could not be saved (e.g. password to short etc.)
     @user = User.new(params[:user])
 
     respond_to do |format|
