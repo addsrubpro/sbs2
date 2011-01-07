@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.connect 'userrights/new/:user_id', :controller => 'userrights', :action => 'new'
+  #map.connect 'userrights/new/:user_id', :controller => 'userrights', :action => 'new'
+  #map.connect 'userrights/:user_id', :controller => 'userrights', :action => 'index' #, :except => [:show]
   map.resources :userrights, :except => [:edit, :update]
     
   map.resources :rights

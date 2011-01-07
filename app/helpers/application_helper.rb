@@ -82,7 +82,7 @@ module ApplicationHelper
       end
       
       unless @right_id.include?(1)
-        flash[:notice] = "You do not have appropriate privileges."
+        flash[:notice] = "This action needs special privileges."
         redirect_to(root_path)
       end
     end
@@ -97,6 +97,22 @@ module ApplicationHelper
       end
       
       @right_id.include?(1) 
+    end
+    
+    # authorization method
+    def people_search_advanced
+      $psa_right = Userright.find(:all, :conditions => ["user_id = ?", current_user.id], :select => "right_id")
+      @right_id = Array.new << 0
+      @length = $psa_right.length
+    
+      (1..@length).each do |a|
+        @right_id << $psa_right[a-1].right_id
+      end
+      
+      unless ( @right_id.include?(2) || admin_user? )
+        flash[:notice] = "This action needs special privileges."
+        redirect_to(root_path)
+      end
     end
     
     

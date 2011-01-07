@@ -4,7 +4,7 @@
   <%= f.error_messages %>
 
   <div class="field">
-    <%= f.label :party_id %> <br />
+    <%= f.label :party_id, 'Party ID' %> <br />
     <%= f.text_field :party_id, 'disabled' => 'true' %>
   </div>
   <div class="field">
@@ -26,4 +26,8 @@
 <% end %>
 
 <%= link_to 'Show', @user %> |
-<%= link_to "Back", :controller => "users", :action => "index" %>
+<% if admin_user? %>
+  <%= link_to "Back", users_path %>
+<% else %>
+  <%= link_to "Home", root_path %>
+<% end %>

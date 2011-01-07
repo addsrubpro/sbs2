@@ -6,8 +6,8 @@ class CreateRights < ActiveRecord::Migration
       t.timestamps
     end
     
-    Right.create  :id => 1,
-                  :description => "Admin"
+    Right.create  :id => 1, :description => "admin"
+    Right.create  :id => 2, :description => "people_search_advanced"
     
   end
 

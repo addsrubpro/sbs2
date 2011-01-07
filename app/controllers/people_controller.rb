@@ -1,7 +1,7 @@
 class PeopleController < ApplicationController
   before_filter :authenticate
   before_filter :admin_user, :only => :destroy
-  #before_filter :correct_user, :only => [:edit, :update, :destroy]
+  before_filter :people_search_advanced, :only => :search_classi
     
   AGE = { "0" => 0, "18" => 18, "25" => 25, "35" => 35, "55" => 55, "65" => 65, "unlimited" => 200 }.sort
     
@@ -38,12 +38,12 @@ class PeopleController < ApplicationController
         pid_selected_param = ''
       else
         $sql_insert_pid = ' AND party_id = :pid'
-        pid_selected_param = "Party ID: " + params[:party_id]
+        pid_selected_param = "<br />Party ID: <b> #{params[:party_id]} </b>"
       end
-      flash.now[:notice] = "Selected parameters:<br />" + pid_selected_param + "<br /> current last name: " + $cln + "<br /> current first name: " +$cfn
+      flash.now[:notice] = "Selected parameters: #{pid_selected_param} <br /> current last name: <b> #{$cln} </b> <br /> current first name: <b> #{$cfn} </b>"
     end
     
-    @people = Person.paginate(:page => params[:page], :per_page => 2,
+    @people = Person.paginate(:page => params[:page], :per_page => 4,
                               :conditions => ['current_last_name LIKE :cln AND
                                                current_first_name LIKE :cfn' +
                                                $sql_insert_pid,
@@ -98,7 +98,7 @@ class PeopleController < ApplicationController
       flash.now[:notice] = "Selected parameters: <br />Birthdate range from: <b>#{$birthdate_low}</b> to: <b>#{$birthdate_high}</b>" + ic_selected_param + oc_selected_param
     end
       
-    @people = Person.paginate_by_sql [$sql_query, {:ic_id => $ic_id, :oc_id => $oc_id, :bdl => $birthdate_low, :bdh => $birthdate_high}], :page => params[:page], :per_page => 2
+    @people = Person.paginate_by_sql [$sql_query, {:ic_id => $ic_id, :oc_id => $oc_id, :bdl => $birthdate_low, :bdh => $birthdate_high}], :page => params[:page], :per_page => 4
     
     render "search" # search.html.erb   <-- search results page
     

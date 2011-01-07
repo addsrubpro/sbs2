@@ -18,7 +18,7 @@
     <% if signed_in? %>
         <li><%= "Signed in as: <strong>#{current_user.username}</strong>" %></li>
         <% if admin_user? %>
-            <li><%= "ADMIN" %></li>
+            <li><%= "ADMIN RIGHTS" %></li>
         <% end %>
     <% else %>
         <li>You are not signed in.</li>

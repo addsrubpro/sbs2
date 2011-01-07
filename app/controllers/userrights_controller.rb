@@ -2,10 +2,10 @@ class UserrightsController < ApplicationController
   # GET /userrights
   # GET /userrights.xml
   def index
-   #$party_id = params[:party_id]
+    $user_id = params[:user_id]
     @userrights = Userright.find_all_by_user_id(params[:user_id])
     
-    unless !@userrights.nil? || !@userrights.empty?
+    unless !( @userrights.nil? || @userrights.empty? )
       flash.now[:notice] = "No user right has been assigned yet!"
     end
     
@@ -86,7 +86,7 @@ class UserrightsController < ApplicationController
     @userright.destroy
 
     respond_to do |format|
-      format.html { redirect_to(userrights_url) }
+      format.html { redirect_to :action => 'index', :user_id => $user_id }
       format.xml  { head :ok }
     end
   end

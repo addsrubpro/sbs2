@@ -8,7 +8,9 @@
     <th>Birth date</th>
     <th>Income classification</th>
     <th>Occupation classification</th>
-    <th>User account name</th>
+    <% if admin_user? %>
+      <th>User account name</th>
+    <% end %>
   </tr>
   <%= render @people %>     <!-- calls the partial _person.html.erb for each Person object collected in the @people array-->
 </table>
