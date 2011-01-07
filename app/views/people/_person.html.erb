@@ -10,7 +10,7 @@
     <% if person.user == nil %>
     <td><%= link_to "Create user account", :controller => "users", :action => "new", :party_id => person.party_id %></td>
     <% else %>
-    <td><%= link_to "Show user account", :controller => "users", :action => "show", :user_id => person.user.id %></td>
+    <td><%= link_to "Show user account", :controller => "users", :action => "show", :id => person.user.id %></td>
     <% end %>
     
     <td><%= link_to "Manage party roles", :controller => "partyroles", :action => "index", :party_id => person.party_id %></td>

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_filter :authenticate
-  before_filter :admin_user #, :only => :destroy
-  before_filter :correct_user, :only => [:edit, :update]
+  before_filter :admin_user , :only => :destroy
+  before_filter :correct_user, :only => [:show, :edit, :update]
   
   # GET /users
   # GET /users.xml
@@ -22,8 +22,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.xml
   def show
-    #@user = User.find(:id)
-    @user = User.find_by_id(params[:user_id])
+    @user = User.find(params[:id])
+    #@user = User.find_by_id(params[:user_id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -58,7 +58,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         flash[:success] = "User was successfully created."
-        format.html { redirect_to :controller => "users", :action => "show", :user_id => @user.id }  # show.html.erb
+        format.html { redirect_to @user }  # show.html.erb
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }

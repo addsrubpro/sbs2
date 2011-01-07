@@ -5,8 +5,8 @@ ActionController::Routing::Routes.draw do |map|
     
   map.resources :rights
   
-  map.resources :users, :except => [:show]
-  map.connect 'users/:user_id', :controller => 'users', :action => 'show'
+  map.resources :users  #, :except => [:show]
+  #map.connect 'users/:user_id', :controller => 'users', :action => 'show'
   
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.resources :partyroles
