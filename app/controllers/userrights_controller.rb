@@ -31,7 +31,6 @@ class UserrightsController < ApplicationController
   def new
     @user = User.find(params[:user_id])
     @userright = Userright.new
-    #$party_id = params[:party_id]
 
     # dropdown box shall contain only not yet assigned rights
     right_for_user = Userright.find(:all, :conditions => ["user_id = ?", params[:user_id]], :select => "right_id")
@@ -83,11 +82,15 @@ class UserrightsController < ApplicationController
   # DELETE /userrights/1.xml
   def destroy
     @userright = Userright.find(params[:id])
-    @userright.destroy
-
+    
     respond_to do |format|
-      format.html { redirect_to :action => 'index', :user_id => $user_id }
-      format.xml  { head :ok }
-    end
+      if @userright.destroy
+        flash[:success] = "User right record was successfully destroyed."
+        format.html { redirect_to userrights_path(:user_id => @userright.user_id) }
+      else
+        flash[:error] = "User right record could not be destroyed."
+        format.html { redirect_to @userrights }
+      end
+    end      
   end
 end

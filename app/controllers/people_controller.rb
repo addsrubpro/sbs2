@@ -200,11 +200,11 @@ class PeopleController < ApplicationController
    
     respond_to do |format|
       if @person.destroy
-        flash[:success] = "Person was successfully destroyed."
-        format.html { redirect_to people_url }
+        flash[:success] = "Person record was successfully destroyed."
+        format.html { redirect_to people_path }
       else
         flash[:error] = "Person record cannot be destroyed due to existing associations."
-        format.html { redirect_to people_url(:party_id => params[:id]) }
+        format.html { redirect_to people_path(:party_id => params[:id]) }
       end
     end
   end

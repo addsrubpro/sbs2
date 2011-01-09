@@ -39,6 +39,10 @@ class UsersController < ApplicationController
   def show
     @tilte = "Show user account"
     @user = User.find(params[:id])
+    
+    unless @user.userrights.any?
+      flash.now[:notice] = "No user right has been asigned yet."
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -106,11 +110,15 @@ class UsersController < ApplicationController
   # DELETE /users/1.xml
   def destroy
     @user = User.find(params[:id])
-    @user.destroy
-
+    
     respond_to do |format|
-      format.html { redirect_to(users_url) }
-      format.xml  { head :ok }
-    end
+      if @user.destroy
+        flash[:success] = "User record was successfully destroyed."
+        format.html { redirect_to people_path(:party_id => @user.party_id) }
+      else
+        flash[:error] = "User record could not be destroyed."
+        format.html { redirect_to users_path(:user_id => params[:id]) }
+      end
+    end   
   end
 end

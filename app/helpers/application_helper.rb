@@ -10,12 +10,12 @@ module ApplicationHelper
       end
   end
 
-  # Return "(no account)" if no value has been assigned.
-  def no_account_on_fail
+  # Return a link to create a new user account if no one exists.
+  def create_user_account_on_fail
       begin
           return yield
       rescue
-          return "(no account)"
+          return " #{link_to '[Create account]', :controller => 'users', :action => 'new', :party_id => @party_id} "      
       end
   end
 
