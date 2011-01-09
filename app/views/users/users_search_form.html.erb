@@ -1,0 +1,15 @@
+<!-- form for user accounts basic search -->
+<h2> User accounts: basic search </h2>
+<hr />
+<div id="form">
+    <% form_tag :controller => "users", :action => "basic_search", :method => :get do %>
+        <div class="field">
+            <%= label_tag 'username' %><br />
+            <%= text_field_tag :username, params[:username] %>
+        </div>
+        <div class="actions">
+            <%= submit_tag "Search", :name => nil %>
+        </div>
+    <% end %>
+</div>
+<hr style="height: 3px;">

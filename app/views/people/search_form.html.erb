@@ -1,5 +1,6 @@
 <!-- basis search for people -->
 <h2> People: Basic search </h2>
+<hr />
 <div id="form">
     <% form_tag :controller => "people", :action => "search", :method => :get do %>
         <div class="field">
@@ -19,10 +20,11 @@
         </div>
     <% end %>
 </div>
-<hr />
+<hr style="height: 3px;">
 
 <!-- advanced search for people classifications (search_classi) -->
 <h2> People: Advanced search </h2>
+<hr />
 <div id="form">
     <% form_tag :controller => "people", :action => "search_classi", :method => :get do %>
         <div class="field">
@@ -44,3 +46,4 @@
         </div>
     <% end %>
 </div>
+<hr style="height: 3px;">

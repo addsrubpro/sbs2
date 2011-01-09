@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   before_filter :authenticate, :only => [:income_classes, :occupation_classes, :roles, :people]
 
   # To define the selectable actions for the dropdown box in _actionsbox.html.erb
-  SELECTABLE_ACTIONS_ADMIN = [:home, :help, :income_classes, :occupation_classes, :rights, :roles, :people, :people_search, :users]
+  SELECTABLE_ACTIONS_ADMIN = [:home, :help, :income_classes, :occupation_classes, :rights, :roles, :people, :people_search, :user_accounts_search]
   SELECTABLE_ACTIONS_STD = [:home, :help, :people, :people_search]
   SELECTABLE_ACTIONS = [:sign_in, :home, :help]
   
@@ -56,11 +56,11 @@ class PagesController < ApplicationController
   
   def people_search
     @title = "People search"
-    redirect_to search_form_path
+    redirect_to search_form_path    # path defined in routes.rb
   end
   
-  def users
-    @title = "Users"
-    redirect_to users_path
+  def user_accounts_search
+    @title = "User accounts search"
+    redirect_to users_search_form_path    # path defined in routes.rb
   end
 end

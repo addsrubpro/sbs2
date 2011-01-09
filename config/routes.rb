@@ -1,14 +1,17 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :userrights, :except => [:edit, :update]
   map.resources :rights
+  
   map.resources :users
+  map.connect 'users/basic_search/*', :controller => 'users', :action => 'basic_search'
+  
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.resources :partyroles
   map.resources :roles
   map.resources :occupationclassifications
   map.resources :incomeclassifications
-  map.resources :people , :except => [:show]
   
+  map.resources :people , :except => [:show]
   map.connect 'people/:party_id', :controller => 'people', :action => 'show'
   map.connect 'people/search/*', :controller => 'people', :action => 'search'
   map.connect 'people/search_classi/*', :controller => 'people', :action => 'search_classi'
@@ -21,7 +24,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'pages/roles', :controller => 'pages', :action => 'roles'
   map.connect 'pages/people', :controller => 'pages', :action => 'people'
   map.connect 'pages/people_search', :controller => 'pages', :action => 'people_search'
-  map.connect 'pages/users', :controller => 'pages', :action => 'users'
+  map.connect 'pages/user_accounts_search', :controller => 'pages', :action => 'user_accounts_search'
   
   map.resources :parties
   
@@ -29,8 +32,8 @@ ActionController::Routing::Routes.draw do |map|
   map.signin '/signin',   :controller => 'sessions', :action => 'new'
   map.signout '/signout', :controller => 'sessions', :action => 'destroy'
   
-  map.search_form 'search_form', :controller => 'people', :action => 'search_form'  # map.search_form ... -> creates a URL helper -> search_form_path
-  
+  map.search_form 'search_form', :controller => 'people', :action => 'search_form'        # people search # map.search_form ... -> creates a URL helper -> search_form_path
+  map.users_search_form 'user_search_form', :controller => 'users', :action => 'users_search_form'  # users search
   
   
   # The priority is based upon order of creation: first created -> highest priority.

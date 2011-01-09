@@ -30,16 +30,15 @@ class PeopleController < ApplicationController
     @occupationclass = Occupationclassification.find(:all, :order => 'description ASC')
     
     render "search_form"
-    
   end
   
   def search
-    @title = "People search result"
+    @title = "People: basic search results"
 
     $cln = params[:current_last_name].to_s + "%" unless params[:current_last_name].nil?
     $cfn = params[:current_first_name].to_s + "%" unless params[:current_first_name].nil?   # the % sign is the SQL LIKE wildcard which is added to search strings of type VARCHAR delivered by the relevant params (does not work with INTEGER attributes on PostgreSQL DB)
    
-    unless params[:party_id].nil?
+    unless params[:party_id].nil?       # due to pagination: only the first method call provides parameters, subsequent calls (e.g. for pages 2, 3, 4 ,etc. don't provide parameters (parameters are nil)
       if params[:party_id].empty?
         $sql_insert_pid = ''
         pid_selected_param = ''
@@ -75,13 +74,12 @@ class PeopleController < ApplicationController
   end
   
   def search_classi
-    @title = "Search form incomeclassification"
+    @title = "People: advanced search results"
     
     $birthdate_low = Date.today - params[:age_high][:value].to_i.years unless params[:age_high].nil?
     $birthdate_high = Date.today - params[:age_low][:value].to_i.years unless params[:age_low].nil?
     
-    
-    unless params[:classify].nil?
+    unless params[:classify].nil?                                 # due to pagination: only the first method call provides parameters, subsequent calls (e.g. for pages 2, 3, 4 ,etc. don't provide parameters (parameters are nil)
       if params[:classify][:incomeclassification_id].empty?
         ic_selected_param = ""
         sql_insert_ic = ""
@@ -121,7 +119,6 @@ class PeopleController < ApplicationController
     @people = Person.paginate_by_sql [$sql_query, {:ic_id => $ic_id, :oc_id => $oc_id, :bdl => $birthdate_low, :bdh => $birthdate_high}], :page => params[:page], :per_page => 4
     
     render "search" # search.html.erb   <-- search results page
-    
   end
 
   # GET /people/1
