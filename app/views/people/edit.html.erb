@@ -36,4 +36,4 @@
 <% end %>
 
 <%= link_to 'Show', @person %> |
-<%= link_to 'Back', people_path %>
+<%= link_to 'Back', people_path(:party_id => @person.party_id) %>

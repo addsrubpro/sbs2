@@ -9,7 +9,14 @@ class PeopleController < ApplicationController
   # GET /people.xml
   def index
     @title = "People index"
-    @people = Person.paginate(:page => params[:page], :per_page => 4, :order => "party_id ASC")
+    
+    if !params[:party_id].nil? 
+      @people = Person.paginate(:page => params[:page], :conditions => ['party_id = ?', params[:party_id]] )
+    else
+      @people = Person.paginate(:page => params[:page], :per_page => 4, :order => "party_id ASC")
+    end
+    
+    # @people = Person.paginate(:page => params[:page], :per_page => 4, :order => "party_id ASC")
     
     respond_to do |format|
       format.html # index.html.erb
@@ -41,6 +48,16 @@ class PeopleController < ApplicationController
         pid_selected_param = "<br />Party ID: <b> #{params[:party_id]} </b>"
       end
       flash.now[:notice] = "Selected parameters: #{pid_selected_param} <br /> current last name: <b> #{$cln} </b> <br /> current first name: <b> #{$cfn} </b>"
+    
+      # counter for records found
+      sql_count = "SELECT COUNT(*) FROM people WHERE current_last_name LIKE :cln AND current_first_name LIKE :cfn" + $sql_insert_pid
+      people_counter = Person.count_by_sql [sql_count, {:cln => $cln, :cfn => $cfn, :pid => params[:party_id]}]
+      
+      if people_counter > 1
+        flash.now[:info] = people_counter.to_s + " records have been found."
+      else
+        flash.now[:info] = people_counter.to_s + " record has been found."
+      end
     end
     
     @people = Person.paginate(:page => params[:page], :per_page => 4,
@@ -50,6 +67,7 @@ class PeopleController < ApplicationController
                                                {:cln => $cln,
                                                 :cfn => $cfn,
                                                 :pid => params[:party_id]} ])
+   
     respond_to do |format|
       format.html # search.html.erb   <-- search results page
       format.xml  { render :xml => @people }
@@ -85,6 +103,8 @@ class PeopleController < ApplicationController
       end
       
       $sql_query = "SELECT * FROM people p WHERE " + sql_insert_ic + sql_insert_oc + "p.birth_date BETWEEN :bdl AND :bdh"
+      
+      # counter for records found
       sql_count = "SELECT COUNT(*) FROM people p WHERE " + sql_insert_ic + sql_insert_oc + "p.birth_date BETWEEN :bdl AND :bdh"
       
       people_counter = Person.count_by_sql [sql_count, {:ic_id => $ic_id, :oc_id => $oc_id, :bdl => $birthdate_low, :bdh => $birthdate_high}]
@@ -179,12 +199,16 @@ class PeopleController < ApplicationController
   # DELETE /people/1
   # DELETE /people/1.xml
   def destroy
-    @person = Person.find(params[:id])
-    @person.destroy
-
+    @person = Person.find(params[:id])      # params[:id] contains here the 'party_id' due to the special path definition in routes.rb
+   
     respond_to do |format|
-      format.html { redirect_to(people_url) }
-      format.xml  { head :ok }
+      if @person.destroy
+        flash[:success] = "Person was successfully destroyed."
+        format.html { redirect_to people_url }
+      else
+        flash[:error] = "Person record cannot be destroyed due to existing associations."
+        format.html { redirect_to people_url(:party_id => params[:id]) }
+      end
     end
   end
 end

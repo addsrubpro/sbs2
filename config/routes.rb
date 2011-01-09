@@ -1,14 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  
-  #map.connect 'userrights/new/:user_id', :controller => 'userrights', :action => 'new'
-  #map.connect 'userrights/:user_id', :controller => 'userrights', :action => 'index' #, :except => [:show]
   map.resources :userrights, :except => [:edit, :update]
-    
   map.resources :rights
-  
-  map.resources :users  #, :except => [:show]
-  #map.connect 'users/:user_id', :controller => 'users', :action => 'show'
-  
+  map.resources :users
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.resources :partyroles
   map.resources :roles

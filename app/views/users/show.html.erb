@@ -10,6 +10,14 @@
     <td><b><%=h @user.username %></b></td>
   </tr>
   <tr>
+    <td>User rights assigned</td>
+    <td>
+      <% @user.userrights.each do |userright| %>
+          - <%=h userright.right.description %> -
+      <% end %>
+    </td>
+  </tr>
+  <tr>
     <td> Record created at</td>
     <td><%=h @user.created_at %></td>
   </tr>
@@ -22,7 +30,7 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <% if admin_user? %>
-  <%= link_to "Back", users_path %>
+  <%= link_to "Back", users_path(:user_id => @user.id) %>
 <% else %>
   <%= link_to "Home", root_path %>
 <% end %>

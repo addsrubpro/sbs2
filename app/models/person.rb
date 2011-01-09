@@ -3,4 +3,13 @@ class Person < ActiveRecord::Base
   belongs_to :occupationclassification , :foreign_key => "occupationclassification_id"
   has_one :user, :foreign_key => "party_id"      # 1 person has 0..1 user -> thus, has_one relationship; user is dependent from person, thus, define the :foreign_key  
   has_one :party
+  before_destroy :check_for_user
+
+  private
+
+  def check_for_user    # method to check if an association exists (if a user record exists for the person)
+    if !user.nil?
+      return false
+    end
+  end
 end

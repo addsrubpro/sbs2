@@ -6,10 +6,12 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
-    #unless (params[:party_id].nil? || params[:party_id] == 0) 
-    #  $party_id = params[:party_id]
-    #end
-    @users = User.paginate(:page => params[:page], :order => 'party_id ASC', :per_page => 5)
+    if !params[:user_id].nil? 
+      @users = User.paginate(:page => params[:page], :conditions => ['id = ?', params[:user_id]] )
+    else
+      @users = User.paginate(:page => params[:page], :order => 'party_id ASC', :per_page => 5)
+    end
+    
     # @user = User.find(:all) 
     # @person = Person.find(:first, :conditions => ["party_id = ?", $party_id], :select => "party_id, current_last_name, current_first_name")
     

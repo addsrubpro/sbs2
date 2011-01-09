@@ -7,7 +7,7 @@
     <td><%=h none_on_fail {person.occupationclassification.description} %></td>
     
     <% if admin_user? %> 
-        <td><%=h no_account_on_fail {person.user.username} %></td>
+        <td><%= no_account_on_fail {link_to person.user.username, :controller => "users", :action => "index", :user_id => person.user.id} %></td>
     
         <% if person.user == nil %>
             <td><%= link_to "Create user account", :controller => "users", :action => "new", :party_id => person.party_id %></td>
