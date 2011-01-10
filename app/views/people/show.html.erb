@@ -16,22 +16,18 @@
   <tr>
     <td>Roles assigned</td>
     <td>
-      <% @partyroles.each do |partyrole| %>
-          - <%=h partyrole.role.description %> -
+      <% if @partyroles.any? %>
+        <% @partyroles.each do |partyrole| %>
+          - <%= link_to partyrole.role.description, partyroles_path(:party_id => @person.party_id) %> -
+        <% end %>
+      <% else %>
+        <%= link_to '[Assign party role]', new_partyrole_path(:party_id => @person.party_id) %>
       <% end %>
-    </td>
-  </tr>
-  <tr>
-    <td>Income classification ID</td>
-    <td><%=h @person.incomeclassification_id %></td>
+    </td> 
   </tr>
   <tr>
     <td>Income classification</td>
     <td><%=h none_on_fail {@person.incomeclassification.description} %></td>
-  </tr>
-  <tr>
-    <td>Occupation classification ID</td>
-    <td><%=h @person.occupationclassification_id %></td>
   </tr>
   <tr>
     <td>Occupation classification</td>
@@ -43,7 +39,8 @@
   </tr>
   <tr>
     <td>User account name</td>
-    <td><%= create_user_account_on_fail {@person.user.username} %></td>
+    <% @party_id = @person.party_id unless !@person.user.nil? %>
+    <td><%= create_user_account_on_fail {link_to @person.user.username, users_path(:user_id => @person.user.id)} %></td>
   </tr>
   <tr>
     <td>Record created at</td>
@@ -56,4 +53,4 @@
 </table>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path(:party_id => @person.party_id) %>
+<%= link_to 'Back to person index', people_path(:party_id => @person.party_id) %>

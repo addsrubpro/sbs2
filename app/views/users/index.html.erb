@@ -29,4 +29,5 @@
 <div class="paginate"><%= will_paginate %></div><br />
 
 <br />
+<%= link_to 'Person index', people_path(:party_id => @users.first.party_id) %> |
 <%= link_to 'Home', root_path %>

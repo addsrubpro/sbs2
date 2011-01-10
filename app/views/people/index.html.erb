@@ -1,4 +1,10 @@
-<h1>Listing people</h1>
+<% if @people.count > 1 %>
+  <h1>Listing people</h1>
+<% else %>
+  <h1>Listing person</h1>
+<% end %>
+
+<div class="paginate"><%= will_paginate %></div><br />
 
 <table>
   <tr>
@@ -18,4 +24,4 @@
 <div class="paginate"><%= will_paginate %></div><br />
 
 <%= link_to 'New person', new_person_path %> |
-<%= link_to 'Search', :controller => "people", :action => "search_form" %>
+<%= link_to 'People search', :controller => "people", :action => "search_form" %>

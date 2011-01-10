@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'users/basic_search/*', :controller => 'users', :action => 'basic_search'
   
   map.resources :sessions, :only => [:new, :create, :destroy]
-  map.resources :partyroles
+  map.resources :partyroles, :except => [:edit, :update]
   map.resources :roles
   map.resources :occupationclassifications
   map.resources :incomeclassifications

@@ -15,7 +15,11 @@ module ApplicationHelper
       begin
           return yield
       rescue
+        if admin_user?
           return " #{link_to '[Create account]', :controller => 'users', :action => 'new', :party_id => @party_id} "      
+        else
+          return "[No user account]"
+        end
       end
   end
 

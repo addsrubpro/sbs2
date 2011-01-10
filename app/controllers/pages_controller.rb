@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   # To define the selectable actions for the dropdown box in _actionsbox.html.erb
   SELECTABLE_ACTIONS_ADMIN = [:home, :help, :income_classes, :occupation_classes, :rights, :roles, :people, :people_search, :user_accounts_search]
   SELECTABLE_ACTIONS_STD = [:home, :help, :people, :people_search]
-  SELECTABLE_ACTIONS = [:sign_in, :home, :help]
+  SELECTABLE_ACTIONS = [:sign_in, :home]
   
   # Method for actions selection with dropdown box in _header.html.erb (see also pages_helper.rb)
   def select_view

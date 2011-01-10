@@ -20,5 +20,5 @@
 <% end %>
 
 <br />
-<%= link_to 'Back', partyroles_path %> |
-<%= link_to 'Quit role assignment', people_path %>
+<%= link_to 'Back to party roles', partyroles_path(:party_id => @person.party_id) %> |
+<%= link_to 'Back to person', people_path(:party_id => @person.party_id) %>

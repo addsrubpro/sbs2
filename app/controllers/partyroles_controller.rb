@@ -11,6 +11,10 @@ class PartyrolesController < ApplicationController
     @partyrole = Person.find(:first, :conditions => ["party_id = ?", $party_id])
     @person = Person.find(:first, :conditions => ["party_id = ?", $party_id], :select => "party_id, current_last_name, current_first_name")
     
+    unless !( @partyroles.nil? || @partyroles.empty? )
+      flash.now[:notice] = "No party role has been assigned yet!"
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @partyroles }
@@ -55,7 +59,7 @@ class PartyrolesController < ApplicationController
 
   # GET /partyroles/1/edit
   def edit
-    @partyrole = Partyrole.find(params[:id])
+    # this action is not provided for partyroles
   end
 
   # POST /partyroles
@@ -78,18 +82,7 @@ class PartyrolesController < ApplicationController
   # PUT /partyroles/1
   # PUT /partyroles/1.xml
   def update
-    @partyrole = Partyrole.find(params[:id])
-
-    respond_to do |format|
-      if @partyrole.update_attributes(params[:partyrole])
-        flash[:success] = "Party role assignment was successfully updated."
-        format.html { redirect_to(@partyrole) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @partyrole.errors, :status => :unprocessable_entity }
-      end
-    end
+    # this action is not provided for partyroles
   end
 
   # DELETE /partyroles/1

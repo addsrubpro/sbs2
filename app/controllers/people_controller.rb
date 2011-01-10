@@ -16,8 +16,6 @@ class PeopleController < ApplicationController
       @people = Person.paginate(:page => params[:page], :per_page => 4, :order => "party_id ASC")
     end
     
-    # @people = Person.paginate(:page => params[:page], :per_page => 4, :order => "party_id ASC")
-    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @people }
@@ -32,7 +30,7 @@ class PeopleController < ApplicationController
     render "search_form"
   end
   
-  def search
+  def search                                                # people: basic search
     @title = "People: basic search results"
 
     $cln = params[:current_last_name].to_s + "%" unless params[:current_last_name].nil?
@@ -46,16 +44,16 @@ class PeopleController < ApplicationController
         $sql_insert_pid = ' AND party_id = :pid'
         pid_selected_param = "<br />Party ID: <b> #{params[:party_id]} </b>"
       end
-      flash.now[:notice] = "Selected parameters: #{pid_selected_param} <br /> current last name: <b> #{$cln} </b> <br /> current first name: <b> #{$cfn} </b>"
+      flash.now[:info] = "Selected parameters: #{pid_selected_param} <br /> current last name: <b> #{$cln} </b> <br /> current first name: <b> #{$cfn} </b>"
     
       # counter for records found
       sql_count = "SELECT COUNT(*) FROM people WHERE current_last_name LIKE :cln AND current_first_name LIKE :cfn" + $sql_insert_pid
       people_counter = Person.count_by_sql [sql_count, {:cln => $cln, :cfn => $cfn, :pid => params[:party_id]}]
       
       if people_counter > 1
-        flash.now[:info] = people_counter.to_s + " records have been found."
+        flash.now[:info1] = people_counter.to_s + " records have been found."
       else
-        flash.now[:info] = people_counter.to_s + " record has been found."
+        flash.now[:info1] = people_counter.to_s + " record has been found."
       end
     end
     
@@ -73,7 +71,7 @@ class PeopleController < ApplicationController
     end
   end
   
-  def search_classi
+  def search_classi                               # people: advanced search
     @title = "People: advanced search results"
     
     $birthdate_low = Date.today - params[:age_high][:value].to_i.years unless params[:age_high].nil?
@@ -113,7 +111,7 @@ class PeopleController < ApplicationController
         flash.now[:info] = people_counter.to_s + " record has been found."
       end
       
-      flash.now[:notice] = "Selected parameters: <br />Birthdate range from: <b>#{$birthdate_low}</b> to: <b>#{$birthdate_high}</b>" + ic_selected_param + oc_selected_param
+      flash.now[:info1] = "Selected parameters: <br />Birthdate range from: <b>#{$birthdate_low}</b> to: <b>#{$birthdate_high}</b>" + ic_selected_param + oc_selected_param
     end
       
     @people = Person.paginate_by_sql [$sql_query, {:ic_id => $ic_id, :oc_id => $oc_id, :bdl => $birthdate_low, :bdh => $birthdate_high}], :page => params[:page], :per_page => 4
@@ -129,7 +127,7 @@ class PeopleController < ApplicationController
     end
     @person = Person.find($party_id)
     @partyroles = Partyrole.find(:all, :conditions => ["party_id = ?", $party_id])
-    @title = @person.current_first_name + ' ' + @person.current_last_name
+    @title = @person.current_first_name.to_s + ' ' + @person.current_last_name.to_s
     
     respond_to do |format|
       format.html # show.html.erb

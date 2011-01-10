@@ -14,7 +14,7 @@
     <td>
       <% if @user.userrights.any? %>
         <% @user.userrights.each do |userright| %>
-          - <%=h userright.right.description %> -
+          - <%= link_to userright.right.description, userrights_path(:user_id => @user.id) %> -
         <% end %>
       <% else %>
         <%= link_to '[Assign user right]', new_userright_path(:user_id => @user.id) %>
