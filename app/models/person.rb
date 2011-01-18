@@ -16,3 +16,19 @@ class Person < ActiveRecord::Base
     end
   end
 end
+# == Schema Information
+# Schema version: 20101205122557
+#
+# Table name: people
+#
+#  id                          :integer         not null, primary key
+#  party_id                    :integer
+#  incomeclassification_id     :integer
+#  occupationclassification_id :integer
+#  current_last_name           :string(255)
+#  current_first_name          :string(255)
+#  birth_date                  :date
+#  created_at                  :datetime
+#  updated_at                  :datetime
+#
+

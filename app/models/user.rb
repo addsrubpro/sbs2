@@ -51,3 +51,19 @@ class User < ActiveRecord::Base
       Digest::SHA2.hexdigest(string)
     end
 end
+
+# == Schema Information
+# Schema version: 20101205122557
+#
+# Table name: users
+#
+#  id                 :integer         not null, primary key
+#  party_id           :integer
+#  username           :string(255)
+#  encrypted_password :string(255)
+#  salt               :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  remember_token     :string(255)
+#
+

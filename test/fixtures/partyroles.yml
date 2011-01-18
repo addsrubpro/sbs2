@@ -7,3 +7,16 @@ one:
 two:
   party_id: 1
   role_id: 1
+
+# == Schema Information
+# Schema version: 20101205122557
+#
+# Table name: partyroles
+#
+#  id         :integer         not null, primary key
+#  party_id   :integer
+#  role_id    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+

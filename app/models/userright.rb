@@ -18,3 +18,15 @@ end
 
 # foreign_key's contain the values of the same key name from the related table.
 # So, both tables are connected by the same value between key <---> foreign_key
+# == Schema Information
+# Schema version: 20101205122557
+#
+# Table name: userrights
+#
+#  id         :integer         not null, primary key
+#  user_id    :integer
+#  right_id   :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+

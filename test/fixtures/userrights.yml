@@ -7,3 +7,16 @@ one:
 two:
   party_id: 1
   right_id: 1
+
+# == Schema Information
+# Schema version: 20101205122557
+#
+# Table name: userrights
+#
+#  id         :integer         not null, primary key
+#  user_id    :integer
+#  right_id   :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
