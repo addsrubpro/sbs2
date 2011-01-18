@@ -9,18 +9,20 @@
     <td><b>Username</b></td>
     <td><b><%=h @user.username %></b></td>
   </tr>
-  <tr>
-    <td>User rights assigned</td>
-    <td>
-      <% if @user.userrights.any? %>
-        <% @user.userrights.each do |userright| %>
-          - <%= link_to userright.right.description, userrights_path(:user_id => @user.id) %> -
+  <% if admin_user? %>
+    <tr>
+      <td>User rights assigned</td>
+      <td>
+        <% if @user.userrights.any? %>
+          <% @user.userrights.each do |userright| %>
+           - <%= link_to userright.right.description, userrights_path(:user_id => @user.id) %> -
+          <% end %>
+        <% else %>
+          <%= link_to '[Assign user right]', new_userright_path(:user_id => @user.id) %>
         <% end %>
-      <% else %>
-        <%= link_to '[Assign user right]', new_userright_path(:user_id => @user.id) %>
-      <% end %>
-    </td>
-  </tr>
+      </td>
+    </tr>
+  <% end %>
   <tr>
     <td> Record created at</td>
     <td><%=h @user.created_at %></td>

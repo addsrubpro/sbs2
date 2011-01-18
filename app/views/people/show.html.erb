@@ -37,11 +37,13 @@
     <td>Birth date</td>
     <td><%=h @person.birth_date %></td>
   </tr>
-  <tr>
-    <td>User account name</td>
-    <% @party_id = @person.party_id unless !@person.user.nil? %>
-    <td><%= create_user_account_on_fail {link_to @person.user.username, users_path(:user_id => @person.user.id)} %></td>
-  </tr>
+  <% if admin_user? %>
+    <tr>
+      <td>User account name</td>
+      <% @party_id = @person.party_id unless !@person.user.nil? %>
+      <td><%= create_user_account_on_fail {link_to @person.user.username, users_path(:user_id => @person.user.id)} %></td>
+    </tr>
+  <% end %>
   <tr>
     <td>Record created at</td>
     <td><%=h @person.created_at %></td>

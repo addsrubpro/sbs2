@@ -2,7 +2,7 @@ class PeopleController < ApplicationController
   before_filter :authenticate
   before_filter :admin_user, :only => :destroy
   before_filter :people_search_advanced, :only => :search_classi
-    
+  
   AGE = { "0" => 0, "18" => 18, "25" => 25, "35" => 35, "55" => 55, "65" => 65, "unlimited" => 200 }.sort
     
   # GET /people
@@ -13,7 +13,7 @@ class PeopleController < ApplicationController
     if !params[:party_id].nil? 
       @people = Person.paginate(:page => params[:page], :conditions => ['party_id = ?', params[:party_id]] )
     else
-      @people = Person.paginate(:page => params[:page], :per_page => 4, :order => "party_id ASC")
+      @people = Person.paginate(:page => params[:page], :conditions => ['party_id IS NOT ?', 1], :per_page => 4, :order => "party_id ASC")
     end
     
     respond_to do |format|
